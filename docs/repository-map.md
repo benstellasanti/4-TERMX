@@ -25,8 +25,12 @@
 - pkg-operation-cursor.json
 - system-manifest.json
 ## scripts
+- infra-audit.py
+- infra-note.py
 - infra-sync.py
 - infra-sync.sh
+- infra-wrapper.sh
+- install-infra-wrappers.sh
 - sync-repo.sh
 - update_readme_tree.py
 

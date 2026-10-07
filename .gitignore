@@ -1,0 +1,16 @@
+# Secretos y material local de Termux
+.ssh/
+.termux_authinfo
+
+# Credenciales / secretos
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Artefactos locales
+__pycache__/
+*.pyc

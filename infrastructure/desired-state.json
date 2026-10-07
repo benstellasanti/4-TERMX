@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "purpose": "Human-maintained desired state. This file is intent, not observed reality.",
+  "package_managers": {
+    "pkg": {"required": [], "optional": [], "temporary": []},
+    "pip": {"required": [], "optional": [], "temporary": []},
+    "npm_global": {"required": [], "optional": [], "temporary": []},
+    "gem": {"required": [], "optional": [], "temporary": []}
+  },
+  "runtimes": {},
+  "notes": [
+    "Do not put secrets, tokens, private keys, or credentials here.",
+    "An installed package absent here is unmanaged, not automatically safe to remove."
+  ]
+}

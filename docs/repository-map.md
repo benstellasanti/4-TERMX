@@ -1,9 +1,9 @@
 # 🌳 4-TERMX — Repository Map
 
 > Generado automáticamente por GitHub Actions a partir de la estructura real del repositorio.
-> Los directorios y archivos excluidos por seguridad no aparecen en este mapa.
+> Los directorios son ramas y los archivos son hojas.
 
-## 🧭 Mapa
+## 🧭 Mapa estructural
 
 # 4-TERMX
 - .gitconfig
@@ -16,11 +16,13 @@
 - .zshrc
 - README.md
 ## docs
-- repository-map.html
 - repository-map.md
 - sync-repo.sh
 - update_readme_tree.py
 
-## 🔗 Vista interactiva
+## 🗺️ Grafos estáticos
 
-Abrir repository-map.html para explorar el mismo árbol con Markmap (zoom, desplazamiento y expandir/contraer ramas).
+- repository-structure.svg: estructura completa, directorios como ramas y archivos como hojas.
+- repository-architecture.svg: relaciones funcionales entre GitHub, Actions, workflow, generador, README y docs/.
+
+> Ambos SVG y sus fuentes DOT se regeneran automáticamente cuando cambia el repositorio.

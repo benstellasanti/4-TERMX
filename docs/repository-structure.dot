@@ -1,0 +1,32 @@
+digraph RepositoryStructure {
+  graph [rankdir=TB, bgcolor="white", pad="0.25", nodesep="0.28", ranksep="0.55", splines=ortho, label="4-TERMX — Estructura real", labelloc=t, fontsize=20];
+  node [fontname="Arial", fontsize=10, style="filled", color="#555555"];
+  edge [color="#777777", arrowsize=0.6];
+  root [label="4-TERMX", shape=box, style="filled,bold", fontsize=15];
+  n__github [label=".github", shape=box, fillcolor="#eeeeee"];
+  n__termux [label=".termux", shape=box, fillcolor="#eeeeee"];
+  n_docs [label="docs", shape=box, fillcolor="#eeeeee"];
+  n__github_workflows [label="workflows", shape=box, fillcolor="#eeeeee"];
+  n__gitconfig [label=".gitconfig", shape=note, fillcolor="white"];
+  root -> n__gitconfig;
+  n__github_workflows_update_tree_yml [label="update-tree.yml", shape=note, fillcolor="white"];
+  n__github_workflows -> n__github_workflows_update_tree_yml;
+  n__gitignore [label=".gitignore", shape=note, fillcolor="white"];
+  root -> n__gitignore;
+  n__termux_termux_properties [label="termux.properties", shape=note, fillcolor="white"];
+  n__termux -> n__termux_termux_properties;
+  n__zshrc [label=".zshrc", shape=note, fillcolor="white"];
+  root -> n__zshrc;
+  n_README_md [label="README.md", shape=note, fillcolor="white"];
+  root -> n_README_md;
+  n_docs_repository_map_md [label="repository-map.md", shape=note, fillcolor="white"];
+  n_docs -> n_docs_repository_map_md;
+  n_sync_repo_sh [label="sync-repo.sh", shape=note, fillcolor="white"];
+  root -> n_sync_repo_sh;
+  n_update_readme_tree_py [label="update_readme_tree.py", shape=note, fillcolor="white"];
+  root -> n_update_readme_tree_py;
+  root -> n__github;
+  root -> n__termux;
+  root -> n_docs;
+  n__github -> n__github_workflows;
+}

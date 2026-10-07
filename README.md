@@ -71,22 +71,21 @@ Graphviz genera los SVG estáticos desde archivos DOT; ambos formatos quedan ver
 | Estado | Archivo | Tipo | Tamaño | Función |
 |---|---|---|---:|---|
 | — | [<code>.gitconfig</code>](./.gitconfig) | Configuración | 64 B | Archivo Configuración del proyecto. |
-| — | [<code>.github/workflows/update-tree.yml</code>](./.github/workflows/update-tree.yml) | GitHub Actions | 1.1 KB | Workflow de automatización de GitHub Actions. |
+| — | [<code>.github/workflows/update-tree.yml</code>](./.github/workflows/update-tree.yml) | GitHub Actions | 1.5 KB | Workflow de automatización de GitHub Actions. |
 | — | [<code>.gitignore</code>](./.gitignore) | Configuración | 179 B | Archivo Configuración del proyecto. |
 | — | [<code>.termux/termux.properties</code>](./.termux/termux.properties) | Archivo | 5.9 KB | Archivo Archivo del proyecto. |
 | — | [<code>.zshrc</code>](./.zshrc) | Configuración | 84 B | Archivo Configuración del proyecto. |
-| — | [<code>README.md</code>](./README.md) | Markdown | 4.7 KB | Documentación central del entorno Termux. |
-| — | [<code>docs/repository-map.html</code>](./docs/repository-map.html) | Archivo | 636 B | Archivo Archivo del proyecto. |
-| — | [<code>docs/repository-map.md</code>](./docs/repository-map.md) | Markdown | 543 B | Archivo Markdown del proyecto. |
+| — | [<code>README.md</code>](./README.md) | Markdown | 5.6 KB | Documentación central del entorno Termux. |
+| — | [<code>docs/repository-map.md</code>](./docs/repository-map.md) | Markdown | 590 B | Archivo Markdown del proyecto. |
 | — | [<code>sync-repo.sh</code>](./sync-repo.sh) | Shell | 1.1 KB | Sincronización del repositorio desde Termux. |
-| — | [<code>update_readme_tree.py</code>](./update_readme_tree.py) | Python | 7.7 KB | Generador automático del manifiesto y Repository Map. |
+| — | [<code>update_readme_tree.py</code>](./update_readme_tree.py) | Python | 12.6 KB | Generador automático del manifiesto y los dos grafos. |
 
 ### 📂 Bloques colapsables por componente
 
 <details>
-<summary>📁 <strong>.github</strong> — 1 archivos / 1.1 KB</summary>
+<summary>📁 <strong>.github</strong> — 1 archivos / 1.5 KB</summary>
 
-- [<code>.github/workflows/update-tree.yml</code>](./.github/workflows/update-tree.yml) — **1.1 KB** — Workflow de automatización de GitHub Actions.
+- [<code>.github/workflows/update-tree.yml</code>](./.github/workflows/update-tree.yml) — **1.5 KB** — Workflow de automatización de GitHub Actions.
 
 </details>
 
@@ -98,26 +97,25 @@ Graphviz genera los SVG estáticos desde archivos DOT; ambos formatos quedan ver
 </details>
 
 <details>
-<summary>📁 <strong>docs</strong> — 2 archivos / 1.2 KB</summary>
+<summary>📁 <strong>docs</strong> — 1 archivos / 590 B</summary>
 
-- [<code>docs/repository-map.html</code>](./docs/repository-map.html) — **636 B** — Archivo Archivo del proyecto.
-- [<code>docs/repository-map.md</code>](./docs/repository-map.md) — **543 B** — Archivo Markdown del proyecto.
+- [<code>docs/repository-map.md</code>](./docs/repository-map.md) — **590 B** — Archivo Markdown del proyecto.
 
 </details>
 
 <details>
-<summary>📁 <strong>raíz</strong> — 6 archivos / 13.8 KB</summary>
+<summary>📁 <strong>raíz</strong> — 6 archivos / 19.6 KB</summary>
 
 - [<code>.gitconfig</code>](./.gitconfig) — **64 B** — Archivo Configuración del proyecto.
 - [<code>.gitignore</code>](./.gitignore) — **179 B** — Archivo Configuración del proyecto.
 - [<code>.zshrc</code>](./.zshrc) — **84 B** — Archivo Configuración del proyecto.
-- [<code>README.md</code>](./README.md) — **4.7 KB** — Documentación central del entorno Termux.
+- [<code>README.md</code>](./README.md) — **5.6 KB** — Documentación central del entorno Termux.
 - [<code>sync-repo.sh</code>](./sync-repo.sh) — **1.1 KB** — Sincronización del repositorio desde Termux.
-- [<code>update_readme_tree.py</code>](./update_readme_tree.py) — **7.7 KB** — Generador automático del manifiesto y Repository Map.
+- [<code>update_readme_tree.py</code>](./update_readme_tree.py) — **12.6 KB** — Generador automático del manifiesto y los dos grafos.
 
 </details>
 
-**Total actual:** 10 archivos — **21.9 KB**
+**Total actual:** 9 archivos — **27.6 KB**
 
 _Este bloque es mantenido por Actions. No editar manualmente entre los marcadores._
 <!-- FILE-MANIFEST:END -->

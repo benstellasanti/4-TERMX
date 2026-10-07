@@ -8,6 +8,11 @@ install_wrapper() {
   name="$1"
   manager="$2"
   real="$3"
+
+  if [ ! -x "$real" ]; then
+    return 0
+  fi
+
   cat > "$BIN/$name" <<EOF
 #!/data/data/com.termux/files/usr/bin/bash
 export INFRA_MANAGER="$manager"
@@ -23,5 +28,5 @@ install_wrapper pip3 pip /data/data/com.termux/files/usr/bin/pip
 install_wrapper npm npm /data/data/com.termux/files/usr/bin/npm
 install_wrapper gem gem /data/data/com.termux/files/usr/bin/gem
 
-echo "Wrappers instalados en $BIN"
+echo "Wrappers sincronizados en $BIN"
 echo "Ejecuta 'rehash' en zsh si algún comando ya estaba cacheado."

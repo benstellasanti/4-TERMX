@@ -1,17 +1,25 @@
 #!/usr/bin/env python3
-"""Generate the automatic repository manifest and Markmap sources."""
+"""Generate the automatic manifest and two static repository graphs."""
 from pathlib import Path
-import html
 import os
 import subprocess
 
 ROOT = Path(__file__).resolve().parent
 README = ROOT / "README.md"
 MAP_MD = ROOT / "docs" / "repository-map.md"
-MAP_HTML = ROOT / "docs" / "repository-map.html"
+GRAPH_STRUCTURE_DOT = ROOT / "docs" / "repository-structure.dot"
+GRAPH_STRUCTURE_SVG = ROOT / "docs" / "repository-structure.svg"
+GRAPH_ARCH_DOT = ROOT / "docs" / "repository-architecture.dot"
+GRAPH_ARCH_SVG = ROOT / "docs" / "repository-architecture.svg"
 START = "<!-- FILE-MANIFEST:START -->"
 END = "<!-- FILE-MANIFEST:END -->"
 EXCLUDED_PREFIXES = (".git/", ".ssh/", ".termux_authinfo")
+GENERATED_GRAPH_FILES = {
+    "docs/repository-structure.dot",
+    "docs/repository-structure.svg",
+    "docs/repository-architecture.dot",
+    "docs/repository-architecture.svg",
+}
 
 TYPE_MAP = {
     ".py": "Python", ".sh": "Shell", ".md": "Markdown",
@@ -30,7 +38,7 @@ DESCRIPTIONS = {
     "rag_simple.py": "Implementación simplificada de RAG.",
     "sync-menu.sh": "Menú de sincronización y operaciones Git.",
     "sync-repo.sh": "Sincronización del repositorio desde Termux.",
-    "update_readme_tree.py": "Generador automático del manifiesto y Repository Map.",
+    "update_readme_tree.py": "Generador automático del manifiesto y los dos grafos.",
 }
 
 def size_text(size):
@@ -90,19 +98,117 @@ def files_in_repo():
         if not path.is_file():
             continue
         rel = path.relative_to(ROOT).as_posix()
-        if rel.startswith(EXCLUDED_PREFIXES):
+        if rel.startswith(EXCLUDED_PREFIXES) or rel in GENERATED_GRAPH_FILES:
             continue
         result.append((rel, path.stat().st_size))
     return sorted(result)
+
+def dot_escape(value):
+    return value.replace("\\", "\\\\").replace('"', '\\"')
+
+def node_id(rel):
+    return "n_" + "".join(ch if ch.isalnum() else "_" for ch in rel)
+
+def build_structure_dot(files):
+    dirs = set()
+    for rel, _ in files:
+        parts = rel.split("/")
+        for i in range(1, len(parts)):
+            dirs.add("/".join(parts[:i]))
+
+    lines = [
+        "digraph RepositoryStructure {",
+        '  graph [rankdir=TB, bgcolor="white", pad="0.25", nodesep="0.28", ranksep="0.55", splines=ortho, label="4-TERMX — Estructura real", labelloc=t, fontsize=20];',
+        '  node [fontname="Arial", fontsize=10, style="filled", color="#555555"];',
+        '  edge [color="#777777", arrowsize=0.6];',
+        '  root [label="4-TERMX", shape=box, style="filled,bold", fontsize=15];',
+    ]
+    all_dirs = sorted(dirs, key=lambda x: (x.count("/"), x))
+    for d in all_dirs:
+        lines.append(f'  {node_id(d)} [label="{dot_escape(d.split("/")[-1])}", shape=box, fillcolor="#eeeeee"];')
+    for rel, _ in files:
+        parent = "/".join(rel.split("/")[:-1])
+        shape = "box" if "." not in rel.split("/")[-1] else "note"
+        label = rel.split("/")[-1]
+        lines.append(f'  {node_id(rel)} [label="{dot_escape(label)}", shape={shape}, fillcolor="white"];')
+        source = node_id(parent) if parent else "root"
+        lines.append(f"  {source} -> {node_id(rel)};")
+    for d in all_dirs:
+        parent = "/".join(d.split("/")[:-1])
+        source = node_id(parent) if parent else "root"
+        lines.append(f"  {source} -> {node_id(d)};")
+    lines.append("}")
+    return "\n".join(lines) + "\n"
+
+def build_architecture_dot(files):
+    paths = [rel for rel, _ in files]
+    lines = [
+        "digraph RepositoryArchitecture {",
+        '  graph [rankdir=TB, bgcolor="white", pad="0.3", nodesep="0.45", ranksep="0.65", splines=ortho, label="4-TERMX — Arquitectura / relaciones", labelloc=t, fontsize=20];',
+        '  node [fontname="Arial", fontsize=10, style="rounded,filled", color="#555555", fillcolor="white"];',
+        '  edge [color="#777777", arrowsize=0.65];',
+        '  root [label="4-TERMX", shape=box, fillcolor="#eeeeee", fontsize=15];',
+    ]
+
+    top_dirs = sorted({p.split("/")[0] for p in paths if "/" in p})
+    root_files = sorted(p for p in paths if "/" not in p)
+    for d in top_dirs:
+        lines.append(f'  dir_{node_id(d)} [label="{dot_escape(d)}", shape=box, fillcolor="#eeeeee"];')
+        lines.append(f"  root -> dir_{node_id(d)};")
+    for f in root_files:
+        lines.append(f'  file_{node_id(f)} [label="{dot_escape(f)}", shape=note];')
+        lines.append(f"  root -> file_{node_id(f)};")
+
+    workflow = next((p for p in paths if p == ".github/workflows/update-tree.yml"), None)
+    generator = "update_readme_tree.py" if "update_readme_tree.py" in paths else None
+    readme = "README.md" if "README.md" in paths else None
+
+    if workflow:
+        lines.append('  workflow [label="update-tree.yml\\nGitHub Actions", shape=box, fillcolor="#f3f3f3"];')
+        lines.append(f"  dir_{node_id('.github')} -> workflow;")
+    if generator:
+        lines.append('  generator [label="update_readme_tree.py\\ndescubre + genera", shape=box, fillcolor="#f3f3f3"];')
+        lines.append("  root -> generator;")
+    if readme:
+        lines.append('  readme [label="README.md", shape=note, fillcolor="white"];')
+        lines.append("  root -> readme;")
+
+    docs = [p for p in paths if p.startswith("docs/")]
+    if docs:
+        lines.append('  docs [label="docs", shape=box, fillcolor="#eeeeee"];')
+        lines.append("  root -> docs;")
+        for p in docs:
+            lines.append(f'  doc_{node_id(p)} [label="{dot_escape(p.split("/")[-1])}", shape=note];')
+            lines.append(f"  docs -> doc_{node_id(p)};")
+
+    if generator and workflow:
+        lines.append('  workflow -> generator [label="ejecuta"];')
+    if generator and readme:
+        lines.append('  generator -> readme [label="actualiza"];')
+    if generator and docs:
+        for p in docs:
+            if "repository-" in p:
+                lines.append(f'  generator -> doc_{node_id(p)} [label="genera"];')
+    lines.append('  github [label="GitHub", shape=box, fillcolor="#eeeeee"];')
+    lines.append('  actions [label="GitHub Actions", shape=box, fillcolor="#eeeeee"];')
+    lines.append('  root -> github [style=dashed, label="repositorio"];')
+    lines.append("  github -> actions [style=dashed];")
+    if workflow:
+        lines.append('  actions -> workflow [style=dashed, label="workflow"];')
+    lines.append("}")
+    return "\n".join(lines) + "\n"
+
+def render_graph(dot_path, svg_path):
+    subprocess.run(["dot", "-Tsvg", str(dot_path), "-o", str(svg_path)], check=True)
 
 def build_tree_markdown(files):
     lines = [
         "# 🌳 4-TERMX — Repository Map",
         "",
         "> Generado automáticamente por GitHub Actions a partir de la estructura real del repositorio.",
-        "> Los directorios y archivos excluidos por seguridad no aparecen en este mapa.",
+        "> Los directorios son ramas y los archivos son hojas.",
         "",
-        "## 🧭 Mapa",
+        "## 🧭 Mapa estructural",
         "",
         "# 4-TERMX",
     ]
@@ -127,32 +233,15 @@ def build_tree_markdown(files):
     emit(tree, 0)
     lines += [
         "",
-        "## 🔗 Vista interactiva",
+        "## 🗺️ Grafos estáticos",
         "",
-        "Abrir repository-map.html para explorar el mismo árbol con Markmap (zoom, desplazamiento y expandir/contraer ramas).",
+        "- repository-structure.svg: estructura completa, directorios como ramas y archivos como hojas.",
+        "- repository-architecture.svg: relaciones funcionales entre GitHub, Actions, workflow, generador, README y docs/.",
+        "",
+        "> Ambos SVG y sus fuentes DOT se regeneran automáticamente cuando cambia el repositorio.",
         "",
     ]
     return "\n".join(lines)
-
-def build_tree_html(markdown):
-    payload = html.escape(markdown, quote=False)
-    return f"""<!doctype html>
-<html lang="es">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>4-TERMX — Repository Map</title>
-<style>html,body,#mindmap{{width:100%;height:100%;margin:0}}</style>
-</head>
-<body>
-<svg id="mindmap"></svg>
-<script src="https://cdn.jsdelivr.net/npm/markmap-autoloader@0.18.12"></script>
-<script type="text/template">
-{payload}
-</script>
-</body>
-</html>
-"""
 
 def build_manifest(files):
     total = sum(size for _, size in files)
@@ -208,9 +297,12 @@ def main():
     files = files_in_repo()
     docs = ROOT / "docs"
     docs.mkdir(exist_ok=True)
-    map_markdown = build_tree_markdown(files)
-    MAP_MD.write_text(map_markdown, encoding="utf-8")
-    MAP_HTML.write_text(build_tree_html(map_markdown), encoding="utf-8")
+
+    MAP_MD.write_text(build_tree_markdown(files), encoding="utf-8")
+    GRAPH_STRUCTURE_DOT.write_text(build_structure_dot(files), encoding="utf-8")
+    GRAPH_ARCH_DOT.write_text(build_architecture_dot(files), encoding="utf-8")
+    render_graph(GRAPH_STRUCTURE_DOT, GRAPH_STRUCTURE_SVG)
+    render_graph(GRAPH_ARCH_DOT, GRAPH_ARCH_SVG)
 
     content = README.read_text(encoding="utf-8")
     manifest = build_manifest(files)

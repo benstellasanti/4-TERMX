@@ -1,27 +1,38 @@
-name: Actualizar Estructura en README
+name: Actualizar File Manifest del README
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
-  update-tree:
+  update-manifest:
     runs-on: ubuntu-latest
     steps:
-      - name: 📥 Clonar repositorio
+      - name: 📥 Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: 🐍 Configurar Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
+          python-version: "3.12"
 
-      - name: ⚙️ Ejecutar script generador de árbol
+      - name: 📋 Generar File Manifest + bloques colapsables
         run: python update_readme_tree.py
 
-      - name: 🚀 Commit y Push automáticos si hay cambios
+      - name: 🚀 Commit automático del README
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- README.md; then
+            echo "README.md ya está actualizado."
+            exit 0
+          fi
           git add README.md
-          git diff --quiet && git diff --staged --quiet || (git commit -m "docs: actualización automática del diagrama de archivos [skip ci]" && git push)
+          git commit -m "docs: actualizar file manifest [skip ci]"
+          git push

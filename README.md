@@ -98,7 +98,7 @@ Graphviz genera los SVG estáticos desde archivos DOT; ambos formatos quedan ver
 | — | [<code>infrastructure/desired-state.json</code>](./infrastructure/desired-state.json) | JSON | 597 B | Archivo JSON del proyecto. |
 | — | [<code>infrastructure/history/infrastructure-history.jsonl</code>](./infrastructure/history/infrastructure-history.jsonl) | Archivo | 816 B | Archivo Archivo del proyecto. |
 | — | [<code>infrastructure/system-manifest.json</code>](./infrastructure/system-manifest.json) | JSON | 4.2 KB | Archivo JSON del proyecto. |
-| — | [<code>scripts/infra-sync.py</code>](./scripts/infra-sync.py) | Python | 6.9 KB | Archivo Python del proyecto. |
+| — | [<code>scripts/infra-sync.py</code>](./scripts/infra-sync.py) | Python | 7.2 KB | Archivo Python del proyecto. |
 | — | [<code>scripts/infra-sync.sh</code>](./scripts/infra-sync.sh) | Shell | 181 B | Archivo Shell del proyecto. |
 | — | [<code>sync-repo.sh</code>](./sync-repo.sh) | Shell | 1.1 KB | Sincronización del repositorio desde Termux. |
 | — | [<code>update_readme_tree.py</code>](./update_readme_tree.py) | Python | 12.8 KB | Generador automático del manifiesto y los dos grafos. |
@@ -153,14 +153,14 @@ Graphviz genera los SVG estáticos desde archivos DOT; ambos formatos quedan ver
 </details>
 
 <details>
-<summary>📁 <strong>scripts</strong> — 2 archivos / 7.1 KB</summary>
+<summary>📁 <strong>scripts</strong> — 2 archivos / 7.4 KB</summary>
 
-- [<code>scripts/infra-sync.py</code>](./scripts/infra-sync.py) — **6.9 KB** — Archivo Python del proyecto.
+- [<code>scripts/infra-sync.py</code>](./scripts/infra-sync.py) — **7.2 KB** — Archivo Python del proyecto.
 - [<code>scripts/infra-sync.sh</code>](./scripts/infra-sync.sh) — **181 B** — Archivo Shell del proyecto.
 
 </details>
 
-**Total actual:** 19 archivos — **86.5 KB**
+**Total actual:** 19 archivos — **86.8 KB**
 
 _Este bloque es mantenido por Actions. No editar manualmente entre los marcadores._
 <!-- FILE-MANIFEST:END -->

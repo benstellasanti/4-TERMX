@@ -6,17 +6,17 @@
 ## 🧭 Mapa
 
 # 4-TERMX
-## .gitconfig
 ## .github
 ### workflows
-#### update-tree.yml
-## .gitignore
+- update-tree.yml
 ## .termux
-### termux.properties
+- termux.properties
+## .gitconfig
+## .gitignore
 ## .zshrc
-## README.md
-## sync-repo.sh
-## update_readme_tree.py
+- README.md
+- sync-repo.sh
+- update_readme_tree.py
 
 ## 🔗 Vista interactiva
 

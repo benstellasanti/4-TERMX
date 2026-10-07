@@ -6,7 +6,10 @@ digraph RepositoryStructure {
   n__github [label=".github", shape=box, fillcolor="#eeeeee"];
   n__termux [label=".termux", shape=box, fillcolor="#eeeeee"];
   n_docs [label="docs", shape=box, fillcolor="#eeeeee"];
+  n_infrastructure [label="infrastructure", shape=box, fillcolor="#eeeeee"];
+  n_scripts [label="scripts", shape=box, fillcolor="#eeeeee"];
   n__github_workflows [label="workflows", shape=box, fillcolor="#eeeeee"];
+  n_infrastructure_history [label="history", shape=box, fillcolor="#eeeeee"];
   n__gitconfig [label=".gitconfig", shape=note, fillcolor="white"];
   root -> n__gitconfig;
   n__github_workflows_update_tree_yml [label="update-tree.yml", shape=note, fillcolor="white"];
@@ -19,8 +22,20 @@ digraph RepositoryStructure {
   root -> n__zshrc;
   n_README_md [label="README.md", shape=note, fillcolor="white"];
   root -> n_README_md;
+  n_docs_infrastructure_md [label="infrastructure.md", shape=note, fillcolor="white"];
+  n_docs -> n_docs_infrastructure_md;
   n_docs_repository_map_md [label="repository-map.md", shape=note, fillcolor="white"];
   n_docs -> n_docs_repository_map_md;
+  n_infrastructure_desired_state_json [label="desired-state.json", shape=note, fillcolor="white"];
+  n_infrastructure -> n_infrastructure_desired_state_json;
+  n_infrastructure_history_infrastructure_history_jsonl [label="infrastructure-history.jsonl", shape=note, fillcolor="white"];
+  n_infrastructure_history -> n_infrastructure_history_infrastructure_history_jsonl;
+  n_infrastructure_system_manifest_json [label="system-manifest.json", shape=note, fillcolor="white"];
+  n_infrastructure -> n_infrastructure_system_manifest_json;
+  n_scripts_infra_sync_py [label="infra-sync.py", shape=note, fillcolor="white"];
+  n_scripts -> n_scripts_infra_sync_py;
+  n_scripts_infra_sync_sh [label="infra-sync.sh", shape=note, fillcolor="white"];
+  n_scripts -> n_scripts_infra_sync_sh;
   n_sync_repo_sh [label="sync-repo.sh", shape=note, fillcolor="white"];
   root -> n_sync_repo_sh;
   n_update_readme_tree_py [label="update_readme_tree.py", shape=note, fillcolor="white"];
@@ -28,5 +43,8 @@ digraph RepositoryStructure {
   root -> n__github;
   root -> n__termux;
   root -> n_docs;
+  root -> n_infrastructure;
+  root -> n_scripts;
   n__github -> n__github_workflows;
+  n_infrastructure -> n_infrastructure_history;
 }

@@ -16,7 +16,16 @@
 - .zshrc
 - README.md
 ## docs
+- infrastructure.md
 - repository-map.md
+## infrastructure
+- desired-state.json
+### history
+- infrastructure-history.jsonl
+- system-manifest.json
+## scripts
+- infra-sync.py
+- infra-sync.sh
 - sync-repo.sh
 - update_readme_tree.py
 

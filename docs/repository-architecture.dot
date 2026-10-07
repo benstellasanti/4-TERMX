@@ -9,6 +9,10 @@ digraph RepositoryArchitecture {
   root -> dir_n__termux;
   dir_n_docs [label="docs", shape=box, fillcolor="#eeeeee"];
   root -> dir_n_docs;
+  dir_n_infrastructure [label="infrastructure", shape=box, fillcolor="#eeeeee"];
+  root -> dir_n_infrastructure;
+  dir_n_scripts [label="scripts", shape=box, fillcolor="#eeeeee"];
+  root -> dir_n_scripts;
   file_n__gitconfig [label=".gitconfig", shape=note];
   root -> file_n__gitconfig;
   file_n__gitignore [label=".gitignore", shape=note];
@@ -29,6 +33,8 @@ digraph RepositoryArchitecture {
   root -> readme;
   docs [label="docs", shape=box, fillcolor="#eeeeee"];
   root -> docs;
+  doc_n_docs_infrastructure_md [label="infrastructure.md", shape=note];
+  docs -> doc_n_docs_infrastructure_md;
   doc_n_docs_repository_map_md [label="repository-map.md", shape=note];
   docs -> doc_n_docs_repository_map_md;
   workflow -> generator [label="ejecuta"];

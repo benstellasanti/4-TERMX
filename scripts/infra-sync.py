@@ -5,6 +5,7 @@ import datetime as dt
 import json
 import platform
 import re
+import shlex
 import shutil
 import subprocess
 from pathlib import Path
@@ -12,8 +13,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = ROOT / "infrastructure/system-manifest.json"
 HISTORY = ROOT / "infrastructure/history/infrastructure-history.jsonl"
-PKG_OPERATION_LOG = Path.home() / ".infra-pkg-operations.log"
-PKG_OPERATION_CURSOR = ROOT / "infrastructure/history/pkg-operation-cursor.json"
+OP_LOG = Path.home() / ".infra-package-operations.jsonl"
+OP_CURSOR = ROOT / "infrastructure/history/package-operation-cursor.json"
+LEGACY_PKG_LOG = Path.home() / ".infra-pkg-operations.log"
+LEGACY_PKG_CURSOR = ROOT / "infrastructure/history/pkg-operation-cursor.json"
+NOTES_LOG = Path.home() / ".infra-notes.jsonl"
 
 def run(cmd, timeout=30):
     try:
@@ -99,7 +103,7 @@ def ssh_hosts():
 def observe():
     py = shutil.which("python") or shutil.which("python3")
     return {
-        "schema_version": "1.0",
+        "schema_version": "1.1",
         "generated_by": "scripts/infra-sync.py",
         "purpose": "Observed current state of the Termux environment.",
         "generated_at": dt.datetime.now().astimezone().isoformat(timespec="seconds"),
@@ -146,93 +150,168 @@ def changes(old, new):
                 events.append(["upgrade_or_downgrade", manager, name, before[name], after[name]])
     return events
 
-def load_pkg_operations():
-    if not PKG_OPERATION_LOG.exists():
-        return []
-
-    try:
-        lines = PKG_OPERATION_LOG.read_text(
-            encoding="utf-8", errors="ignore"
-        ).splitlines()
-    except OSError:
-        return []
-
-    cursor = load(PKG_OPERATION_CURSOR, {"processed_lines": 0})
-    processed_lines = int(cursor.get("processed_lines", 0) or 0)
-
+def load_operations():
     operations = []
-    for line_number, line in enumerate(lines, start=1):
-        if line_number <= processed_lines:
-            continue
+    if OP_LOG.exists():
+        cursor = load(OP_CURSOR, {"processed_lines": 0})
+        start = int(cursor.get("processed_lines", 0) or 0)
+        try:
+            lines = OP_LOG.read_text(encoding="utf-8", errors="ignore").splitlines()
+        except OSError:
+            lines = []
+        for n, line in enumerate(lines, 1):
+            if n <= start:
+                continue
+            try:
+                item = json.loads(line)
+                if isinstance(item, dict) and item.get("manager") and item.get("action"):
+                    item["line"] = n
+                    operations.append(item)
+            except json.JSONDecodeError:
+                continue
+        return operations
 
-        parts = line.split("\t", 2)
-        if len(parts) != 3:
-            continue
-
-        occurred_at, action, command = parts
-        operations.append({
-            "line": line_number,
-            "occurred_at": occurred_at.strip() or None,
-            "action": action.strip(),
-            "command": command.strip()
-        })
-
+    # Compatibilidad con el registro pkg de la versión anterior.
+    if LEGACY_PKG_LOG.exists():
+        cursor = load(LEGACY_PKG_CURSOR, {"processed_lines": 0})
+        start = int(cursor.get("processed_lines", 0) or 0)
+        try:
+            lines = LEGACY_PKG_LOG.read_text(encoding="utf-8", errors="ignore").splitlines()
+        except OSError:
+            lines = []
+        for n, line in enumerate(lines, 1):
+            if n <= start:
+                continue
+            parts = line.split("\t", 2)
+            if len(parts) == 3:
+                occurred_at, action, command = parts
+                operations.append({
+                    "line": n,
+                    "occurred_at": occurred_at.strip() or None,
+                    "manager": "pkg",
+                    "action": action.strip(),
+                    "command": command.strip()
+                })
     return operations
 
+def load_notes():
+    if not NOTES_LOG.exists():
+        return []
+    try:
+        lines = NOTES_LOG.read_text(encoding="utf-8", errors="ignore").splitlines()
+    except OSError:
+        return []
+    result = []
+    for line in lines:
+        try:
+            item = json.loads(line)
+            if isinstance(item, dict):
+                result.append(item)
+        except json.JSONDecodeError:
+            pass
+    return result
 
-def append(events, detected_at, pkg_operations=None):
+def operation_package_names(operation):
+    try:
+        args = shlex.split(operation.get("command", ""))
+    except ValueError:
+        args = operation.get("command", "").split()
+    if not args:
+        return set()
+    action = operation.get("action")
+    skip = {"-y", "--yes", "-q", "--quiet", "-v", "--verbose", "--no-cache",
+            "-g", "--global", "--local", "--user", "--upgrade", "-U"}
+    names = set()
+    for token in args[1:]:
+        if token in skip or token.startswith("-"):
+            continue
+        if "=" in token and token.startswith("--"):
+            continue
+        names.add(token.strip())
+    if action in {"upgrade", "update", "full-upgrade", "dist-upgrade"} and not names:
+        return set()
+    return names
+
+def operation_matches(event, operation):
+    if event[1] != operation.get("manager"):
+        return False
+    action = event[0]
+    op = operation.get("action")
+    if op == "update":
+        return False
+    allowed = {
+        "install": {"install", "reinstall"},
+        "remove": {"remove", "uninstall"},
+        "upgrade_or_downgrade": {"upgrade", "update", "full-upgrade", "dist-upgrade", "reinstall"}
+    }
+    if op not in allowed.get(action, set()):
+        return False
+    names = operation_package_names(operation)
+    if names:
+        return event[2] in names
+    return action == "upgrade_or_downgrade"
+
+def parse_time(value):
+    if not value:
+        return None
+    try:
+        return dt.datetime.fromisoformat(value)
+    except ValueError:
+        return None
+
+def find_note(manager, package, detected_at):
+    target = parse_time(detected_at)
+    if target is None:
+        return None
+    best = None
+    for note in load_notes():
+        if note.get("manager") != manager or note.get("package") != package:
+            continue
+        t = parse_time(note.get("timestamp"))
+        if t is None:
+            continue
+        delta = abs((target - t).total_seconds())
+        if delta <= 1800 and (best is None or t > parse_time(best["timestamp"])):
+            best = note
+    return best
+
+def append(events, detected_at, operations):
     HISTORY.parent.mkdir(parents=True, exist_ok=True)
-    pkg_operations = list(pkg_operations or [])
-
     with HISTORY.open("a", encoding="utf-8") as f:
-        for action, manager, package, old, new in events:
+        for event in events:
+            action, manager, package, old, new = event
             occurred_at = None
             occurred_at_source = None
-            evidence_command = "dpkg-query/pip/npm/gem observation"
+            evidence_command = "state observation"
+            evidence_method = "state_comparison"
 
-            if manager == "pkg" and pkg_operations:
-                for operation in pkg_operations:
-                    op = operation["action"]
-                    command = operation["command"]
+            matches = [op for op in operations if operation_matches(event, op)]
+            if matches:
+                op = matches[0]
+                occurred_at = op.get("occurred_at")
+                occurred_at_source = f'{op.get("manager")}_wrapper'
+                evidence_command = op.get("command", evidence_command)
+                evidence_method = "state_comparison+operation_log"
 
-                    # pkg update solo actualiza índices; no explica
-                    # directamente un cambio de paquete observado.
-                    if op == "update":
-                        continue
-
-                    matches_action = (
-                        (action == "install" and op in {"install", "reinstall"}) or
-                        (action == "remove" and op in {"remove", "uninstall"}) or
-                        (action == "upgrade_or_downgrade" and
-                         op in {"upgrade", "full-upgrade", "dist-upgrade"})
-                    )
-
-                    if not matches_action:
-                        continue
-
-                    occurred_at = operation["occurred_at"]
-                    occurred_at_source = "pkg_wrapper"
-                    evidence_command = command
-                    break
-
+            note = find_note(manager, package, occurred_at or detected_at)
             record = {
-                "schema_version": "1.1",
+                "schema_version": "1.2",
                 "detected_at": detected_at,
                 "occurred_at": occurred_at,
                 "occurred_at_source": occurred_at_source,
-                "actor": "unknown",
-                "actor_source": None,
+                "actor": note.get("actor", "unknown") if note else "unknown",
+                "actor_source": "infra_note" if note else None,
                 "source": "reconciliation",
-                "confidence": "detected",
+                "confidence": "declared+detected" if note else "detected",
                 "action": action,
                 "manager": manager,
                 "package": package,
                 "from": old,
                 "to": new,
-                "reason": None,
-                "reason_source": None,
+                "reason": note.get("reason") if note else None,
+                "reason_source": "infra_note" if note else None,
                 "evidence": {
-                    "method": "state_comparison",
+                    "method": evidence_method,
                     "command": evidence_command
                 },
                 "status": "observed"
@@ -243,35 +322,38 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--quiet", action="store_true")
     ap.add_argument("--no-git", action="store_true")
+    ap.add_argument("--git-commit", action="store_true")
     args = ap.parse_args()
 
     old = load(MANIFEST, {})
     new = observe()
     first = old.get("generated_at") is None
     events = [] if first else changes(old, new)
-    pkg_operations = load_pkg_operations()
+    operations = load_operations()
     save(MANIFEST, new)
 
     if first:
-        append([["baseline", "system", "", "", "initial_observation"]], new["generated_at"])
+        append([["baseline", "system", "", "", "initial_observation"]], new["generated_at"], [])
     elif events:
-        append(events, new["generated_at"], pkg_operations)
+        append(events, new["generated_at"], operations)
 
-    if pkg_operations:
-        save(
-            PKG_OPERATION_CURSOR,
-            {"schema_version": "1.0", "processed_lines": pkg_operations[-1]["line"]}
-        )
+    if operations and OP_LOG.exists():
+        save(OP_CURSOR, {"schema_version": "1.0", "processed_lines": operations[-1]["line"]})
 
-    if not args.no_git and (first or events) and exists("git"):
-        subprocess.run(["git", "add", str(MANIFEST), str(HISTORY)], cwd=ROOT, check=False)
+    if not args.no_git and args.git_commit and (first or events) and exists("git"):
+        subprocess.run(["git", "add", str(MANIFEST), str(HISTORY), str(OP_CURSOR)],
+                       cwd=ROOT, check=False)
         subprocess.run(["git", "commit", "-m", "infra: reconcile infrastructure state"],
                        cwd=ROOT, check=False)
 
     if not args.quiet:
-        print(json.dumps({"first_run": first, "events": len(events),
-                          "manifest": str(MANIFEST), "history": str(HISTORY)},
-                         ensure_ascii=False, indent=2))
+        print(json.dumps({
+            "first_run": first,
+            "events": len(events),
+            "operations_correlated": len(operations),
+            "manifest": str(MANIFEST),
+            "history": str(HISTORY)
+        }, ensure_ascii=False, indent=2))
 
 if __name__ == "__main__":
     main()

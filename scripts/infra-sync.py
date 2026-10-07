@@ -42,7 +42,7 @@ def save(path, data):
 def pkg_state():
     if not exists("dpkg-query"):
         return {}
-    out = run(["dpkg-query", "-W", "-f=%{Package}\t%{Version}\n"], 60)
+    out = run(["dpkg-query", "-W", "-f=${Package}\t${Version}\n"], 60)
     result = {}
     for line in out.splitlines():
         if "\t" in line:
@@ -172,7 +172,7 @@ def main():
 
     old = load(MANIFEST, {})
     new = observe()
-    first = not bool(old.get("packages"))
+    first = old.get("generated_at") is None
     events = [] if first else changes(old, new)
     save(MANIFEST, new)
 

@@ -14,3 +14,7 @@
 # Artefactos locales
 __pycache__/
 *.pyc
+
+# Configuración local de Termux
+.local/
+4termx-security-backup/

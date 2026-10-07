@@ -109,13 +109,21 @@ def build_tree_markdown(files):
     tree = {}
     for rel, _ in files:
         node = tree
-        for part in rel.split("/"):
-            node = node.setdefault(part, {})
+        parts = rel.split("/")
+        for index, part in enumerate(parts):
+            if index == len(parts) - 1:
+                node[part] = None
+            else:
+                node = node.setdefault(part, {})
     def emit(node, depth):
         for name in sorted(node):
-            prefix = "#" * min(depth + 2, 6)
-            lines.append(f"{prefix} {name}")
-            emit(node[name], depth + 1)
+            value = node[name]
+            if value is None:
+                lines.append(f"- {name}")
+            else:
+                prefix = "#" * min(depth + 2, 6)
+                lines.append(f"{prefix} {name}")
+                emit(value, depth + 1)
     emit(tree, 0)
     lines += [
         "",

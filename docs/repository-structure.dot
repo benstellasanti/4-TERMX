@@ -24,6 +24,8 @@ digraph RepositoryStructure {
   root -> n_README_md;
   n_docs_infrastructure_md [label="infrastructure.md", shape=note, fillcolor="white"];
   n_docs -> n_docs_infrastructure_md;
+  n_docs_pendientes_evolucion_md [label="pendientes-evolucion.md", shape=note, fillcolor="white"];
+  n_docs -> n_docs_pendientes_evolucion_md;
   n_docs_repository_map_md [label="repository-map.md", shape=note, fillcolor="white"];
   n_docs -> n_docs_repository_map_md;
   n_infrastructure_desired_state_json [label="desired-state.json", shape=note, fillcolor="white"];

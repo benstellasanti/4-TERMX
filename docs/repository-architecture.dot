@@ -35,6 +35,8 @@ digraph RepositoryArchitecture {
   root -> docs;
   doc_n_docs_infrastructure_md [label="infrastructure.md", shape=note];
   docs -> doc_n_docs_infrastructure_md;
+  doc_n_docs_pendientes_evolucion_md [label="pendientes-evolucion.md", shape=note];
+  docs -> doc_n_docs_pendientes_evolucion_md;
   doc_n_docs_repository_map_md [label="repository-map.md", shape=note];
   docs -> doc_n_docs_repository_map_md;
   workflow -> generator [label="ejecuta"];

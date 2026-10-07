@@ -17,6 +17,7 @@
 - README.md
 ## docs
 - infrastructure.md
+- pendientes-evolucion.md
 - repository-map.md
 ## infrastructure
 - desired-state.json

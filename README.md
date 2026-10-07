@@ -27,6 +27,7 @@ graph TD
     C -->|Git & SSH Keys & GitHub Actions| D((GitHub Repository))
     style B fill:#36BCF7,stroke:#333,stroke-width:2px
     style D fill:#3fb950,stroke:#333,stroke-width:2px
+```
 
 <!-- FILE-MANIFEST:START -->
 ## 📦 File Manifest Table

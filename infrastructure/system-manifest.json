@@ -4,7 +4,7 @@
       "github-4termx"
     ]
   },
-  "generated_at": "2026-10-07T01:54:36-03:00",
+  "generated_at": "2026-10-07T02:12:15-03:00",
   "generated_by": "scripts/infra-sync.py",
   "package_managers": {
     "gem": false,
@@ -148,7 +148,7 @@
     "python": "Python 3.14.6",
     "zsh": "zsh 5.9.2 (aarch64-unknown-linux-android)"
   },
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "system": {
     "architecture": "aarch64",
     "platform": "Android",

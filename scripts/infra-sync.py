@@ -242,7 +242,8 @@ def operation_matches(event, operation):
     allowed = {
         "install": {"install", "reinstall"},
         "remove": {"remove", "uninstall"},
-        "upgrade_or_downgrade": {"upgrade", "update", "full-upgrade", "dist-upgrade", "reinstall"}
+        "upgrade_or_downgrade": {"upgrade", "update", "full-upgrade", "dist-upgrade", "reinstall"},
+        "reinstall": {"reinstall"}
     }
     if op not in allowed.get(action, set()):
         return False
@@ -274,6 +275,42 @@ def find_note(manager, package, detected_at):
         if delta <= 1800 and (best is None or t > parse_time(best["timestamp"])):
             best = note
     return best
+
+def operation_events(operations, state_events):
+    events = []
+    represented = {
+        (event[1], event[2])
+        for event in state_events
+    }
+
+    for op in operations:
+        action = op.get("action")
+        manager = op.get("manager")
+
+        # update solo actualiza índices/repositorios; no representa
+        # por sí mismo un cambio de paquete.
+        if action == "update":
+            continue
+
+        names = operation_package_names(op)
+
+        # Operaciones explícitas que pueden existir aunque el estado final
+        # sea idéntico, especialmente reinstall.
+        if action == "reinstall":
+            for package in sorted(names):
+                key = (manager, package)
+                if key in represented:
+                    continue
+                events.append([
+                    "reinstall",
+                    manager,
+                    package,
+                    None,
+                    None
+                ])
+
+    return events
+
 
 def append(events, detected_at, operations):
     HISTORY.parent.mkdir(parents=True, exist_ok=True)
@@ -334,8 +371,10 @@ def main():
 
     if first:
         append([["baseline", "system", "", "", "initial_observation"]], new["generated_at"], [])
-    elif events:
-        append(events, new["generated_at"], operations)
+    else:
+        events.extend(operation_events(operations, events))
+        if events:
+            append(events, new["generated_at"], operations)
 
     if operations and OP_LOG.exists():
         save(OP_CURSOR, {"schema_version": "1.0", "processed_lines": operations[-1]["line"]})

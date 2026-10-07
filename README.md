@@ -176,3 +176,34 @@ Graphviz genera los SVG estáticos desde archivos DOT; ambos formatos quedan ver
 
 _Este bloque es mantenido por Actions. No editar manualmente entre los marcadores._
 <!-- FILE-MANIFEST:END -->
+
+---
+
+## 📌 Pendientes de evolución
+
+> **Estado del proyecto:** en evolución continua.  
+> Esta sección permite identificar rápidamente qué mejoras están pendientes y dónde se encuentra actualmente el proyecto.
+
+### 🔴 Pendiente prioritario
+
+- [ ] **Diseñar la metodología de gestión del ciclo de vida del desarrollo.**
+  - Definir el flujo desde necesidad/objetivo hasta desarrollo, pruebas, evidencia, deployment y evolución.
+  - Establecer trazabilidad entre objetivos, issues, ramas, decisiones, commits, pruebas y deployments.
+  - Diseñar la estructura documental para que una IA pueda consultar y reconstruir el contexto técnico e histórico del proyecto.
+  - Detalle completo: [`docs/pendientes-evolucion.md`](./docs/pendientes-evolucion.md)
+
+### 🟡 Mejoras de documentación y arquitectura
+
+- [ ] **Badge de estado de GitHub Actions.**
+- [ ] **Quick Start** para explicar el inicio y uso del proyecto.
+- [ ] **Arquitectura explícita** y explicación formal de componentes y flujos.
+- [ ] **Modelo de evidencia y confianza** para diferenciar observación, inferencia e historial.
+- [ ] **Design Principles** del proyecto.
+- [ ] Evaluar `SECURITY.md`.
+- [ ] Evaluar `CONTRIBUTING.md` si el proyecto comienza a recibir colaboradores.
+
+### 📍 Estado de evolución
+
+Los pendientes anteriores representan **mejoras planificadas**, no necesariamente defectos del sistema actual. El objetivo es que cada evolución futura pueda quedar documentada, validada y trazable.
+
+Para el detalle metodológico y los criterios de evolución, consultar [`docs/pendientes-evolucion.md`](./docs/pendientes-evolucion.md).

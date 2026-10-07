@@ -18,15 +18,30 @@
 
 ---
 
-## 📊 Arquitectura del Flujo de Trabajo
+## 🌳 Repository Map
 
-```mermaid
-graph TD
-    A[PC Windows / VS Code] -->|SSH Port 8022| B(Termux en Android)
-    B -->|Zsh + Autosuggestions| C[Entorno Local]
-    C -->|Git & SSH Keys & GitHub Actions| D((GitHub Repository))
-    style B fill:#36BCF7,stroke:#333,stroke-width:2px
-    style D fill:#3fb950,stroke:#333,stroke-width:2px
+El árbol se genera automáticamente desde la estructura real del repositorio. **Los directorios son ramas y los archivos son hojas**, permitiendo representar el crecimiento del proyecto sin mantener un diagrama manual.
+
+- [📄 Ver el mapa fuente en Markdown](./docs/repository-map.md)
+- [🧩 Abrir la versión interactiva Markmap](./docs/repository-map.html)
+
+> **Markmap** convierte Markdown jerárquico en un mapa mental con zoom, desplazamiento y expansión/contracción de ramas. GitHub no ejecuta JavaScript arbitrario dentro del README, por eso la vista interactiva se genera como HTML independiente. Markmap documenta oficialmente estas capacidades. citeturn1search0turn1search1
+
+### 🔄 Flujo automático
+
+```text
+Nuevo archivo/directorio
+        │
+        ▼
+     git push
+        │
+        ▼
+ GitHub Actions
+        │
+        ├── descubre estructura
+        ├── actualiza README.md
+        ├── genera repository-map.md
+        └── genera repository-map.html
 ```
 
 <!-- FILE-MANIFEST:START -->

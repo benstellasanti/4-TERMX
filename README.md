@@ -88,7 +88,7 @@ Graphviz genera los SVG estáticos desde archivos DOT; ambos formatos quedan ver
 | — | [<code>.gitignore</code>](./.gitignore) | Configuración | 279 B | Archivo Configuración del proyecto. |
 | — | [<code>.termux/termux.properties</code>](./.termux/termux.properties) | Archivo | 5.9 KB | Archivo Archivo del proyecto. |
 | — | [<code>.zshrc</code>](./.zshrc) | Configuración | 302 B | Archivo Configuración del proyecto. |
-| — | [<code>README.md</code>](./README.md) | Markdown | 7.1 KB | Documentación central del entorno Termux. |
+| — | [<code>README.md</code>](./README.md) | Markdown | 8.9 KB | Documentación central del entorno Termux. |
 | — | [<code>docs/infrastructure.md</code>](./docs/infrastructure.md) | Markdown | 1.3 KB | Archivo Markdown del proyecto. |
 | — | [<code>docs/repository-architecture.dot</code>](./docs/repository-architecture.dot) | Archivo | 2.4 KB | Archivo Archivo del proyecto. |
 | — | [<code>docs/repository-architecture.svg</code>](./docs/repository-architecture.svg) | Archivo | 18.2 KB | Archivo Archivo del proyecto. |
@@ -96,8 +96,8 @@ Graphviz genera los SVG estáticos desde archivos DOT; ambos formatos quedan ver
 | — | [<code>docs/repository-structure.dot</code>](./docs/repository-structure.dot) | Archivo | 2.9 KB | Archivo Archivo del proyecto. |
 | — | [<code>docs/repository-structure.svg</code>](./docs/repository-structure.svg) | Archivo | 17.5 KB | Archivo Archivo del proyecto. |
 | — | [<code>infrastructure/desired-state.json</code>](./infrastructure/desired-state.json) | JSON | 597 B | Archivo JSON del proyecto. |
-| — | [<code>infrastructure/history/infrastructure-history.jsonl</code>](./infrastructure/history/infrastructure-history.jsonl) | Archivo | 0 B | Archivo Archivo del proyecto. |
-| — | [<code>infrastructure/system-manifest.json</code>](./infrastructure/system-manifest.json) | JSON | 336 B | Archivo JSON del proyecto. |
+| — | [<code>infrastructure/history/infrastructure-history.jsonl</code>](./infrastructure/history/infrastructure-history.jsonl) | Archivo | 816 B | Archivo Archivo del proyecto. |
+| — | [<code>infrastructure/system-manifest.json</code>](./infrastructure/system-manifest.json) | JSON | 4.2 KB | Archivo JSON del proyecto. |
 | — | [<code>scripts/infra-sync.py</code>](./scripts/infra-sync.py) | Python | 6.9 KB | Archivo Python del proyecto. |
 | — | [<code>scripts/infra-sync.sh</code>](./scripts/infra-sync.sh) | Shell | 181 B | Archivo Shell del proyecto. |
 | — | [<code>sync-repo.sh</code>](./sync-repo.sh) | Shell | 1.1 KB | Sincronización del repositorio desde Termux. |
@@ -132,21 +132,21 @@ Graphviz genera los SVG estáticos desde archivos DOT; ambos formatos quedan ver
 </details>
 
 <details>
-<summary>📁 <strong>infrastructure</strong> — 3 archivos / 933 B</summary>
+<summary>📁 <strong>infrastructure</strong> — 3 archivos / 5.5 KB</summary>
 
 - [<code>infrastructure/desired-state.json</code>](./infrastructure/desired-state.json) — **597 B** — Archivo JSON del proyecto.
-- [<code>infrastructure/history/infrastructure-history.jsonl</code>](./infrastructure/history/infrastructure-history.jsonl) — **0 B** — Archivo Archivo del proyecto.
-- [<code>infrastructure/system-manifest.json</code>](./infrastructure/system-manifest.json) — **336 B** — Archivo JSON del proyecto.
+- [<code>infrastructure/history/infrastructure-history.jsonl</code>](./infrastructure/history/infrastructure-history.jsonl) — **816 B** — Archivo Archivo del proyecto.
+- [<code>infrastructure/system-manifest.json</code>](./infrastructure/system-manifest.json) — **4.2 KB** — Archivo JSON del proyecto.
 
 </details>
 
 <details>
-<summary>📁 <strong>raíz</strong> — 6 archivos / 21.6 KB</summary>
+<summary>📁 <strong>raíz</strong> — 6 archivos / 23.4 KB</summary>
 
 - [<code>.gitconfig</code>](./.gitconfig) — **64 B** — Archivo Configuración del proyecto.
 - [<code>.gitignore</code>](./.gitignore) — **279 B** — Archivo Configuración del proyecto.
 - [<code>.zshrc</code>](./.zshrc) — **302 B** — Archivo Configuración del proyecto.
-- [<code>README.md</code>](./README.md) — **7.1 KB** — Documentación central del entorno Termux.
+- [<code>README.md</code>](./README.md) — **8.9 KB** — Documentación central del entorno Termux.
 - [<code>sync-repo.sh</code>](./sync-repo.sh) — **1.1 KB** — Sincronización del repositorio desde Termux.
 - [<code>update_readme_tree.py</code>](./update_readme_tree.py) — **12.8 KB** — Generador automático del manifiesto y los dos grafos.
 
@@ -160,7 +160,7 @@ Graphviz genera los SVG estáticos desde archivos DOT; ambos formatos quedan ver
 
 </details>
 
-**Total actual:** 19 archivos — **80.1 KB**
+**Total actual:** 19 archivos — **86.5 KB**
 
 _Este bloque es mantenido por Actions. No editar manualmente entre los marcadores._
 <!-- FILE-MANIFEST:END -->

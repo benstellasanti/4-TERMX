@@ -1,9 +1,13 @@
-name: Actualizar File Manifest del README
+name: Actualizar mapa y File Manifest
 
 on:
   push:
     branches: [main]
   workflow_dispatch:
+
+concurrency:
+  group: repository-documentation
+  cancel-in-progress: true
 
 permissions:
   contents: write
@@ -22,17 +26,17 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: 📋 Generar File Manifest + bloques colapsables
+      - name: 📋 Generar File Manifest + Repository Map
         run: python update_readme_tree.py
 
-      - name: 🚀 Commit automático del README
+      - name: 🚀 Commit automático de documentación
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if git diff --quiet -- README.md; then
-            echo "README.md ya está actualizado."
+          if git diff --quiet -- README.md docs/repository-map.md docs/repository-map.html; then
+            echo "Documentación ya está actualizada."
             exit 0
           fi
-          git add README.md
-          git commit -m "docs: actualizar file manifest [skip ci]"
+          git add README.md docs/repository-map.md docs/repository-map.html
+          git commit -m "docs: actualizar repository map y manifest [skip ci]"
           git push

@@ -22,6 +22,7 @@
 - desired-state.json
 ### history
 - infrastructure-history.jsonl
+- pkg-operation-cursor.json
 - system-manifest.json
 ## scripts
 - infra-sync.py

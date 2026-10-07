@@ -23,7 +23,7 @@
 <text text-anchor="middle" x="129" y="-167.5" font-family="Arial" font-size="10.00">.github</text>
 </g>
 <!-- root&#45;&gt;n__github -->
-<g id="edge16" class="edge">
+<g id="edge17" class="edge">
 <title>root&#45;&gt;n__github</title>
 <path fill="none" stroke="#777777" d="M624.75,-256C499.01,-256 129,-256 129,-256 129,-256 129,-194.24 129,-194.24"/>
 <polygon fill="#777777" stroke="#777777" points="131.1,-194.24 129,-188.24 126.9,-194.24 131.1,-194.24"/>
@@ -35,7 +35,7 @@
 <text text-anchor="middle" x="214" y="-167.5" font-family="Arial" font-size="10.00">.termux</text>
 </g>
 <!-- root&#45;&gt;n__termux -->
-<g id="edge17" class="edge">
+<g id="edge18" class="edge">
 <title>root&#45;&gt;n__termux</title>
 <path fill="none" stroke="#777777" d="M624.69,-249C513.11,-249 214,-249 214,-249 214,-249 214,-194.32 214,-194.32"/>
 <polygon fill="#777777" stroke="#777777" points="216.1,-194.32 214,-188.32 211.9,-194.32 216.1,-194.32"/>
@@ -47,7 +47,7 @@
 <text text-anchor="middle" x="364" y="-167.5" font-family="Arial" font-size="10.00">docs</text>
 </g>
 <!-- root&#45;&gt;n_docs -->
-<g id="edge18" class="edge">
+<g id="edge19" class="edge">
 <title>root&#45;&gt;n_docs</title>
 <path fill="none" stroke="#777777" d="M624.96,-242C542.38,-242 364,-242 364,-242 364,-242 364,-194.17 364,-194.17"/>
 <polygon fill="#777777" stroke="#777777" points="366.1,-194.17 364,-188.17 361.9,-194.17 366.1,-194.17"/>
@@ -59,7 +59,7 @@
 <text text-anchor="middle" x="507" y="-167.5" font-family="Arial" font-size="10.00">infrastructure</text>
 </g>
 <!-- root&#45;&gt;n_infrastructure -->
-<g id="edge19" class="edge">
+<g id="edge20" class="edge">
 <title>root&#45;&gt;n_infrastructure</title>
 <path fill="none" stroke="#777777" d="M624.64,-235C577.53,-235 507,-235 507,-235 507,-235 507,-194.11 507,-194.11"/>
 <polygon fill="#777777" stroke="#777777" points="509.1,-194.11 507,-188.11 504.9,-194.11 509.1,-194.11"/>
@@ -71,7 +71,7 @@
 <text text-anchor="middle" x="591" y="-167.5" font-family="Arial" font-size="10.00">scripts</text>
 </g>
 <!-- root&#45;&gt;n_scripts -->
-<g id="edge20" class="edge">
+<g id="edge21" class="edge">
 <title>root&#45;&gt;n_scripts</title>
 <path fill="none" stroke="#777777" d="M633.67,-227.99C633.67,-205.51 633.67,-170 633.67,-170 633.67,-170 624.26,-170 624.26,-170"/>
 <polygon fill="#777777" stroke="#777777" points="624.26,-167.9 618.26,-170 624.26,-172.1 624.26,-167.9"/>
@@ -133,7 +133,7 @@
 <polygon fill="#777777" stroke="#777777" points="905.1,-194.17 903,-188.17 900.9,-194.17 905.1,-194.17"/>
 </g>
 <!-- n_sync_repo_sh -->
-<g id="node22" class="node">
+<g id="node23" class="node">
 <title>n_sync_repo_sh</title>
 <polygon fill="white" stroke="#555555" points="1028.5,-188 961.5,-188 961.5,-152 1034.5,-152 1034.5,-182 1028.5,-188"/>
 <polyline fill="none" stroke="#555555" points="1028.5,-188 1028.5,-182 "/>
@@ -141,13 +141,13 @@
 <text text-anchor="middle" x="998" y="-167.5" font-family="Arial" font-size="10.00">sync&#45;repo.sh</text>
 </g>
 <!-- root&#45;&gt;n_sync_repo_sh -->
-<g id="edge14" class="edge">
+<g id="edge15" class="edge">
 <title>root&#45;&gt;n_sync_repo_sh</title>
 <path fill="none" stroke="#777777" d="M707.04,-249C795.87,-249 998,-249 998,-249 998,-249 998,-194.32 998,-194.32"/>
 <polygon fill="#777777" stroke="#777777" points="1000.1,-194.32 998,-188.32 995.9,-194.32 1000.1,-194.32"/>
 </g>
 <!-- n_update_readme_tree_py -->
-<g id="node23" class="node">
+<g id="node24" class="node">
 <title>n_update_readme_tree_py</title>
 <polygon fill="white" stroke="#555555" points="1167.5,-188 1054.5,-188 1054.5,-152 1173.5,-152 1173.5,-182 1167.5,-188"/>
 <polyline fill="none" stroke="#555555" points="1167.5,-188 1167.5,-182 "/>
@@ -155,7 +155,7 @@
 <text text-anchor="middle" x="1114" y="-167.5" font-family="Arial" font-size="10.00">update_readme_tree.py</text>
 </g>
 <!-- root&#45;&gt;n_update_readme_tree_py -->
-<g id="edge15" class="edge">
+<g id="edge16" class="edge">
 <title>root&#45;&gt;n_update_readme_tree_py</title>
 <path fill="none" stroke="#777777" d="M707.34,-256C818.25,-256 1114,-256 1114,-256 1114,-256 1114,-194.24 1114,-194.24"/>
 <polygon fill="#777777" stroke="#777777" points="1116.1,-194.24 1114,-188.24 1111.9,-194.24 1116.1,-194.24"/>
@@ -167,7 +167,7 @@
 <text text-anchor="middle" x="42" y="-91.5" font-family="Arial" font-size="10.00">workflows</text>
 </g>
 <!-- n__github&#45;&gt;n__github_workflows -->
-<g id="edge21" class="edge">
+<g id="edge22" class="edge">
 <title>n__github&#45;&gt;n__github_workflows</title>
 <path fill="none" stroke="#777777" d="M101.95,-170C76.41,-170 42,-170 42,-170 42,-170 42,-118.01 42,-118.01"/>
 <polygon fill="#777777" stroke="#777777" points="44.1,-118.01 42,-112.01 39.9,-118.01 44.1,-118.01"/>
@@ -221,7 +221,7 @@
 <text text-anchor="middle" x="460" y="-91.5" font-family="Arial" font-size="10.00">history</text>
 </g>
 <!-- n_infrastructure&#45;&gt;n_infrastructure_history -->
-<g id="edge22" class="edge">
+<g id="edge23" class="edge">
 <title>n_infrastructure&#45;&gt;n_infrastructure_history</title>
 <path fill="none" stroke="#777777" d="M478.5,-151.99C478.5,-151.99 478.5,-118.15 478.5,-118.15"/>
 <polygon fill="#777777" stroke="#777777" points="480.6,-118.15 478.5,-112.15 476.4,-118.15 480.6,-118.15"/>
@@ -241,7 +241,7 @@
 <polygon fill="#777777" stroke="#777777" points="521.43,-118.15 519.33,-112.15 517.23,-118.15 521.43,-118.15"/>
 </g>
 <!-- n_infrastructure_system_manifest_json -->
-<g id="node19" class="node">
+<g id="node20" class="node">
 <title>n_infrastructure_system_manifest_json</title>
 <polygon fill="white" stroke="#555555" points="725,-112 621,-112 621,-76 731,-76 731,-106 725,-112"/>
 <polyline fill="none" stroke="#555555" points="725,-112 725,-106 "/>
@@ -249,13 +249,13 @@
 <text text-anchor="middle" x="676" y="-91.5" font-family="Arial" font-size="10.00">system&#45;manifest.json</text>
 </g>
 <!-- n_infrastructure&#45;&gt;n_infrastructure_system_manifest_json -->
-<g id="edge11" class="edge">
+<g id="edge12" class="edge">
 <title>n_infrastructure&#45;&gt;n_infrastructure_system_manifest_json</title>
 <path fill="none" stroke="#777777" d="M531.67,-151.85C531.67,-138.26 531.67,-122 531.67,-122 531.67,-122 629.33,-122 629.33,-122 629.33,-122 629.33,-118.21 629.33,-118.21"/>
 <polygon fill="#777777" stroke="#777777" points="631.43,-118.21 629.33,-112.21 627.23,-118.21 631.43,-118.21"/>
 </g>
 <!-- n_scripts_infra_sync_py -->
-<g id="node20" class="node">
+<g id="node21" class="node">
 <title>n_scripts_infra_sync_py</title>
 <polygon fill="white" stroke="#555555" points="818.5,-112 751.5,-112 751.5,-76 824.5,-76 824.5,-106 818.5,-112"/>
 <polyline fill="none" stroke="#555555" points="818.5,-112 818.5,-106 "/>
@@ -263,13 +263,13 @@
 <text text-anchor="middle" x="788" y="-91.5" font-family="Arial" font-size="10.00">infra&#45;sync.py</text>
 </g>
 <!-- n_scripts&#45;&gt;n_scripts_infra_sync_py -->
-<g id="edge12" class="edge">
+<g id="edge13" class="edge">
 <title>n_scripts&#45;&gt;n_scripts_infra_sync_py</title>
 <path fill="none" stroke="#777777" d="M606.67,-151.89C606.67,-142.1 606.67,-132 606.67,-132 606.67,-132 760.75,-132 760.75,-132 760.75,-132 760.75,-118.11 760.75,-118.11"/>
 <polygon fill="#777777" stroke="#777777" points="762.85,-118.11 760.75,-112.11 758.65,-118.11 762.85,-118.11"/>
 </g>
 <!-- n_scripts_infra_sync_sh -->
-<g id="node21" class="node">
+<g id="node22" class="node">
 <title>n_scripts_infra_sync_sh</title>
 <polygon fill="white" stroke="#555555" points="911.5,-112 844.5,-112 844.5,-76 917.5,-76 917.5,-106 911.5,-112"/>
 <polyline fill="none" stroke="#555555" points="911.5,-112 911.5,-106 "/>
@@ -277,7 +277,7 @@
 <text text-anchor="middle" x="881" y="-91.5" font-family="Arial" font-size="10.00">infra&#45;sync.sh</text>
 </g>
 <!-- n_scripts&#45;&gt;n_scripts_infra_sync_sh -->
-<g id="edge13" class="edge">
+<g id="edge14" class="edge">
 <title>n_scripts&#45;&gt;n_scripts_infra_sync_sh</title>
 <path fill="none" stroke="#777777" d="M612.33,-151.79C612.33,-146.45 612.33,-142 612.33,-142 612.33,-142 854.5,-142 854.5,-142 854.5,-142 854.5,-118.15 854.5,-118.15"/>
 <polygon fill="#777777" stroke="#777777" points="856.6,-118.15 854.5,-112.15 852.4,-118.15 856.6,-118.15"/>
@@ -299,16 +299,30 @@
 <!-- n_infrastructure_history_infrastructure_history_jsonl -->
 <g id="node18" class="node">
 <title>n_infrastructure_history_infrastructure_history_jsonl</title>
-<polygon fill="white" stroke="#555555" points="518,-36 396,-36 396,0 524,0 524,-30 518,-36"/>
-<polyline fill="none" stroke="#555555" points="518,-36 518,-30 "/>
-<polyline fill="none" stroke="#555555" points="524,-30 518,-30 "/>
-<text text-anchor="middle" x="460" y="-15.5" font-family="Arial" font-size="10.00">infrastructure&#45;history.jsonl</text>
+<polygon fill="white" stroke="#555555" points="444,-36 322,-36 322,0 450,0 450,-30 444,-36"/>
+<polyline fill="none" stroke="#555555" points="444,-36 444,-30 "/>
+<polyline fill="none" stroke="#555555" points="450,-30 444,-30 "/>
+<text text-anchor="middle" x="386" y="-15.5" font-family="Arial" font-size="10.00">infrastructure&#45;history.jsonl</text>
 </g>
 <!-- n_infrastructure_history&#45;&gt;n_infrastructure_history_infrastructure_history_jsonl -->
 <g id="edge10" class="edge">
 <title>n_infrastructure_history&#45;&gt;n_infrastructure_history_infrastructure_history_jsonl</title>
-<path fill="none" stroke="#777777" d="M460,-75.99C460,-75.99 460,-42.15 460,-42.15"/>
-<polygon fill="#777777" stroke="#777777" points="462.1,-42.15 460,-36.15 457.9,-42.15 462.1,-42.15"/>
+<path fill="none" stroke="#777777" d="M441.5,-75.99C441.5,-75.99 441.5,-42.15 441.5,-42.15"/>
+<polygon fill="#777777" stroke="#777777" points="443.6,-42.15 441.5,-36.15 439.4,-42.15 443.6,-42.15"/>
+</g>
+<!-- n_infrastructure_history_pkg_operation_cursor_json -->
+<g id="node19" class="node">
+<title>n_infrastructure_history_pkg_operation_cursor_json</title>
+<polygon fill="white" stroke="#555555" points="590,-36 470,-36 470,0 596,0 596,-30 590,-36"/>
+<polyline fill="none" stroke="#555555" points="590,-36 590,-30 "/>
+<polyline fill="none" stroke="#555555" points="596,-30 590,-30 "/>
+<text text-anchor="middle" x="533" y="-15.5" font-family="Arial" font-size="10.00">pkg&#45;operation&#45;cursor.json</text>
+</g>
+<!-- n_infrastructure_history&#45;&gt;n_infrastructure_history_pkg_operation_cursor_json -->
+<g id="edge11" class="edge">
+<title>n_infrastructure_history&#45;&gt;n_infrastructure_history_pkg_operation_cursor_json</title>
+<path fill="none" stroke="#777777" d="M478.5,-75.99C478.5,-75.99 478.5,-42.15 478.5,-42.15"/>
+<polygon fill="#777777" stroke="#777777" points="480.6,-42.15 478.5,-36.15 476.4,-42.15 480.6,-42.15"/>
 </g>
 </g>
 </svg>

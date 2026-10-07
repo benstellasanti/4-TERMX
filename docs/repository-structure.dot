@@ -30,6 +30,8 @@ digraph RepositoryStructure {
   n_infrastructure -> n_infrastructure_desired_state_json;
   n_infrastructure_history_infrastructure_history_jsonl [label="infrastructure-history.jsonl", shape=note, fillcolor="white"];
   n_infrastructure_history -> n_infrastructure_history_infrastructure_history_jsonl;
+  n_infrastructure_history_pkg_operation_cursor_json [label="pkg-operation-cursor.json", shape=note, fillcolor="white"];
+  n_infrastructure_history -> n_infrastructure_history_pkg_operation_cursor_json;
   n_infrastructure_system_manifest_json [label="system-manifest.json", shape=note, fillcolor="white"];
   n_infrastructure -> n_infrastructure_system_manifest_json;
   n_scripts_infra_sync_py [label="infra-sync.py", shape=note, fillcolor="white"];

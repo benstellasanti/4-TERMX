@@ -18,6 +18,19 @@
 
 ---
 
+## 🏗️ Infrastructure as Data
+
+El entorno Termux se audita mediante un manifiesto estructurado y un historial de reconciliación:
+
+- `infrastructure/system-manifest.json` — estado observado.
+- `infrastructure/desired-state.json` — estado deseado.
+- `infrastructure/history/infrastructure-history.jsonl` — cambios detectados.
+- `scripts/infra-sync.py` — motor de auditoría.
+
+El sistema detecta instalaciones, eliminaciones y cambios de versión aunque el cambio haya sido realizado manualmente. Cuando no existe información sobre el motivo, registra `actor: unknown` y `reason: null`; no inventa contexto.
+
+La reconciliación se ejecuta automáticamente al iniciar Zsh.
+
 ## 🗺️ Repository Maps
 
 El repositorio se representa automáticamente de **dos formas complementarias**:

@@ -38,6 +38,7 @@ graph TD
 |---|---|---|---:|---|
 | — | [<code>.gitconfig</code>](./.gitconfig) | Configuración | 64 B | Archivo Configuración del proyecto. |
 | — | [<code>.github/workflows/update-tree.yml</code>](./.github/workflows/update-tree.yml) | GitHub Actions | 975 B | Workflow de automatización de GitHub Actions. |
+| — | [<code>.gitignore</code>](./.gitignore) | Configuración | 179 B | Archivo Configuración del proyecto. |
 | — | [<code>.ssh/authorized_keys</code>](./.ssh/authorized_keys) | Archivo | 0 B | Archivo Archivo del proyecto. |
 | — | [<code>.ssh/id_ed25519</code>](./.ssh/id_ed25519) | Archivo | 419 B | Archivo Archivo del proyecto. |
 | — | [<code>.ssh/id_ed25519.pub</code>](./.ssh/id_ed25519.pub) | Archivo | 106 B | Archivo Archivo del proyecto. |
@@ -78,9 +79,10 @@ graph TD
 </details>
 
 <details>
-<summary>📁 <strong>raíz</strong> — 6 archivos / 12.0 KB</summary>
+<summary>📁 <strong>raíz</strong> — 7 archivos / 12.2 KB</summary>
 
 - [<code>.gitconfig</code>](./.gitconfig) — **64 B** — Archivo Configuración del proyecto.
+- [<code>.gitignore</code>](./.gitignore) — **179 B** — Archivo Configuración del proyecto.
 - [<code>.termux_authinfo</code>](./.termux_authinfo) — **20 B** — Archivo Configuración del proyecto.
 - [<code>.zshrc</code>](./.zshrc) — **84 B** — Archivo Configuración del proyecto.
 - [<code>README.md</code>](./README.md) — **5.1 KB** — Documentación central del entorno Termux.
@@ -89,7 +91,7 @@ graph TD
 
 </details>
 
-**Total actual:** 13 archivos — **20.3 KB**
+**Total actual:** 14 archivos — **20.5 KB**
 
 _Este bloque es mantenido por Actions. No editar manualmente entre los marcadores._
 <!-- FILE-MANIFEST:END -->

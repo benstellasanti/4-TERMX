@@ -92,13 +92,15 @@ def changed_files():
             result.append((labels.get(parts[0][0], parts[0]), parts[-1]))
     return result
 
-def files_in_repo():
+def files_in_repo(include_generated=False):
     result = []
     for path in ROOT.rglob("*"):
         if not path.is_file():
             continue
         rel = path.relative_to(ROOT).as_posix()
-        if rel.startswith(EXCLUDED_PREFIXES) or rel in GENERATED_GRAPH_FILES:
+        if rel.startswith(EXCLUDED_PREFIXES):
+            continue
+        if not include_generated and rel in GENERATED_GRAPH_FILES:
             continue
         result.append((rel, path.stat().st_size))
     return sorted(result)
@@ -294,7 +296,7 @@ def build_manifest(files):
     return "\n".join(lines)
 
 def main():
-    files = files_in_repo()
+    files = files_in_repo(include_generated=False)
     docs = ROOT / "docs"
     docs.mkdir(exist_ok=True)
 
@@ -304,8 +306,9 @@ def main():
     render_graph(GRAPH_STRUCTURE_DOT, GRAPH_STRUCTURE_SVG)
     render_graph(GRAPH_ARCH_DOT, GRAPH_ARCH_SVG)
 
+    manifest_files = files_in_repo(include_generated=True)
     content = README.read_text(encoding="utf-8")
-    manifest = build_manifest(files)
+    manifest = build_manifest(manifest_files)
     if START in content and END in content:
         before, rest = content.split(START, 1)
         _, after = rest.split(END, 1)

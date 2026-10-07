@@ -88,7 +88,7 @@ Graphviz genera los SVG estáticos desde archivos DOT; ambos formatos quedan ver
 | — | [<code>.gitignore</code>](./.gitignore) | Configuración | 398 B | Archivo Configuración del proyecto. |
 | — | [<code>.termux/termux.properties</code>](./.termux/termux.properties) | Archivo | 5.9 KB | Archivo Archivo del proyecto. |
 | — | [<code>.zshrc</code>](./.zshrc) | Configuración | 319 B | Archivo Configuración del proyecto. |
-| — | [<code>README.md</code>](./README.md) | Markdown | 10.2 KB | Documentación central del entorno Termux. |
+| — | [<code>README.md</code>](./README.md) | Markdown | 10.5 KB | Documentación central del entorno Termux. |
 | — | [<code>docs/infrastructure.md</code>](./docs/infrastructure.md) | Markdown | 4.7 KB | Archivo Markdown del proyecto. |
 | — | [<code>docs/repository-architecture.dot</code>](./docs/repository-architecture.dot) | Archivo | 2.4 KB | Archivo Archivo del proyecto. |
 | — | [<code>docs/repository-architecture.svg</code>](./docs/repository-architecture.svg) | Archivo | 18.2 KB | Archivo Archivo del proyecto. |
@@ -148,12 +148,12 @@ Graphviz genera los SVG estáticos desde archivos DOT; ambos formatos quedan ver
 </details>
 
 <details>
-<summary>📁 <strong>raíz</strong> — 6 archivos / 24.8 KB</summary>
+<summary>📁 <strong>raíz</strong> — 6 archivos / 25.0 KB</summary>
 
 - [<code>.gitconfig</code>](./.gitconfig) — **64 B** — Archivo Configuración del proyecto.
 - [<code>.gitignore</code>](./.gitignore) — **398 B** — Archivo Configuración del proyecto.
 - [<code>.zshrc</code>](./.zshrc) — **319 B** — Archivo Configuración del proyecto.
-- [<code>README.md</code>](./README.md) — **10.2 KB** — Documentación central del entorno Termux.
+- [<code>README.md</code>](./README.md) — **10.5 KB** — Documentación central del entorno Termux.
 - [<code>sync-repo.sh</code>](./sync-repo.sh) — **1.1 KB** — Sincronización del repositorio desde Termux.
 - [<code>update_readme_tree.py</code>](./update_readme_tree.py) — **12.8 KB** — Generador automático del manifiesto y los dos grafos.
 
@@ -172,7 +172,7 @@ Graphviz genera los SVG estáticos desde archivos DOT; ambos formatos quedan ver
 
 </details>
 
-**Total actual:** 25 archivos — **110.3 KB**
+**Total actual:** 25 archivos — **110.6 KB**
 
 _Este bloque es mantenido por Actions. No editar manualmente entre los marcadores._
 <!-- FILE-MANIFEST:END -->

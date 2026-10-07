@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0",
+  "generated_by": "scripts/infra-sync.py",
+  "purpose": "Observed current state of the Termux environment.",
+  "generated_at": null,
+  "system": {},
+  "runtimes": {},
+  "package_managers": {},
+  "packages": {"pkg": {}, "pip": {}, "npm_global": {}, "gem": {}},
+  "configuration": {"ssh_host_profiles": []}
+}

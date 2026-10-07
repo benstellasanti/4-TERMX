@@ -4,7 +4,7 @@
       "github-4termx"
     ]
   },
-  "generated_at": "2026-10-07T01:34:33-03:00",
+  "generated_at": "2026-10-07T01:54:36-03:00",
   "generated_by": "scripts/infra-sync.py",
   "package_managers": {
     "gem": false,
@@ -36,6 +36,7 @@
       "dos2unix": "7.5.7",
       "dpkg": "1.22.6-5",
       "ed": "1.22.6",
+      "figlet": "2.2.5-3",
       "findutils": "4.11.0",
       "gawk": "5.3.2",
       "gdbm": "1.26-1",

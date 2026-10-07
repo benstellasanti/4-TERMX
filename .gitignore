@@ -21,3 +21,6 @@ __pycache__/
 
 # Caché local de Termux
 .cache/
+
+# Local infrastructure operation capture
+.infra-pkg-operations.log

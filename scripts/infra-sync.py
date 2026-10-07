@@ -12,6 +12,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = ROOT / "infrastructure/system-manifest.json"
 HISTORY = ROOT / "infrastructure/history/infrastructure-history.jsonl"
+PKG_OPERATION_LOG = Path.home() / ".infra-pkg-operations.log"
+PKG_OPERATION_CURSOR = ROOT / "infrastructure/history/pkg-operation-cursor.json"
 
 def run(cmd, timeout=30):
     try:
@@ -144,15 +146,80 @@ def changes(old, new):
                 events.append(["upgrade_or_downgrade", manager, name, before[name], after[name]])
     return events
 
-def append(events, detected_at):
+def load_pkg_operations():
+    if not PKG_OPERATION_LOG.exists():
+        return []
+
+    try:
+        lines = PKG_OPERATION_LOG.read_text(
+            encoding="utf-8", errors="ignore"
+        ).splitlines()
+    except OSError:
+        return []
+
+    cursor = load(PKG_OPERATION_CURSOR, {"processed_lines": 0})
+    processed_lines = int(cursor.get("processed_lines", 0) or 0)
+
+    operations = []
+    for line_number, line in enumerate(lines, start=1):
+        if line_number <= processed_lines:
+            continue
+
+        parts = line.split("\t", 2)
+        if len(parts) != 3:
+            continue
+
+        occurred_at, action, command = parts
+        operations.append({
+            "line": line_number,
+            "occurred_at": occurred_at.strip() or None,
+            "action": action.strip(),
+            "command": command.strip()
+        })
+
+    return operations
+
+
+def append(events, detected_at, pkg_operations=None):
     HISTORY.parent.mkdir(parents=True, exist_ok=True)
+    pkg_operations = list(pkg_operations or [])
+
     with HISTORY.open("a", encoding="utf-8") as f:
         for action, manager, package, old, new in events:
+            occurred_at = None
+            occurred_at_source = None
+            evidence_command = "dpkg-query/pip/npm/gem observation"
+
+            if manager == "pkg" and pkg_operations:
+                for operation in pkg_operations:
+                    op = operation["action"]
+                    command = operation["command"]
+
+                    # pkg update solo actualiza índices; no explica
+                    # directamente un cambio de paquete observado.
+                    if op == "update":
+                        continue
+
+                    matches_action = (
+                        (action == "install" and op in {"install", "reinstall"}) or
+                        (action == "remove" and op in {"remove", "uninstall"}) or
+                        (action == "upgrade_or_downgrade" and
+                         op in {"upgrade", "full-upgrade", "dist-upgrade"})
+                    )
+
+                    if not matches_action:
+                        continue
+
+                    occurred_at = operation["occurred_at"]
+                    occurred_at_source = "pkg_wrapper"
+                    evidence_command = command
+                    break
+
             record = {
                 "schema_version": "1.1",
                 "detected_at": detected_at,
-                "occurred_at": None,
-                "occurred_at_source": None,
+                "occurred_at": occurred_at,
+                "occurred_at_source": occurred_at_source,
                 "actor": "unknown",
                 "actor_source": None,
                 "source": "reconciliation",
@@ -166,7 +233,7 @@ def append(events, detected_at):
                 "reason_source": None,
                 "evidence": {
                     "method": "state_comparison",
-                    "command": "dpkg-query/pip/npm/gem observation"
+                    "command": evidence_command
                 },
                 "status": "observed"
             }
@@ -182,12 +249,19 @@ def main():
     new = observe()
     first = old.get("generated_at") is None
     events = [] if first else changes(old, new)
+    pkg_operations = load_pkg_operations()
     save(MANIFEST, new)
 
     if first:
         append([["baseline", "system", "", "", "initial_observation"]], new["generated_at"])
     elif events:
-        append(events, new["generated_at"])
+        append(events, new["generated_at"], pkg_operations)
+
+    if pkg_operations:
+        save(
+            PKG_OPERATION_CURSOR,
+            {"schema_version": "1.0", "processed_lines": pkg_operations[-1]["line"]}
+        )
 
     if not args.no_git and (first or events) and exists("git"):
         subprocess.run(["git", "add", str(MANIFEST), str(HISTORY)], cwd=ROOT, check=False)

@@ -56,9 +56,11 @@ Nuevo archivo/directorio
 | — | [<code>.gitignore</code>](./.gitignore) | Configuración | 179 B | Archivo Configuración del proyecto. |
 | — | [<code>.termux/termux.properties</code>](./.termux/termux.properties) | Archivo | 5.9 KB | Archivo Archivo del proyecto. |
 | — | [<code>.zshrc</code>](./.zshrc) | Configuración | 84 B | Archivo Configuración del proyecto. |
-| — | [<code>README.md</code>](./README.md) | Markdown | 5.3 KB | Documentación central del entorno Termux. |
+| — | [<code>README.md</code>](./README.md) | Markdown | 4.7 KB | Documentación central del entorno Termux. |
+| — | [<code>docs/repository-map.html</code>](./docs/repository-map.html) | Archivo | 636 B | Archivo Archivo del proyecto. |
+| — | [<code>docs/repository-map.md</code>](./docs/repository-map.md) | Markdown | 543 B | Archivo Markdown del proyecto. |
 | — | [<code>sync-repo.sh</code>](./sync-repo.sh) | Shell | 1.1 KB | Sincronización del repositorio desde Termux. |
-| — | [<code>update_readme_tree.py</code>](./update_readme_tree.py) | Python | 7.5 KB | Generador automático del manifiesto y Repository Map. |
+| — | [<code>update_readme_tree.py</code>](./update_readme_tree.py) | Python | 7.7 KB | Generador automático del manifiesto y Repository Map. |
 
 ### 📂 Bloques colapsables por componente
 
@@ -77,18 +79,26 @@ Nuevo archivo/directorio
 </details>
 
 <details>
-<summary>📁 <strong>raíz</strong> — 6 archivos / 14.2 KB</summary>
+<summary>📁 <strong>docs</strong> — 2 archivos / 1.2 KB</summary>
+
+- [<code>docs/repository-map.html</code>](./docs/repository-map.html) — **636 B** — Archivo Archivo del proyecto.
+- [<code>docs/repository-map.md</code>](./docs/repository-map.md) — **543 B** — Archivo Markdown del proyecto.
+
+</details>
+
+<details>
+<summary>📁 <strong>raíz</strong> — 6 archivos / 13.8 KB</summary>
 
 - [<code>.gitconfig</code>](./.gitconfig) — **64 B** — Archivo Configuración del proyecto.
 - [<code>.gitignore</code>](./.gitignore) — **179 B** — Archivo Configuración del proyecto.
 - [<code>.zshrc</code>](./.zshrc) — **84 B** — Archivo Configuración del proyecto.
-- [<code>README.md</code>](./README.md) — **5.3 KB** — Documentación central del entorno Termux.
+- [<code>README.md</code>](./README.md) — **4.7 KB** — Documentación central del entorno Termux.
 - [<code>sync-repo.sh</code>](./sync-repo.sh) — **1.1 KB** — Sincronización del repositorio desde Termux.
-- [<code>update_readme_tree.py</code>](./update_readme_tree.py) — **7.5 KB** — Generador automático del manifiesto y Repository Map.
+- [<code>update_readme_tree.py</code>](./update_readme_tree.py) — **7.7 KB** — Generador automático del manifiesto y Repository Map.
 
 </details>
 
-**Total actual:** 8 archivos — **21.2 KB**
+**Total actual:** 10 archivos — **21.9 KB**
 
 _Este bloque es mantenido por Actions. No editar manualmente entre los marcadores._
 <!-- FILE-MANIFEST:END -->

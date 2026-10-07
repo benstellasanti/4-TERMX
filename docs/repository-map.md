@@ -6,15 +6,18 @@
 ## 🧭 Mapa
 
 # 4-TERMX
+- .gitconfig
 ## .github
 ### workflows
 - update-tree.yml
+- .gitignore
 ## .termux
 - termux.properties
-## .gitconfig
-## .gitignore
-## .zshrc
+- .zshrc
 - README.md
+## docs
+- repository-map.html
+- repository-map.md
 - sync-repo.sh
 - update_readme_tree.py
 

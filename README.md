@@ -18,18 +18,29 @@
 
 ---
 
-## 🌳 Repository Map
+## 🗺️ Repository Maps
 
-El árbol se genera automáticamente desde la estructura real del repositorio. **Los directorios son ramas y los archivos son hojas**, permitiendo representar el crecimiento del proyecto sin mantener un diagrama manual.
+El repositorio se representa automáticamente de **dos formas complementarias**:
 
-- [📄 Ver el mapa fuente en Markdown](./docs/repository-map.md)
-- [🧩 Abrir la versión interactiva Markmap](./docs/repository-map.html)
+### 1. 🌳 Estructura del repositorio
 
-> **Markmap** convierte Markdown jerárquico en un mapa mental con zoom, desplazamiento y expansión/contracción de ramas. GitHub no ejecuta JavaScript arbitrario dentro del README, por eso la vista interactiva se genera como HTML independiente. Markmap documenta oficialmente estas capacidades. citeturn1search0turn1search1
+Muestra la jerarquía real: **directorios como ramas y archivos como hojas**.
 
-### 🔄 Flujo automático
+![4-TERMX — Estructura del repositorio](./docs/repository-structure.svg)
 
-```text
+[📄 Ver fuente DOT](./docs/repository-structure.dot)
+
+### 2. 🧠 Arquitectura y relaciones
+
+Muestra las relaciones funcionales principales: **GitHub → GitHub Actions → workflow → generador → README/docs**.
+
+![4-TERMX — Arquitectura y relaciones](./docs/repository-architecture.svg)
+
+[📄 Ver fuente DOT](./docs/repository-architecture.dot)
+
+### 🔄 Actualización automática
+
+~~~text
 Nuevo archivo/directorio
         │
         ▼
@@ -38,11 +49,19 @@ Nuevo archivo/directorio
         ▼
  GitHub Actions
         │
-        ├── descubre estructura
+        ├── descubre la estructura actual
+        ├── genera el grafo estructural
+        ├── genera el grafo de arquitectura
         ├── actualiza README.md
-        ├── genera repository-map.md
-        └── genera repository-map.html
-```
+        └── actualiza el File Manifest
+        │
+        ▼
+ Commit automático de documentación
+~~~
+
+**Actualización automática:** el workflow se ejecuta en cada push a main y también puede ejecutarse manualmente. Cuando agregues, modifiques o elimines archivos en main, los dos grafos se vuelven a generar a partir del estado real del repositorio.
+
+Graphviz genera los SVG estáticos desde archivos DOT; ambos formatos quedan versionados dentro de docs/.
 
 <!-- FILE-MANIFEST:START -->
 ## 📦 File Manifest Table

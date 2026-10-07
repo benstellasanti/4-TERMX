@@ -22,6 +22,8 @@ digraph RepositoryStructure {
   root -> n__zshrc;
   n_README_md [label="README.md", shape=note, fillcolor="white"];
   root -> n_README_md;
+  n_docs_conocimiento_4_termx_md [label="conocimiento-4-termx.md", shape=note, fillcolor="white"];
+  n_docs -> n_docs_conocimiento_4_termx_md;
   n_docs_infrastructure_md [label="infrastructure.md", shape=note, fillcolor="white"];
   n_docs -> n_docs_infrastructure_md;
   n_docs_pendientes_evolucion_md [label="pendientes-evolucion.md", shape=note, fillcolor="white"];

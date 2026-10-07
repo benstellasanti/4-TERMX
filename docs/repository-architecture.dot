@@ -33,6 +33,8 @@ digraph RepositoryArchitecture {
   root -> readme;
   docs [label="docs", shape=box, fillcolor="#eeeeee"];
   root -> docs;
+  doc_n_docs_conocimiento_4_termx_md [label="conocimiento-4-termx.md", shape=note];
+  docs -> doc_n_docs_conocimiento_4_termx_md;
   doc_n_docs_infrastructure_md [label="infrastructure.md", shape=note];
   docs -> doc_n_docs_infrastructure_md;
   doc_n_docs_pendientes_evolucion_md [label="pendientes-evolucion.md", shape=note];

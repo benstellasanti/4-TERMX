@@ -16,6 +16,7 @@
 - .zshrc
 - README.md
 ## docs
+- conocimiento-4-termx.md
 - infrastructure.md
 - pendientes-evolucion.md
 - repository-map.md

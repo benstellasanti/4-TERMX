@@ -18,3 +18,6 @@ __pycache__/
 # Configuración local de Termux
 .local/
 4termx-security-backup/
+
+# Caché local de Termux
+.cache/

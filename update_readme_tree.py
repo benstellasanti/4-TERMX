@@ -8,7 +8,7 @@ def generate_mermaid_string():
     
     startpath = "."
     for root, dirs, files in os.walk(startpath):
-        if '.git' in root or '.ssh' in root or '__pycache__' in root:
+        if '.git' in root or '.ssh' in root or '__pycache__' in root or '.github' in root:
             continue
         
         relpath = os.path.relpath(root, startpath)
@@ -25,7 +25,7 @@ def generate_mermaid_string():
             lines.append(f"    {parent} --> {child}[\"📁 {d}\"];")
             
         for f in files:
-            if f.startswith('.') or f == "update_readme_tree.py": continue
+            if f == "update_readme_tree.py": continue
             child = f"{parent}_{f.replace('.', '_')}".replace("-", "_")
             lines.append(f"    {parent} --> {child}[\"📄 {f}\"];")
             
@@ -50,7 +50,6 @@ def update_readme():
         end_idx = content.find(end_tag)
         updated_content = content[:start_idx] + "\n" + new_mermaid + "\n" + content[end_idx:]
     else:
-        # Si no existen las etiquetas, las añade al final
         updated_content = content + f"\n\n## 📂 Estructura del Repositorio\n{start_tag}\n{new_mermaid}\n{end_tag}\n"
 
     with open(readme_path, "w", encoding="utf-8") as f:

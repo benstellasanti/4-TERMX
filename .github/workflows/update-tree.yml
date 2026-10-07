@@ -1,0 +1,27 @@
+name: Actualizar Estructura en README
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  update-tree:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Clonar repositorio
+        uses: actions/checkout@v4
+
+      - name: 🐍 Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: ⚙️ Ejecutar script generador de árbol
+        run: python update_readme_tree.py
+
+      - name: 🚀 Commit y Push automáticos si hay cambios
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git diff --quiet && git diff --staged --quiet || (git commit -m "docs: actualización automática del diagrama de archivos [skip ci]" && git push)

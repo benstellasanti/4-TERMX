@@ -72,10 +72,10 @@ Graphviz genera los SVG estáticos desde archivos DOT; ambos formatos quedan ver
 |---|---|---|---:|---|
 | — | [<code>.gitconfig</code>](./.gitconfig) | Configuración | 64 B | Archivo Configuración del proyecto. |
 | — | [<code>.github/workflows/update-tree.yml</code>](./.github/workflows/update-tree.yml) | GitHub Actions | 1.5 KB | Workflow de automatización de GitHub Actions. |
-| — | [<code>.gitignore</code>](./.gitignore) | Configuración | 179 B | Archivo Configuración del proyecto. |
+| — | [<code>.gitignore</code>](./.gitignore) | Configuración | 279 B | Archivo Configuración del proyecto. |
 | — | [<code>.termux/termux.properties</code>](./.termux/termux.properties) | Archivo | 5.9 KB | Archivo Archivo del proyecto. |
 | — | [<code>.zshrc</code>](./.zshrc) | Configuración | 84 B | Archivo Configuración del proyecto. |
-| — | [<code>README.md</code>](./README.md) | Markdown | 5.4 KB | Documentación central del entorno Termux. |
+| — | [<code>README.md</code>](./README.md) | Markdown | 6.5 KB | Documentación central del entorno Termux. |
 | — | [<code>docs/repository-architecture.dot</code>](./docs/repository-architecture.dot) | Archivo | 2.1 KB | Archivo Archivo del proyecto. |
 | — | [<code>docs/repository-architecture.svg</code>](./docs/repository-architecture.svg) | Archivo | 15.7 KB | Archivo Archivo del proyecto. |
 | — | [<code>docs/repository-map.md</code>](./docs/repository-map.md) | Markdown | 740 B | Archivo Markdown del proyecto. |
@@ -112,18 +112,18 @@ Graphviz genera los SVG estáticos desde archivos DOT; ambos formatos quedan ver
 </details>
 
 <details>
-<summary>📁 <strong>raíz</strong> — 6 archivos / 19.5 KB</summary>
+<summary>📁 <strong>raíz</strong> — 6 archivos / 20.7 KB</summary>
 
 - [<code>.gitconfig</code>](./.gitconfig) — **64 B** — Archivo Configuración del proyecto.
-- [<code>.gitignore</code>](./.gitignore) — **179 B** — Archivo Configuración del proyecto.
+- [<code>.gitignore</code>](./.gitignore) — **279 B** — Archivo Configuración del proyecto.
 - [<code>.zshrc</code>](./.zshrc) — **84 B** — Archivo Configuración del proyecto.
-- [<code>README.md</code>](./README.md) — **5.4 KB** — Documentación central del entorno Termux.
+- [<code>README.md</code>](./README.md) — **6.5 KB** — Documentación central del entorno Termux.
 - [<code>sync-repo.sh</code>](./sync-repo.sh) — **1.1 KB** — Sincronización del repositorio desde Termux.
 - [<code>update_readme_tree.py</code>](./update_readme_tree.py) — **12.8 KB** — Generador automático del manifiesto y los dos grafos.
 
 </details>
 
-**Total actual:** 13 archivos — **57.4 KB**
+**Total actual:** 13 archivos — **58.5 KB**
 
 _Este bloque es mantenido por Actions. No editar manualmente entre los marcadores._
 <!-- FILE-MANIFEST:END -->

@@ -24,3 +24,5 @@ __pycache__/
 
 # Local infrastructure operation capture
 .infra-pkg-operations.log
+.infra-package-operations.jsonl
+.infra-notes.jsonl

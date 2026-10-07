@@ -46,7 +46,7 @@ graph TD
 | — | [<code>.termux/termux.properties</code>](./.termux/termux.properties) | Archivo | 5.9 KB | Archivo Archivo del proyecto. |
 | — | [<code>.termux_authinfo</code>](./.termux_authinfo) | Configuración | 20 B | Archivo Configuración del proyecto. |
 | — | [<code>.zshrc</code>](./.zshrc) | Configuración | 84 B | Archivo Configuración del proyecto. |
-| — | [<code>README.md</code>](./README.md) | Markdown | 1.4 KB | Documentación central del entorno Termux. |
+| — | [<code>README.md</code>](./README.md) | Markdown | 5.1 KB | Documentación central del entorno Termux. |
 | — | [<code>sync-repo.sh</code>](./sync-repo.sh) | Shell | 1.1 KB | Archivo Shell del proyecto. |
 | — | [<code>update_readme_tree.py</code>](./update_readme_tree.py) | Python | 5.7 KB | Generador automático del File Manifest del README. |
 
@@ -78,18 +78,18 @@ graph TD
 </details>
 
 <details>
-<summary>📁 <strong>raíz</strong> — 6 archivos / 8.3 KB</summary>
+<summary>📁 <strong>raíz</strong> — 6 archivos / 12.0 KB</summary>
 
 - [<code>.gitconfig</code>](./.gitconfig) — **64 B** — Archivo Configuración del proyecto.
 - [<code>.termux_authinfo</code>](./.termux_authinfo) — **20 B** — Archivo Configuración del proyecto.
 - [<code>.zshrc</code>](./.zshrc) — **84 B** — Archivo Configuración del proyecto.
-- [<code>README.md</code>](./README.md) — **1.4 KB** — Documentación central del entorno Termux.
+- [<code>README.md</code>](./README.md) — **5.1 KB** — Documentación central del entorno Termux.
 - [<code>sync-repo.sh</code>](./sync-repo.sh) — **1.1 KB** — Archivo Shell del proyecto.
 - [<code>update_readme_tree.py</code>](./update_readme_tree.py) — **5.7 KB** — Generador automático del File Manifest del README.
 
 </details>
 
-**Total actual:** 13 archivos — **16.5 KB**
+**Total actual:** 13 archivos — **20.3 KB**
 
 _Este bloque es mantenido por Actions. No editar manualmente entre los marcadores._
 <!-- FILE-MANIFEST:END -->

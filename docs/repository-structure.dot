@@ -36,6 +36,8 @@ digraph RepositoryStructure {
   n_infrastructure -> n_infrastructure_system_manifest_json;
   n_scripts_infra_audit_py [label="infra-audit.py", shape=note, fillcolor="white"];
   n_scripts -> n_scripts_infra_audit_py;
+  n_scripts_infra_git_sync_sh [label="infra-git-sync.sh", shape=note, fillcolor="white"];
+  n_scripts -> n_scripts_infra_git_sync_sh;
   n_scripts_infra_note_py [label="infra-note.py", shape=note, fillcolor="white"];
   n_scripts -> n_scripts_infra_note_py;
   n_scripts_infra_sync_py [label="infra-sync.py", shape=note, fillcolor="white"];

@@ -26,6 +26,7 @@
 - system-manifest.json
 ## scripts
 - infra-audit.py
+- infra-git-sync.sh
 - infra-note.py
 - infra-sync.py
 - infra-sync.sh

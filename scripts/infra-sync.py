@@ -144,14 +144,17 @@ def changes(old, new):
                 events.append(["upgrade_or_downgrade", manager, name, before[name], after[name]])
     return events
 
-def append(events, timestamp):
+def append(events, detected_at):
     HISTORY.parent.mkdir(parents=True, exist_ok=True)
     with HISTORY.open("a", encoding="utf-8") as f:
         for action, manager, package, old, new in events:
             record = {
-                "schema_version": "1.0",
-                "timestamp": timestamp,
+                "schema_version": "1.1",
+                "detected_at": detected_at,
+                "occurred_at": None,
+                "occurred_at_source": None,
                 "actor": "unknown",
+                "actor_source": None,
                 "source": "reconciliation",
                 "confidence": "detected",
                 "action": action,
@@ -160,6 +163,11 @@ def append(events, timestamp):
                 "from": old,
                 "to": new,
                 "reason": None,
+                "reason_source": None,
+                "evidence": {
+                    "method": "state_comparison",
+                    "command": "dpkg-query/pip/npm/gem observation"
+                },
                 "status": "observed"
             }
             f.write(json.dumps(record, ensure_ascii=False, sort_keys=True) + "\n")

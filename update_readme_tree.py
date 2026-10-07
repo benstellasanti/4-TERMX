@@ -1,13 +1,17 @@
 #!/usr/bin/env python3
-"""Generate the automatic File Manifest section of README.md."""
+"""Generate the automatic repository manifest and Markmap sources."""
 from pathlib import Path
+import html
 import os
 import subprocess
 
 ROOT = Path(__file__).resolve().parent
 README = ROOT / "README.md"
+MAP_MD = ROOT / "docs" / "repository-map.md"
+MAP_HTML = ROOT / "docs" / "repository-map.html"
 START = "<!-- FILE-MANIFEST:START -->"
 END = "<!-- FILE-MANIFEST:END -->"
+EXCLUDED_PREFIXES = (".git/", ".ssh/", ".termux_authinfo")
 
 TYPE_MAP = {
     ".py": "Python", ".sh": "Shell", ".md": "Markdown",
@@ -25,7 +29,8 @@ DESCRIPTIONS = {
     "rag_local.py": "Implementación local de RAG.",
     "rag_simple.py": "Implementación simplificada de RAG.",
     "sync-menu.sh": "Menú de sincronización y operaciones Git.",
-    "update_readme_tree.py": "Generador automático del File Manifest del README.",
+    "sync-repo.sh": "Sincronización del repositorio desde Termux.",
+    "update_readme_tree.py": "Generador automático del manifiesto y Repository Map.",
 }
 
 def size_text(size):
@@ -46,11 +51,11 @@ def description(rel):
     if rel.startswith(".github/workflows/"):
         return "Workflow de automatización de GitHub Actions."
     if rel.startswith("agente/core/"):
-        return "Lógica central del agente, modelos, memoria, configuración o pruebas."
+        return "Lógica central del agente."
     if rel.startswith("agente/tools/"):
-        return "Herramienta del agente para archivos, sistema o servicios."
+        return "Herramienta del agente."
     if rel.startswith("codex_local/"):
-        return "Componente local de Codex: configuración, ejecución, herramientas o pruebas."
+        return "Componente local de Codex."
     if rel.startswith("pxe-winpe/scripts/"):
         return "Script operativo del flujo PXE/WinPE."
     if rel.startswith("pxe-winpe/config/"):
@@ -85,32 +90,78 @@ def files_in_repo():
         if not path.is_file():
             continue
         rel = path.relative_to(ROOT).as_posix()
-        if rel.split("/")[0] == ".git":
+        if rel.startswith(EXCLUDED_PREFIXES):
             continue
         result.append((rel, path.stat().st_size))
     return sorted(result)
 
-def build_manifest():
-    files = files_in_repo()
+def build_tree_markdown(files):
+    lines = [
+        "# 🌳 4-TERMX — Repository Map",
+        "",
+        "> Generado automáticamente por GitHub Actions a partir de la estructura real del repositorio.",
+        "> Los directorios y archivos excluidos por seguridad no aparecen en este mapa.",
+        "",
+        "## 🧭 Mapa",
+        "",
+        "# 4-TERMX",
+    ]
+    tree = {}
+    for rel, _ in files:
+        node = tree
+        for part in rel.split("/"):
+            node = node.setdefault(part, {})
+    def emit(node, depth):
+        for name in sorted(node):
+            prefix = "#" * min(depth + 2, 6)
+            lines.append(f"{prefix} {name}")
+            emit(node[name], depth + 1)
+    emit(tree, 0)
+    lines += [
+        "",
+        "## 🔗 Vista interactiva",
+        "",
+        "Abrir repository-map.html para explorar el mismo árbol con Markmap (zoom, desplazamiento y expandir/contraer ramas).",
+        "",
+    ]
+    return "\n".join(lines)
+
+def build_tree_html(markdown):
+    payload = html.escape(markdown, quote=False)
+    return f"""<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4-TERMX — Repository Map</title>
+<style>html,body,#mindmap{{width:100%;height:100%;margin:0}}</style>
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/markmap-autoloader@0.18.12"></script>
+<script type="text/template">
+{payload}
+</script>
+</body>
+</html>
+"""
+
+def build_manifest(files):
     total = sum(size for _, size in files)
     lines = [
         START,
         "## 📦 File Manifest Table",
         "",
-        "> **Generado automáticamente por GitHub Actions.** Esta tabla representa el estado actual de los archivos rastreados del repositorio.",
+        "> **Generado automáticamente por GitHub Actions.** Representa los archivos visibles del repositorio; secretos y material SSH están excluidos.",
         "",
         "| Estado | Archivo | Tipo | Tamaño | Función |",
         "|---|---|---|---:|---|",
     ]
-
     changed = dict(changed_files())
     for rel, size in files:
         status = changed.get(rel, "—")
         link = "[<code>" + rel + "</code>](./" + rel + ")"
-        lines.append(
-            f"| {status} | {link} | {file_type(Path(rel))} | "
-            f"{size_text(size)} | {description(rel)} |"
-        )
+        lines.append(f"| {status} | {link} | {file_type(Path(rel))} | {size_text(size)} | {description(rel)} |")
 
     lines += ["", "### 📂 Bloques colapsables por componente", ""]
     groups = {}
@@ -146,8 +197,15 @@ def build_manifest():
     return "\n".join(lines)
 
 def main():
+    files = files_in_repo()
+    docs = ROOT / "docs"
+    docs.mkdir(exist_ok=True)
+    map_markdown = build_tree_markdown(files)
+    MAP_MD.write_text(map_markdown, encoding="utf-8")
+    MAP_HTML.write_text(build_tree_html(map_markdown), encoding="utf-8")
+
     content = README.read_text(encoding="utf-8")
-    manifest = build_manifest()
+    manifest = build_manifest(files)
     if START in content and END in content:
         before, rest = content.split(START, 1)
         _, after = rest.split(END, 1)

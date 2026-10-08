@@ -1,12 +1,22 @@
 #!/data/data/com.termux/files/usr/bin/python
 from __future__ import annotations
 
+import os
 import shutil
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "docs" / "canvas"
-DESTINATION = Path.home() / "storage" / "shared" / "Documents" / "4-TERM MX"
+
+# Destino oficial de Canvas en Termux/Obsidian.
+# Se puede sobrescribir con CANVAS_DESTINATION si alguna instalación futura lo requiere.
+DESTINATION = Path(
+    os.environ.get(
+        "CANVAS_DESTINATION",
+        str(Path.home() / "storage" / "shared" / "Documents" / "4-TERM MX"),
+    )
+).expanduser()
+
 
 def main() -> int:
     if not SOURCE.is_dir():
@@ -36,6 +46,7 @@ def main() -> int:
     print(f"Sincronización Canvas completada: {len(source_files)} archivo(s).")
     print(f"Destino Obsidian: {DESTINATION}")
     return 0
+
 
 if __name__ == "__main__":
     raise SystemExit(main())

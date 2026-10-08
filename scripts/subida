@@ -6,33 +6,43 @@ cd "$ROOT"
 
 REMOTE="origin"
 BRANCH="main"
+LOCAL_ONLY="storage"
 
 fail() {
-  printf '\n[DETENIDO] %s\n' "$1" >&2
+  printf "\n[DETENIDO] %s\n" "$1" >&2
   exit 1
 }
 
-printf '=== SUBIDA SEGURA: Termux -> GitHub ===\n'
+git_relevant_status() {
+  git status --porcelain -- . ":(exclude)$LOCAL_ONLY" ":(exclude)$LOCAL_ONLY/**"
+}
+
+printf "=== SUBIDA SEGURA: Termux -> GitHub ===\n"
 
 command -v git >/dev/null 2>&1 || fail "Git no está disponible."
 git rev-parse --is-inside-work-tree >/dev/null 2>&1 || fail "No estamos dentro de un repositorio Git."
 [ "$(git symbolic-ref --short -q HEAD || true)" = "$BRANCH" ] || fail "La rama actual no es $BRANCH."
+git ls-files --error-unmatch -- "$LOCAL_ONLY" >/dev/null 2>&1 && fail "$LOCAL_ONLY/ está rastreado por Git; no se excluirá automáticamente."
 git diff --name-only --diff-filter=U | grep -q . && fail "Hay conflictos sin resolver antes de subir."
 git remote get-url "$REMOTE" >/dev/null 2>&1 || fail "No existe el remoto $REMOTE."
 
-printf '[1/8] Revisando cambios locales...\n'
+printf "[1/8] Revisando cambios locales...\n"
 git diff --check || fail "Hay errores de whitespace en cambios locales."
 git diff --cached --check || fail "Hay errores de whitespace en cambios preparados."
 
-STATUS="$(git status --porcelain)"
+STATUS="$(git_relevant_status)"
 if [ -z "$STATUS" ]; then
-  printf '  [INFO] No hay cambios locales para subir.\n'
+  printf "  [INFO] No hay cambios locales para subir.\n"
 else
-  printf '  [CAMBIOS DETECTADOS]\n'
-  printf '%s\n' "$STATUS"
+  printf "  [CAMBIOS DETECTADOS]\n"
+  printf "%s\n" "$STATUS"
 fi
 
-printf '[2/8] Consultando GitHub...\n'
+if [ -d "$ROOT/$LOCAL_ONLY" ] || [ -L "$ROOT/$LOCAL_ONLY" ]; then
+  printf "  [INFO] %s/ queda excluido del commit por ser almacenamiento local de Termux.\n" "$LOCAL_ONLY"
+fi
+
+printf "[2/8] Consultando GitHub...\n"
 git fetch --prune "$REMOTE" || fail "No se pudo actualizar la información del remoto."
 
 LOCAL="$(git rev-parse HEAD)"
@@ -40,65 +50,65 @@ REMOTE_SHA="$(git rev-parse "$REMOTE/$BRANCH")"
 BASE="$(git merge-base HEAD "$REMOTE/$BRANCH")"
 
 if [ "$LOCAL" = "$REMOTE_SHA" ] && [ -z "$STATUS" ]; then
-  printf '  [OK] Termux y GitHub ya están sincronizados.\n'
-  printf '\n=== SUBIDA NO NECESARIA ===\n'
+  printf "  [OK] Termux y GitHub ya están sincronizados.\n"
+  printf "\n=== SUBIDA NO NECESARIA ===\n"
   exit 0
 fi
 
 if [ "$BASE" != "$LOCAL" ] && [ "$LOCAL" != "$REMOTE_SHA" ]; then
-  printf '  [ALERTA] GitHub tiene cambios que Termux todavía no contiene.\n'
-  printf '  [INFO] Primero se integrarán con rebase; no se hará force push.\n'
+  printf "  [ALERTA] GitHub tiene cambios que Termux todavía no contiene.\n"
+  printf "  [INFO] Primero se integrarán con rebase; no se hará force push.\n"
 fi
 
-printf '[3/8] Preparando cambios locales...\n'
+printf "[3/8] Preparando cambios locales...\n"
 if [ -n "$STATUS" ]; then
-  git add -A || fail "No se pudieron preparar los cambios."
+  git add -A -- . ":(exclude)$LOCAL_ONLY" ":(exclude)$LOCAL_ONLY/**" || fail "No se pudieron preparar los cambios."
   git diff --cached --name-status
   git diff --cached --check || fail "Los cambios preparados contienen errores de whitespace."
   git commit -m "sync: actualizar cambios desde Termux" || fail "No se pudo crear el commit local."
 else
-  printf '  [OK] No había cambios nuevos que commitear.\n'
+  printf "  [OK] No había cambios nuevos que commitear.\n"
 fi
 
-printf '[4/8] Verificando divergencia después del commit...\n'
+printf "[4/8] Verificando divergencia después del commit...\n"
 LOCAL="$(git rev-parse HEAD)"
 REMOTE_SHA="$(git rev-parse "$REMOTE/$BRANCH")"
 BASE="$(git merge-base HEAD "$REMOTE/$BRANCH")"
 
 if [ "$LOCAL" != "$REMOTE_SHA" ] && [ "$BASE" != "$REMOTE_SHA" ]; then
-  printf '[5/8] Rebase seguro sobre GitHub...\n'
+  printf "[5/8] Rebase seguro sobre GitHub...\n"
   if ! git rebase "$REMOTE/$BRANCH"; then
-    printf '\n[CONFLICTO] El rebase necesita intervención.\n'
-    printf 'No se ejecutará ningún push forzado.\n'
-    printf 'Revisa: git status\n'
+    printf "\n[CONFLICTO] El rebase necesita intervención.\n"
+    printf "No se ejecutará ningún push forzado.\n"
+    printf "Revisa: git status\n"
     exit 2
   fi
 else
-  printf '[5/8] No es necesario hacer rebase.\n'
+  printf "[5/8] No es necesario hacer rebase.\n"
 fi
 
 git diff --name-only --diff-filter=U | grep -q . && fail "Quedaron conflictos sin resolver."
 git diff --check || fail "La verificación final detectó errores de whitespace."
-git status --short
+git_relevant_status
 
-printf '[6/8] Verificación final antes del push...\n'
+printf "[6/8] Verificación final antes del push...\n"
 LOCAL="$(git rev-parse HEAD)"
 REMOTE_SHA="$(git rev-parse "$REMOTE/$BRANCH")"
 BASE="$(git merge-base HEAD "$REMOTE/$BRANCH")"
 
 [ "$LOCAL" != "$REMOTE_SHA" ] || {
-  printf '  [OK] No quedan commits pendientes.\n'
-  printf '\n=== SUBIDA COMPLETADA ===\n'
+  printf "  [OK] No quedan commits pendientes.\n"
+  printf "\n=== SUBIDA COMPLETADA ===\n"
   exit 0
 }
 
 [ "$BASE" = "$REMOTE_SHA" ] || fail "El historial sigue divergente; se detiene antes del push."
 
-printf '[7/8] Subiendo a GitHub...\n'
+printf "[7/8] Subiendo a GitHub...\n"
 git push "$REMOTE" "$BRANCH" || fail "GitHub rechazó el push. No se usó force push."
 
-printf '[8/8] Verificando remoto...\n'
+printf "[8/8] Verificando remoto...\n"
 git fetch "$REMOTE" || fail "No se pudo verificar el estado remoto."
 [ "$(git rev-parse HEAD)" = "$(git rev-parse "$REMOTE/$BRANCH")" ] || fail "La verificación final detectó diferencias entre Termux y GitHub."
 
-printf '\n=== SUBIDA COMPLETADA ===\n'
+printf "\n=== SUBIDA COMPLETADA ===\n"

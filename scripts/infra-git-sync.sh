@@ -12,4 +12,7 @@ if ! git diff --cached --quiet; then
 fi
 
 git pull --rebase origin main
+
+"\${PYTHON:-python}" "$ROOT/scripts/sync-canvas-to-obsidian.py"
+
 git push origin main

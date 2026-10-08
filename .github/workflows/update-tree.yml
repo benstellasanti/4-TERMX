@@ -47,6 +47,6 @@ jobs:
             exit 0
           fi
 
-          git add README.md docs/repository-map.md docs/repository-structure.dot docs/repository-structure.svg docs/repository-architecture.dot docs/repository-architecture.svg
+          git add README.md docs/repository-map.md docs/repository-structure.dot docs/repository-structure.svg docs/repository-architecture.dot docs/repository-architecture.svg docs/canvas
           git commit -m "docs: actualizar mapas y manifest [skip ci]"
           git push

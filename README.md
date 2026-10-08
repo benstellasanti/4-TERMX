@@ -115,7 +115,7 @@ Graphviz genera los SVG estáticos desde archivos DOT; ambos formatos quedan ver
 | — | [<code>scripts/install-infra-wrappers.sh</code>](./scripts/install-infra-wrappers.sh) | Shell | 840 B | Archivo Shell del proyecto. |
 | — | [<code>scripts/install-sync-commands.sh</code>](./scripts/install-sync-commands.sh) | Shell | 584 B | Archivo Shell del proyecto. |
 | — | [<code>scripts/subida</code>](./scripts/subida) | Archivo | 4.2 KB | Archivo Archivo del proyecto. |
-| — | [<code>scripts/sync-canvas-to-obsidian.py</code>](./scripts/sync-canvas-to-obsidian.py) | Python | 1.5 KB | Archivo Python del proyecto. |
+| — | [<code>scripts/sync-canvas-to-obsidian.py</code>](./scripts/sync-canvas-to-obsidian.py) | Python | 1.8 KB | Archivo Python del proyecto. |
 | — | [<code>sync-repo.sh</code>](./sync-repo.sh) | Shell | 1.1 KB | Sincronización del repositorio desde Termux. |
 | — | [<code>update_readme_tree.py</code>](./update_readme_tree.py) | Python | 13.6 KB | Generador automático del manifiesto y los dos grafos. |
 
@@ -176,7 +176,7 @@ Graphviz genera los SVG estáticos desde archivos DOT; ambos formatos quedan ver
 </details>
 
 <details>
-<summary>📁 <strong>scripts</strong> — 11 archivos / 30.3 KB</summary>
+<summary>📁 <strong>scripts</strong> — 11 archivos / 30.6 KB</summary>
 
 - [<code>scripts/bajada</code>](./scripts/bajada) — **4.6 KB** — Archivo Archivo del proyecto.
 - [<code>scripts/infra-audit.py</code>](./scripts/infra-audit.py) — **2.2 KB** — Archivo Python del proyecto.
@@ -188,11 +188,11 @@ Graphviz genera los SVG estáticos desde archivos DOT; ambos formatos quedan ver
 - [<code>scripts/install-infra-wrappers.sh</code>](./scripts/install-infra-wrappers.sh) — **840 B** — Archivo Shell del proyecto.
 - [<code>scripts/install-sync-commands.sh</code>](./scripts/install-sync-commands.sh) — **584 B** — Archivo Shell del proyecto.
 - [<code>scripts/subida</code>](./scripts/subida) — **4.2 KB** — Archivo Archivo del proyecto.
-- [<code>scripts/sync-canvas-to-obsidian.py</code>](./scripts/sync-canvas-to-obsidian.py) — **1.5 KB** — Archivo Python del proyecto.
+- [<code>scripts/sync-canvas-to-obsidian.py</code>](./scripts/sync-canvas-to-obsidian.py) — **1.8 KB** — Archivo Python del proyecto.
 
 </details>
 
-**Total actual:** 35 archivos — **182.5 KB**
+**Total actual:** 35 archivos — **182.8 KB**
 
 _Este bloque es mantenido por Actions. No editar manualmente entre los marcadores._
 <!-- FILE-MANIFEST:END -->

@@ -13,7 +13,7 @@ SOURCE = ROOT / "docs" / "canvas"
 DESTINATION = Path(
     os.environ.get(
         "CANVAS_DESTINATION",
-        str(Path.home() / "storage" / "shared" / "Documents" / "4-TERM MX"),
+        str(Path.home() / "storage" / "shared" / "Documents" / "4-TERMX"),
     )
 ).expanduser()
 

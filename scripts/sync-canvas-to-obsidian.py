@@ -26,6 +26,13 @@ def main() -> int:
 
     source_files = {p.relative_to(SOURCE) for p in SOURCE.rglob("*.canvas")}
 
+    # README es la referencia textual que acompaña a los Canvas en Obsidian.
+    readme_source = ROOT / "README.md"
+    readme_target = DESTINATION / "README.md"
+    if readme_source.is_file():
+        shutil.copy2(readme_source, readme_target)
+        print(f"[README] README.md -> {readme_target}")
+
     for relative in sorted(source_files):
         source = SOURCE / relative
         target = DESTINATION / relative
@@ -43,7 +50,7 @@ def main() -> int:
         stale.unlink()
         print(f"[Canvas] eliminado obsoleto: {stale}")
 
-    print(f"Sincronización Canvas completada: {len(source_files)} archivo(s).")
+    print(f"Sincronización Obsidian completada: {len(source_files)} Canvas + README.md.")
     print(f"Destino Obsidian: {DESTINATION}")
     return 0
 

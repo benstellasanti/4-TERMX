@@ -88,7 +88,7 @@ Graphviz genera los SVG estáticos desde archivos DOT; ambos formatos quedan ver
 | — | [<code>.gitignore</code>](./.gitignore) | Configuración | 398 B | Archivo Configuración del proyecto. |
 | — | [<code>.termux/termux.properties</code>](./.termux/termux.properties) | Archivo | 5.9 KB | Archivo Archivo del proyecto. |
 | — | [<code>.zshrc</code>](./.zshrc) | Configuración | 319 B | Archivo Configuración del proyecto. |
-| — | [<code>README.md</code>](./README.md) | Markdown | 14.0 KB | Documentación central del entorno Termux. |
+| — | [<code>README.md</code>](./README.md) | Markdown | 14.7 KB | Documentación central del entorno Termux. |
 | — | [<code>docs/canvas/repository-architecture.canvas</code>](./docs/canvas/repository-architecture.canvas) | Archivo | 8.4 KB | Archivo Archivo del proyecto. |
 | — | [<code>docs/canvas/repository-structure.canvas</code>](./docs/canvas/repository-structure.canvas) | Archivo | 12.2 KB | Archivo Archivo del proyecto. |
 | — | [<code>docs/conocimiento-4-termx.md</code>](./docs/conocimiento-4-termx.md) | Markdown | 2.4 KB | Archivo Markdown del proyecto. |
@@ -115,7 +115,7 @@ Graphviz genera los SVG estáticos desde archivos DOT; ambos formatos quedan ver
 | — | [<code>scripts/install-infra-wrappers.sh</code>](./scripts/install-infra-wrappers.sh) | Shell | 840 B | Archivo Shell del proyecto. |
 | — | [<code>scripts/install-sync-commands.sh</code>](./scripts/install-sync-commands.sh) | Shell | 584 B | Archivo Shell del proyecto. |
 | — | [<code>scripts/subida</code>](./scripts/subida) | Archivo | 3.7 KB | Archivo Archivo del proyecto. |
-| — | [<code>scripts/sync-canvas-to-obsidian.py</code>](./scripts/sync-canvas-to-obsidian.py) | Python | 1.2 KB | Archivo Python del proyecto. |
+| — | [<code>scripts/sync-canvas-to-obsidian.py</code>](./scripts/sync-canvas-to-obsidian.py) | Python | 1.5 KB | Archivo Python del proyecto. |
 | — | [<code>sync-repo.sh</code>](./sync-repo.sh) | Shell | 1.1 KB | Sincronización del repositorio desde Termux. |
 | — | [<code>update_readme_tree.py</code>](./update_readme_tree.py) | Python | 13.6 KB | Generador automático del manifiesto y los dos grafos. |
 
@@ -164,19 +164,19 @@ Graphviz genera los SVG estáticos desde archivos DOT; ambos formatos quedan ver
 </details>
 
 <details>
-<summary>📁 <strong>raíz</strong> — 6 archivos / 29.5 KB</summary>
+<summary>📁 <strong>raíz</strong> — 6 archivos / 30.2 KB</summary>
 
 - [<code>.gitconfig</code>](./.gitconfig) — **64 B** — Archivo Configuración del proyecto.
 - [<code>.gitignore</code>](./.gitignore) — **398 B** — Archivo Configuración del proyecto.
 - [<code>.zshrc</code>](./.zshrc) — **319 B** — Archivo Configuración del proyecto.
-- [<code>README.md</code>](./README.md) — **14.0 KB** — Documentación central del entorno Termux.
+- [<code>README.md</code>](./README.md) — **14.7 KB** — Documentación central del entorno Termux.
 - [<code>sync-repo.sh</code>](./sync-repo.sh) — **1.1 KB** — Sincronización del repositorio desde Termux.
 - [<code>update_readme_tree.py</code>](./update_readme_tree.py) — **13.6 KB** — Generador automático del manifiesto y los dos grafos.
 
 </details>
 
 <details>
-<summary>📁 <strong>scripts</strong> — 11 archivos / 28.9 KB</summary>
+<summary>📁 <strong>scripts</strong> — 11 archivos / 29.2 KB</summary>
 
 - [<code>scripts/bajada</code>](./scripts/bajada) — **3.9 KB** — Archivo Archivo del proyecto.
 - [<code>scripts/infra-audit.py</code>](./scripts/infra-audit.py) — **2.2 KB** — Archivo Python del proyecto.
@@ -188,11 +188,11 @@ Graphviz genera los SVG estáticos desde archivos DOT; ambos formatos quedan ver
 - [<code>scripts/install-infra-wrappers.sh</code>](./scripts/install-infra-wrappers.sh) — **840 B** — Archivo Shell del proyecto.
 - [<code>scripts/install-sync-commands.sh</code>](./scripts/install-sync-commands.sh) — **584 B** — Archivo Shell del proyecto.
 - [<code>scripts/subida</code>](./scripts/subida) — **3.7 KB** — Archivo Archivo del proyecto.
-- [<code>scripts/sync-canvas-to-obsidian.py</code>](./scripts/sync-canvas-to-obsidian.py) — **1.2 KB** — Archivo Python del proyecto.
+- [<code>scripts/sync-canvas-to-obsidian.py</code>](./scripts/sync-canvas-to-obsidian.py) — **1.5 KB** — Archivo Python del proyecto.
 
 </details>
 
-**Total actual:** 35 archivos — **180.5 KB**
+**Total actual:** 35 archivos — **181.4 KB**
 
 _Este bloque es mantenido por Actions. No editar manualmente entre los marcadores._
 <!-- FILE-MANIFEST:END -->

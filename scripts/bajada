@@ -7,34 +7,47 @@ cd "$ROOT"
 REMOTE="origin"
 BRANCH="main"
 SYNC_CANVAS="$ROOT/scripts/sync-canvas-to-obsidian.py"
+LOCAL_ONLY="storage"
 
 fail() {
-  printf '\n[DETENIDO] %s\n' "$1" >&2
+  printf "\n[DETENIDO] %s\n" "$1" >&2
   exit 1
 }
 
-printf '=== BAJADA SEGURA: GitHub -> Termux ===\n'
+git_relevant_status() {
+  git status --porcelain -- . ":(exclude)$LOCAL_ONLY" ":(exclude)$LOCAL_ONLY/**"
+}
+
+git_relevant_untracked() {
+  git ls-files --others --exclude-standard -- . ":(exclude)$LOCAL_ONLY" ":(exclude)$LOCAL_ONLY/**"
+}
+
+printf "=== BAJADA SEGURA: GitHub -> Termux ===\n"
 
 command -v git >/dev/null 2>&1 || fail "Git no está disponible."
 git rev-parse --is-inside-work-tree >/dev/null 2>&1 || fail "No estamos dentro de un repositorio Git."
 [ "$(git symbolic-ref --short -q HEAD || true)" = "$BRANCH" ] || fail "La rama actual no es $BRANCH."
-git diff --quiet --exit-code || true
+git ls-files --error-unmatch -- "$LOCAL_ONLY" >/dev/null 2>&1 && fail "$LOCAL_ONLY/ está rastreado por Git; no se excluirá automáticamente."
 git diff --check || fail "Hay errores de whitespace en cambios locales."
 git diff --cached --check || fail "Hay errores de whitespace en cambios preparados."
 git diff --name-only --diff-filter=U | grep -q . && fail "Hay conflictos sin resolver."
 
 git remote get-url "$REMOTE" >/dev/null 2>&1 || fail "No existe el remoto $REMOTE."
 
-printf '[1/8] Estado local...\n'
+printf "[1/8] Estado local...\n"
 DIRTY=0
-if ! git diff --quiet || ! git diff --cached --quiet || [ -n "$(git ls-files --others --exclude-standard)" ]; then
+if ! git diff --quiet || ! git diff --cached --quiet || [ -n "$(git_relevant_untracked)" ]; then
   DIRTY=1
-  printf '  [AVISO] Hay cambios locales. Se preservarán mediante stash.\n'
+  printf "  [AVISO] Hay cambios locales. Se preservarán mediante stash, excluyendo %s/.\n" "$LOCAL_ONLY"
 else
-  printf '  [OK] Árbol de trabajo limpio.\n'
+  printf "  [OK] Árbol de trabajo relevante limpio.\n"
 fi
 
-printf '[2/8] Consultando GitHub...\n'
+if [ -d "$ROOT/$LOCAL_ONLY" ] || [ -L "$ROOT/$LOCAL_ONLY" ]; then
+  printf "  [INFO] %s/ es almacenamiento local de Termux y queda fuera del protocolo Git.\n" "$LOCAL_ONLY"
+fi
+
+printf "[2/8] Consultando GitHub...\n"
 git fetch --prune "$REMOTE" || fail "No se pudo actualizar la información del remoto."
 
 LOCAL="$(git rev-parse HEAD)"
@@ -42,70 +55,70 @@ REMOTE_SHA="$(git rev-parse "$REMOTE/$BRANCH")"
 BASE="$(git merge-base HEAD "$REMOTE/$BRANCH")"
 
 if [ "$LOCAL" = "$REMOTE_SHA" ]; then
-  printf '  [OK] Termux y GitHub ya están sincronizados.\n'
+  printf "  [OK] Termux y GitHub ya están sincronizados.\n"
   if [ -f "$SYNC_CANVAS" ]; then
-    printf '[8/8] Sincronizando Canvas local...\n'
+    printf "[8/8] Sincronizando Canvas hacia Documents/4-TERMX...\n"
     "${PYTHON:-python}" "$SYNC_CANVAS" || fail "Falló la sincronización de Canvas."
   fi
-  printf '\n=== BAJADA COMPLETADA ===\n'
+  printf "\n=== BAJADA COMPLETADA ===\n"
   exit 0
 fi
 
 if [ "$BASE" = "$REMOTE_SHA" ]; then
-  printf '  [OK] GitHub no tiene cambios nuevos.\n'
-  printf '  [INFO] Termux tiene commits locales pendientes; no se sobrescriben.\n'
+  printf "  [OK] GitHub no tiene cambios nuevos.\n"
+  printf "  [INFO] Termux tiene commits locales pendientes; no se sobrescriben.\n"
   if [ "$DIRTY" -eq 1 ]; then
-    printf '[3/8] No se modifica el árbol local porque existen cambios sin commit.\n'
+    printf "[3/8] No se modifica el árbol local porque existen cambios sin commit.\n"
   fi
-  printf '\n=== BAJADA NO NECESARIA ===\n'
+  printf "\n=== BAJADA NO NECESARIA ===\n"
   exit 0
 fi
 
 if [ "$BASE" != "$LOCAL" ]; then
-  printf '  [ALERTA] Existe divergencia entre Termux y GitHub.\n'
-  printf '  [INFO] Se intentará rebase; si aparece un conflicto, se detendrá sin forzar nada.\n'
+  printf "  [ALERTA] Existe divergencia entre Termux y GitHub.\n"
+  printf "  [INFO] Se intentará rebase; si aparece un conflicto, se detendrá sin forzar nada.\n"
 fi
 
 STASH_CREATED=0
 if [ "$DIRTY" -eq 1 ]; then
-  printf '[3/8] Preservando cambios locales...\n'
-  git stash push -u -m "bajada-auto-$(date +%Y%m%d-%H%M%S)" >/dev/null || fail "No se pudieron preservar los cambios locales."
+  printf "[3/8] Preservando cambios locales (excluyendo %s/)...\n" "$LOCAL_ONLY"
+  git stash push -u -m "bajada-auto-$(date +%Y%m%d-%H%M%S)" -- . ":(exclude)$LOCAL_ONLY" ":(exclude)$LOCAL_ONLY/**" >/dev/null || fail "No se pudieron preservar los cambios locales."
   STASH_CREATED=1
 fi
 
-printf '[4/8] Integrando GitHub con rebase seguro...\n'
+printf "[4/8] Integrando GitHub con rebase seguro...\n"
 if ! git rebase "$REMOTE/$BRANCH"; then
-  printf '\n[CONFLICTO] El rebase necesita intervención.\n'
-  printf 'El estado y cualquier stash quedan preservados.\n'
-  printf 'Para continuar manualmente: git status\n'
+  printf "\n[CONFLICTO] El rebase necesita intervención.\n"
+  printf "El estado y cualquier stash quedan preservados.\n"
+  printf "Para continuar manualmente: git status\n"
   exit 2
 fi
 
 if [ "$STASH_CREATED" -eq 1 ]; then
-  printf '[5/8] Restaurando cambios locales...\n'
+  printf "[5/8] Restaurando cambios locales...\n"
   if ! git stash pop; then
-    printf '\n[CONFLICTO] Los cambios locales chocan con lo descargado.\n'
-    printf 'El stash no se elimina automáticamente.\n'
-    printf 'Revisa: git status && git stash list\n'
+    printf "\n[CONFLICTO] Los cambios locales chocan con lo descargado.\n"
+    printf "El stash no se elimina automáticamente.\n"
+    printf "Revisa: git status && git stash list\n"
     exit 3
   fi
 else
-  printf '[5/8] No había cambios locales que restaurar.\n'
+  printf "[5/8] No había cambios locales que restaurar.\n"
 fi
 
 git diff --check || fail "La verificación posterior detectó errores de whitespace."
 git diff --cached --check || fail "La verificación posterior detectó errores preparados."
 git diff --name-only --diff-filter=U | grep -q . && fail "Quedaron conflictos sin resolver."
 
-printf '[6/8] Verificación final de Git...\n'
-git status --short
-printf '[7/8] GitHub -> Termux completado sin force push.\n'
+printf "[6/8] Verificación final de Git...\n"
+git_relevant_status
+printf "[7/8] GitHub -> Termux completado sin force push.\n"
 
 if [ -f "$SYNC_CANVAS" ]; then
-  printf '[8/8] Sincronizando Canvas hacia Documents/4-TERM MX...\n'
+  printf "[8/8] Sincronizando Canvas hacia Documents/4-TERMX...\n"
   "${PYTHON:-python}" "$SYNC_CANVAS" || fail "Git terminó correctamente, pero falló la sincronización de Canvas."
 else
-  printf '[8/8] No existe sincronizador de Canvas; se omite.\n'
+  printf "[8/8] No existe sincronizador de Canvas; se omite.\n"
 fi
 
-printf '\n=== BAJADA COMPLETADA ===\n'
+printf "\n=== BAJADA COMPLETADA ===\n"

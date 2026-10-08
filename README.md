@@ -88,23 +88,24 @@ Graphviz genera los SVG estáticos desde archivos DOT; ambos formatos quedan ver
 | — | [<code>.gitignore</code>](./.gitignore) | Configuración | 398 B | Archivo Configuración del proyecto. |
 | — | [<code>.termux/termux.properties</code>](./.termux/termux.properties) | Archivo | 5.9 KB | Archivo Archivo del proyecto. |
 | — | [<code>.zshrc</code>](./.zshrc) | Configuración | 319 B | Archivo Configuración del proyecto. |
-| — | [<code>README.md</code>](./README.md) | Markdown | 13.7 KB | Documentación central del entorno Termux. |
+| — | [<code>README.md</code>](./README.md) | Markdown | 14.0 KB | Documentación central del entorno Termux. |
 | — | [<code>docs/canvas/repository-architecture.canvas</code>](./docs/canvas/repository-architecture.canvas) | Archivo | 8.4 KB | Archivo Archivo del proyecto. |
-| — | [<code>docs/canvas/repository-structure.canvas</code>](./docs/canvas/repository-structure.canvas) | Archivo | 11.2 KB | Archivo Archivo del proyecto. |
+| — | [<code>docs/canvas/repository-structure.canvas</code>](./docs/canvas/repository-structure.canvas) | Archivo | 12.2 KB | Archivo Archivo del proyecto. |
 | — | [<code>docs/conocimiento-4-termx.md</code>](./docs/conocimiento-4-termx.md) | Markdown | 2.4 KB | Archivo Markdown del proyecto. |
 | — | [<code>docs/infrastructure.md</code>](./docs/infrastructure.md) | Markdown | 4.7 KB | Archivo Markdown del proyecto. |
 | — | [<code>docs/pendientes-evolucion.md</code>](./docs/pendientes-evolucion.md) | Markdown | 7.5 KB | Archivo Markdown del proyecto. |
 | — | [<code>docs/repository-architecture.dot</code>](./docs/repository-architecture.dot) | Archivo | 2.7 KB | Archivo Archivo del proyecto. |
 | — | [<code>docs/repository-architecture.svg</code>](./docs/repository-architecture.svg) | Archivo | 21.3 KB | Archivo Archivo del proyecto. |
-| — | [<code>docs/repository-map.md</code>](./docs/repository-map.md) | Markdown | 1.1 KB | Archivo Markdown del proyecto. |
-| — | [<code>docs/repository-structure.dot</code>](./docs/repository-structure.dot) | Archivo | 4.5 KB | Archivo Archivo del proyecto. |
-| — | [<code>docs/repository-structure.svg</code>](./docs/repository-structure.svg) | Archivo | 27.4 KB | Archivo Archivo del proyecto. |
+| — | [<code>docs/repository-map.md</code>](./docs/repository-map.md) | Markdown | 1.2 KB | Archivo Markdown del proyecto. |
+| — | [<code>docs/repository-structure.dot</code>](./docs/repository-structure.dot) | Archivo | 4.8 KB | Archivo Archivo del proyecto. |
+| — | [<code>docs/repository-structure.svg</code>](./docs/repository-structure.svg) | Archivo | 29.7 KB | Archivo Archivo del proyecto. |
 | — | [<code>docs/svg2canvas.py</code>](./docs/svg2canvas.py) | Python | 12.4 KB | Archivo Python del proyecto. |
 | — | [<code>infrastructure/desired-state.json</code>](./infrastructure/desired-state.json) | JSON | 597 B | Archivo JSON del proyecto. |
 | — | [<code>infrastructure/history/infrastructure-history.jsonl</code>](./infrastructure/history/infrastructure-history.jsonl) | Archivo | 2.6 KB | Archivo Archivo del proyecto. |
 | — | [<code>infrastructure/history/package-operation-cursor.json</code>](./infrastructure/history/package-operation-cursor.json) | JSON | 54 B | Archivo JSON del proyecto. |
 | — | [<code>infrastructure/history/pkg-operation-cursor.json</code>](./infrastructure/history/pkg-operation-cursor.json) | JSON | 54 B | Archivo JSON del proyecto. |
 | — | [<code>infrastructure/system-manifest.json</code>](./infrastructure/system-manifest.json) | JSON | 4.2 KB | Archivo JSON del proyecto. |
+| — | [<code>scripts/bajada</code>](./scripts/bajada) | Archivo | 3.9 KB | Archivo Archivo del proyecto. |
 | — | [<code>scripts/infra-audit.py</code>](./scripts/infra-audit.py) | Python | 2.2 KB | Archivo Python del proyecto. |
 | — | [<code>scripts/infra-git-sync.sh</code>](./scripts/infra-git-sync.sh) | Shell | 463 B | Archivo Shell del proyecto. |
 | — | [<code>scripts/infra-note.py</code>](./scripts/infra-note.py) | Python | 1.1 KB | Archivo Python del proyecto. |
@@ -112,6 +113,8 @@ Graphviz genera los SVG estáticos desde archivos DOT; ambos formatos quedan ver
 | — | [<code>scripts/infra-sync.sh</code>](./scripts/infra-sync.sh) | Shell | 181 B | Archivo Shell del proyecto. |
 | — | [<code>scripts/infra-wrapper.sh</code>](./scripts/infra-wrapper.sh) | Shell | 884 B | Archivo Shell del proyecto. |
 | — | [<code>scripts/install-infra-wrappers.sh</code>](./scripts/install-infra-wrappers.sh) | Shell | 840 B | Archivo Shell del proyecto. |
+| — | [<code>scripts/install-sync-commands.sh</code>](./scripts/install-sync-commands.sh) | Shell | 584 B | Archivo Shell del proyecto. |
+| — | [<code>scripts/subida</code>](./scripts/subida) | Archivo | 3.7 KB | Archivo Archivo del proyecto. |
 | — | [<code>scripts/sync-canvas-to-obsidian.py</code>](./scripts/sync-canvas-to-obsidian.py) | Python | 1.2 KB | Archivo Python del proyecto. |
 | — | [<code>sync-repo.sh</code>](./sync-repo.sh) | Shell | 1.1 KB | Sincronización del repositorio desde Termux. |
 | — | [<code>update_readme_tree.py</code>](./update_readme_tree.py) | Python | 13.6 KB | Generador automático del manifiesto y los dos grafos. |
@@ -133,18 +136,18 @@ Graphviz genera los SVG estáticos desde archivos DOT; ambos formatos quedan ver
 </details>
 
 <details>
-<summary>📁 <strong>docs</strong> — 11 archivos / 103.5 KB</summary>
+<summary>📁 <strong>docs</strong> — 11 archivos / 107.1 KB</summary>
 
 - [<code>docs/canvas/repository-architecture.canvas</code>](./docs/canvas/repository-architecture.canvas) — **8.4 KB** — Archivo Archivo del proyecto.
-- [<code>docs/canvas/repository-structure.canvas</code>](./docs/canvas/repository-structure.canvas) — **11.2 KB** — Archivo Archivo del proyecto.
+- [<code>docs/canvas/repository-structure.canvas</code>](./docs/canvas/repository-structure.canvas) — **12.2 KB** — Archivo Archivo del proyecto.
 - [<code>docs/conocimiento-4-termx.md</code>](./docs/conocimiento-4-termx.md) — **2.4 KB** — Archivo Markdown del proyecto.
 - [<code>docs/infrastructure.md</code>](./docs/infrastructure.md) — **4.7 KB** — Archivo Markdown del proyecto.
 - [<code>docs/pendientes-evolucion.md</code>](./docs/pendientes-evolucion.md) — **7.5 KB** — Archivo Markdown del proyecto.
 - [<code>docs/repository-architecture.dot</code>](./docs/repository-architecture.dot) — **2.7 KB** — Archivo Archivo del proyecto.
 - [<code>docs/repository-architecture.svg</code>](./docs/repository-architecture.svg) — **21.3 KB** — Archivo Archivo del proyecto.
-- [<code>docs/repository-map.md</code>](./docs/repository-map.md) — **1.1 KB** — Archivo Markdown del proyecto.
-- [<code>docs/repository-structure.dot</code>](./docs/repository-structure.dot) — **4.5 KB** — Archivo Archivo del proyecto.
-- [<code>docs/repository-structure.svg</code>](./docs/repository-structure.svg) — **27.4 KB** — Archivo Archivo del proyecto.
+- [<code>docs/repository-map.md</code>](./docs/repository-map.md) — **1.2 KB** — Archivo Markdown del proyecto.
+- [<code>docs/repository-structure.dot</code>](./docs/repository-structure.dot) — **4.8 KB** — Archivo Archivo del proyecto.
+- [<code>docs/repository-structure.svg</code>](./docs/repository-structure.svg) — **29.7 KB** — Archivo Archivo del proyecto.
 - [<code>docs/svg2canvas.py</code>](./docs/svg2canvas.py) — **12.4 KB** — Archivo Python del proyecto.
 
 </details>
@@ -161,20 +164,21 @@ Graphviz genera los SVG estáticos desde archivos DOT; ambos formatos quedan ver
 </details>
 
 <details>
-<summary>📁 <strong>raíz</strong> — 6 archivos / 29.2 KB</summary>
+<summary>📁 <strong>raíz</strong> — 6 archivos / 29.5 KB</summary>
 
 - [<code>.gitconfig</code>](./.gitconfig) — **64 B** — Archivo Configuración del proyecto.
 - [<code>.gitignore</code>](./.gitignore) — **398 B** — Archivo Configuración del proyecto.
 - [<code>.zshrc</code>](./.zshrc) — **319 B** — Archivo Configuración del proyecto.
-- [<code>README.md</code>](./README.md) — **13.7 KB** — Documentación central del entorno Termux.
+- [<code>README.md</code>](./README.md) — **14.0 KB** — Documentación central del entorno Termux.
 - [<code>sync-repo.sh</code>](./sync-repo.sh) — **1.1 KB** — Sincronización del repositorio desde Termux.
 - [<code>update_readme_tree.py</code>](./update_readme_tree.py) — **13.6 KB** — Generador automático del manifiesto y los dos grafos.
 
 </details>
 
 <details>
-<summary>📁 <strong>scripts</strong> — 8 archivos / 20.7 KB</summary>
+<summary>📁 <strong>scripts</strong> — 11 archivos / 28.9 KB</summary>
 
+- [<code>scripts/bajada</code>](./scripts/bajada) — **3.9 KB** — Archivo Archivo del proyecto.
 - [<code>scripts/infra-audit.py</code>](./scripts/infra-audit.py) — **2.2 KB** — Archivo Python del proyecto.
 - [<code>scripts/infra-git-sync.sh</code>](./scripts/infra-git-sync.sh) — **463 B** — Archivo Shell del proyecto.
 - [<code>scripts/infra-note.py</code>](./scripts/infra-note.py) — **1.1 KB** — Archivo Python del proyecto.
@@ -182,11 +186,13 @@ Graphviz genera los SVG estáticos desde archivos DOT; ambos formatos quedan ver
 - [<code>scripts/infra-sync.sh</code>](./scripts/infra-sync.sh) — **181 B** — Archivo Shell del proyecto.
 - [<code>scripts/infra-wrapper.sh</code>](./scripts/infra-wrapper.sh) — **884 B** — Archivo Shell del proyecto.
 - [<code>scripts/install-infra-wrappers.sh</code>](./scripts/install-infra-wrappers.sh) — **840 B** — Archivo Shell del proyecto.
+- [<code>scripts/install-sync-commands.sh</code>](./scripts/install-sync-commands.sh) — **584 B** — Archivo Shell del proyecto.
+- [<code>scripts/subida</code>](./scripts/subida) — **3.7 KB** — Archivo Archivo del proyecto.
 - [<code>scripts/sync-canvas-to-obsidian.py</code>](./scripts/sync-canvas-to-obsidian.py) — **1.2 KB** — Archivo Python del proyecto.
 
 </details>
 
-**Total actual:** 32 archivos — **168.3 KB**
+**Total actual:** 35 archivos — **180.5 KB**
 
 _Este bloque es mantenido por Actions. No editar manualmente entre los marcadores._
 <!-- FILE-MANIFEST:END -->

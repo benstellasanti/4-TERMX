@@ -5,7 +5,7 @@
       "type": "text",
       "text": "4-TERMX",
       "x": 0,
-      "y": 1050,
+      "y": 1176,
       "width": 200,
       "height": 56,
       "color": "#555555"
@@ -51,7 +51,7 @@
       "type": "text",
       "text": "scripts",
       "x": 270,
-      "y": 1302,
+      "y": 1428,
       "width": 200,
       "height": 56
     },
@@ -60,7 +60,7 @@
       "type": "text",
       "text": ".gitconfig",
       "x": 270,
-      "y": 1680,
+      "y": 1932,
       "width": 200,
       "height": 56
     },
@@ -69,7 +69,7 @@
       "type": "text",
       "text": ".gitignore",
       "x": 270,
-      "y": 1764,
+      "y": 2016,
       "width": 200,
       "height": 56
     },
@@ -78,7 +78,7 @@
       "type": "text",
       "text": ".zshrc",
       "x": 270,
-      "y": 1848,
+      "y": 2100,
       "width": 200,
       "height": 56
     },
@@ -87,7 +87,7 @@
       "type": "text",
       "text": "README.md",
       "x": 270,
-      "y": 1932,
+      "y": 2184,
       "width": 200,
       "height": 56
     },
@@ -96,7 +96,7 @@
       "type": "text",
       "text": "sync-repo.sh",
       "x": 270,
-      "y": 2016,
+      "y": 2268,
       "width": 200,
       "height": 56
     },
@@ -105,7 +105,7 @@
       "type": "text",
       "text": "update_readme_tree.py",
       "x": 270,
-      "y": 2100,
+      "y": 2352,
       "width": 258,
       "height": 56
     },
@@ -200,11 +200,20 @@
       "height": 56
     },
     {
+      "id": "06fa88dbd4e0067f",
+      "type": "text",
+      "text": "bajada",
+      "x": 598,
+      "y": 1008,
+      "width": 200,
+      "height": 56
+    },
+    {
       "id": "90273974aea59d32",
       "type": "text",
       "text": "infra-audit.py",
       "x": 598,
-      "y": 1008,
+      "y": 1092,
       "width": 200,
       "height": 56
     },
@@ -213,7 +222,7 @@
       "type": "text",
       "text": "infra-git-sync.sh",
       "x": 598,
-      "y": 1092,
+      "y": 1176,
       "width": 218,
       "height": 56
     },
@@ -222,7 +231,7 @@
       "type": "text",
       "text": "infra-note.py",
       "x": 598,
-      "y": 1176,
+      "y": 1260,
       "width": 200,
       "height": 56
     },
@@ -231,7 +240,7 @@
       "type": "text",
       "text": "infra-sync.py",
       "x": 598,
-      "y": 1260,
+      "y": 1344,
       "width": 200,
       "height": 56
     },
@@ -240,7 +249,7 @@
       "type": "text",
       "text": "infra-sync.sh",
       "x": 598,
-      "y": 1344,
+      "y": 1428,
       "width": 200,
       "height": 56
     },
@@ -249,7 +258,7 @@
       "type": "text",
       "text": "infra-wrapper.sh",
       "x": 598,
-      "y": 1428,
+      "y": 1512,
       "width": 208,
       "height": 56
     },
@@ -258,8 +267,26 @@
       "type": "text",
       "text": "install-infra-wrappers.sh",
       "x": 598,
-      "y": 1512,
+      "y": 1596,
       "width": 298,
+      "height": 56
+    },
+    {
+      "id": "d02f294317f3505e",
+      "type": "text",
+      "text": "install-sync-commands.sh",
+      "x": 598,
+      "y": 1680,
+      "width": 288,
+      "height": 56
+    },
+    {
+      "id": "73f56fe2ae1837b9",
+      "type": "text",
+      "text": "subida",
+      "x": 598,
+      "y": 1764,
+      "width": 200,
       "height": 56
     },
     {
@@ -267,7 +294,7 @@
       "type": "text",
       "text": "sync-canvas-to-obsidian.py",
       "x": 598,
-      "y": 1596,
+      "y": 1848,
       "width": 308,
       "height": 56
     },
@@ -457,6 +484,13 @@
       "toSide": "left"
     },
     {
+      "id": "b27f6ed7edec5f2a",
+      "fromNode": "8c90722c80d2d05f",
+      "fromSide": "right",
+      "toNode": "06fa88dbd4e0067f",
+      "toSide": "left"
+    },
+    {
       "id": "cd28a61cbd173e22",
       "fromNode": "8c90722c80d2d05f",
       "fromSide": "right",
@@ -503,6 +537,20 @@
       "fromNode": "8c90722c80d2d05f",
       "fromSide": "right",
       "toNode": "9afe10a1bcd28a78",
+      "toSide": "left"
+    },
+    {
+      "id": "8720ad3ba1fbec3b",
+      "fromNode": "8c90722c80d2d05f",
+      "fromSide": "right",
+      "toNode": "d02f294317f3505e",
+      "toSide": "left"
+    },
+    {
+      "id": "74c3be81e9813deb",
+      "fromNode": "8c90722c80d2d05f",
+      "fromSide": "right",
+      "toNode": "73f56fe2ae1837b9",
       "toSide": "left"
     },
     {

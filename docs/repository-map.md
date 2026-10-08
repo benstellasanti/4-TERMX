@@ -29,6 +29,7 @@
 - pkg-operation-cursor.json
 - system-manifest.json
 ## scripts
+- bajada
 - infra-audit.py
 - infra-git-sync.sh
 - infra-note.py
@@ -36,6 +37,8 @@
 - infra-sync.sh
 - infra-wrapper.sh
 - install-infra-wrappers.sh
+- install-sync-commands.sh
+- subida
 - sync-canvas-to-obsidian.py
 - sync-repo.sh
 - update_readme_tree.py

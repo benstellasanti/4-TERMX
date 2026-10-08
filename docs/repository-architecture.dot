@@ -41,6 +41,8 @@ digraph RepositoryArchitecture {
   docs -> doc_n_docs_pendientes_evolucion_md;
   doc_n_docs_repository_map_md [label="repository-map.md", shape=note];
   docs -> doc_n_docs_repository_map_md;
+  doc_n_docs_svg2canvas_py [label="svg2canvas.py", shape=note];
+  docs -> doc_n_docs_svg2canvas_py;
   workflow -> generator [label="ejecuta"];
   generator -> readme [label="actualiza"];
   generator -> doc_n_docs_repository_map_md [label="genera"];

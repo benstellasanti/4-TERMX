@@ -88,23 +88,25 @@ Graphviz genera los SVG estáticos desde archivos DOT; ambos formatos quedan ver
 | — | [<code>.gitignore</code>](./.gitignore) | Configuración | 398 B | Archivo Configuración del proyecto. |
 | — | [<code>.termux/termux.properties</code>](./.termux/termux.properties) | Archivo | 5.9 KB | Archivo Archivo del proyecto. |
 | — | [<code>.zshrc</code>](./.zshrc) | Configuración | 319 B | Archivo Configuración del proyecto. |
-| — | [<code>README.md</code>](./README.md) | Markdown | 12.3 KB | Documentación central del entorno Termux. |
+| — | [<code>README.md</code>](./README.md) | Markdown | 12.6 KB | Documentación central del entorno Termux. |
 | — | [<code>docs/conocimiento-4-termx.md</code>](./docs/conocimiento-4-termx.md) | Markdown | 2.4 KB | Archivo Markdown del proyecto. |
 | — | [<code>docs/infrastructure.md</code>](./docs/infrastructure.md) | Markdown | 4.7 KB | Archivo Markdown del proyecto. |
 | — | [<code>docs/pendientes-evolucion.md</code>](./docs/pendientes-evolucion.md) | Markdown | 7.5 KB | Archivo Markdown del proyecto. |
-| — | [<code>docs/repository-architecture.dot</code>](./docs/repository-architecture.dot) | Archivo | 2.6 KB | Archivo Archivo del proyecto. |
-| — | [<code>docs/repository-architecture.svg</code>](./docs/repository-architecture.svg) | Archivo | 20.3 KB | Archivo Archivo del proyecto. |
+| — | [<code>docs/repository-architecture.dot</code>](./docs/repository-architecture.dot) | Archivo | 2.7 KB | Archivo Archivo del proyecto. |
+| — | [<code>docs/repository-architecture.svg</code>](./docs/repository-architecture.svg) | Archivo | 21.3 KB | Archivo Archivo del proyecto. |
 | — | [<code>docs/repository-map.md</code>](./docs/repository-map.md) | Markdown | 1.1 KB | Archivo Markdown del proyecto. |
-| — | [<code>docs/repository-structure.dot</code>](./docs/repository-structure.dot) | Archivo | 4.0 KB | Archivo Archivo del proyecto. |
-| — | [<code>docs/repository-structure.svg</code>](./docs/repository-structure.svg) | Archivo | 24.7 KB | Archivo Archivo del proyecto. |
+| — | [<code>docs/repository-structure.dot</code>](./docs/repository-structure.dot) | Archivo | 4.3 KB | Archivo Archivo del proyecto. |
+| — | [<code>docs/repository-structure.svg</code>](./docs/repository-structure.svg) | Archivo | 26.6 KB | Archivo Archivo del proyecto. |
+| — | [<code>docs/svg2canvas.py</code>](./docs/svg2canvas.py) | Python | 12.4 KB | Archivo Python del proyecto. |
 | — | [<code>infrastructure/desired-state.json</code>](./infrastructure/desired-state.json) | JSON | 597 B | Archivo JSON del proyecto. |
-| — | [<code>infrastructure/history/infrastructure-history.jsonl</code>](./infrastructure/history/infrastructure-history.jsonl) | Archivo | 2.2 KB | Archivo Archivo del proyecto. |
+| — | [<code>infrastructure/history/infrastructure-history.jsonl</code>](./infrastructure/history/infrastructure-history.jsonl) | Archivo | 2.6 KB | Archivo Archivo del proyecto. |
+| — | [<code>infrastructure/history/package-operation-cursor.json</code>](./infrastructure/history/package-operation-cursor.json) | JSON | 54 B | Archivo JSON del proyecto. |
 | — | [<code>infrastructure/history/pkg-operation-cursor.json</code>](./infrastructure/history/pkg-operation-cursor.json) | JSON | 54 B | Archivo JSON del proyecto. |
 | — | [<code>infrastructure/system-manifest.json</code>](./infrastructure/system-manifest.json) | JSON | 4.2 KB | Archivo JSON del proyecto. |
 | — | [<code>scripts/infra-audit.py</code>](./scripts/infra-audit.py) | Python | 2.2 KB | Archivo Python del proyecto. |
 | — | [<code>scripts/infra-git-sync.sh</code>](./scripts/infra-git-sync.sh) | Shell | 398 B | Archivo Shell del proyecto. |
 | — | [<code>scripts/infra-note.py</code>](./scripts/infra-note.py) | Python | 1.1 KB | Archivo Python del proyecto. |
-| — | [<code>scripts/infra-sync.py</code>](./scripts/infra-sync.py) | Python | 12.7 KB | Archivo Python del proyecto. |
+| — | [<code>scripts/infra-sync.py</code>](./scripts/infra-sync.py) | Python | 13.8 KB | Archivo Python del proyecto. |
 | — | [<code>scripts/infra-sync.sh</code>](./scripts/infra-sync.sh) | Shell | 181 B | Archivo Shell del proyecto. |
 | — | [<code>scripts/infra-wrapper.sh</code>](./scripts/infra-wrapper.sh) | Shell | 884 B | Archivo Shell del proyecto. |
 | — | [<code>scripts/install-infra-wrappers.sh</code>](./scripts/install-infra-wrappers.sh) | Shell | 840 B | Archivo Shell del proyecto. |
@@ -128,55 +130,57 @@ Graphviz genera los SVG estáticos desde archivos DOT; ambos formatos quedan ver
 </details>
 
 <details>
-<summary>📁 <strong>docs</strong> — 8 archivos / 67.2 KB</summary>
+<summary>📁 <strong>docs</strong> — 9 archivos / 82.9 KB</summary>
 
 - [<code>docs/conocimiento-4-termx.md</code>](./docs/conocimiento-4-termx.md) — **2.4 KB** — Archivo Markdown del proyecto.
 - [<code>docs/infrastructure.md</code>](./docs/infrastructure.md) — **4.7 KB** — Archivo Markdown del proyecto.
 - [<code>docs/pendientes-evolucion.md</code>](./docs/pendientes-evolucion.md) — **7.5 KB** — Archivo Markdown del proyecto.
-- [<code>docs/repository-architecture.dot</code>](./docs/repository-architecture.dot) — **2.6 KB** — Archivo Archivo del proyecto.
-- [<code>docs/repository-architecture.svg</code>](./docs/repository-architecture.svg) — **20.3 KB** — Archivo Archivo del proyecto.
+- [<code>docs/repository-architecture.dot</code>](./docs/repository-architecture.dot) — **2.7 KB** — Archivo Archivo del proyecto.
+- [<code>docs/repository-architecture.svg</code>](./docs/repository-architecture.svg) — **21.3 KB** — Archivo Archivo del proyecto.
 - [<code>docs/repository-map.md</code>](./docs/repository-map.md) — **1.1 KB** — Archivo Markdown del proyecto.
-- [<code>docs/repository-structure.dot</code>](./docs/repository-structure.dot) — **4.0 KB** — Archivo Archivo del proyecto.
-- [<code>docs/repository-structure.svg</code>](./docs/repository-structure.svg) — **24.7 KB** — Archivo Archivo del proyecto.
+- [<code>docs/repository-structure.dot</code>](./docs/repository-structure.dot) — **4.3 KB** — Archivo Archivo del proyecto.
+- [<code>docs/repository-structure.svg</code>](./docs/repository-structure.svg) — **26.6 KB** — Archivo Archivo del proyecto.
+- [<code>docs/svg2canvas.py</code>](./docs/svg2canvas.py) — **12.4 KB** — Archivo Python del proyecto.
 
 </details>
 
 <details>
-<summary>📁 <strong>infrastructure</strong> — 4 archivos / 7.0 KB</summary>
+<summary>📁 <strong>infrastructure</strong> — 5 archivos / 7.5 KB</summary>
 
 - [<code>infrastructure/desired-state.json</code>](./infrastructure/desired-state.json) — **597 B** — Archivo JSON del proyecto.
-- [<code>infrastructure/history/infrastructure-history.jsonl</code>](./infrastructure/history/infrastructure-history.jsonl) — **2.2 KB** — Archivo Archivo del proyecto.
+- [<code>infrastructure/history/infrastructure-history.jsonl</code>](./infrastructure/history/infrastructure-history.jsonl) — **2.6 KB** — Archivo Archivo del proyecto.
+- [<code>infrastructure/history/package-operation-cursor.json</code>](./infrastructure/history/package-operation-cursor.json) — **54 B** — Archivo JSON del proyecto.
 - [<code>infrastructure/history/pkg-operation-cursor.json</code>](./infrastructure/history/pkg-operation-cursor.json) — **54 B** — Archivo JSON del proyecto.
 - [<code>infrastructure/system-manifest.json</code>](./infrastructure/system-manifest.json) — **4.2 KB** — Archivo JSON del proyecto.
 
 </details>
 
 <details>
-<summary>📁 <strong>raíz</strong> — 6 archivos / 26.9 KB</summary>
+<summary>📁 <strong>raíz</strong> — 6 archivos / 27.1 KB</summary>
 
 - [<code>.gitconfig</code>](./.gitconfig) — **64 B** — Archivo Configuración del proyecto.
 - [<code>.gitignore</code>](./.gitignore) — **398 B** — Archivo Configuración del proyecto.
 - [<code>.zshrc</code>](./.zshrc) — **319 B** — Archivo Configuración del proyecto.
-- [<code>README.md</code>](./README.md) — **12.3 KB** — Documentación central del entorno Termux.
+- [<code>README.md</code>](./README.md) — **12.6 KB** — Documentación central del entorno Termux.
 - [<code>sync-repo.sh</code>](./sync-repo.sh) — **1.1 KB** — Sincronización del repositorio desde Termux.
 - [<code>update_readme_tree.py</code>](./update_readme_tree.py) — **12.8 KB** — Generador automático del manifiesto y los dos grafos.
 
 </details>
 
 <details>
-<summary>📁 <strong>scripts</strong> — 7 archivos / 18.3 KB</summary>
+<summary>📁 <strong>scripts</strong> — 7 archivos / 19.4 KB</summary>
 
 - [<code>scripts/infra-audit.py</code>](./scripts/infra-audit.py) — **2.2 KB** — Archivo Python del proyecto.
 - [<code>scripts/infra-git-sync.sh</code>](./scripts/infra-git-sync.sh) — **398 B** — Archivo Shell del proyecto.
 - [<code>scripts/infra-note.py</code>](./scripts/infra-note.py) — **1.1 KB** — Archivo Python del proyecto.
-- [<code>scripts/infra-sync.py</code>](./scripts/infra-sync.py) — **12.7 KB** — Archivo Python del proyecto.
+- [<code>scripts/infra-sync.py</code>](./scripts/infra-sync.py) — **13.8 KB** — Archivo Python del proyecto.
 - [<code>scripts/infra-sync.sh</code>](./scripts/infra-sync.sh) — **181 B** — Archivo Shell del proyecto.
 - [<code>scripts/infra-wrapper.sh</code>](./scripts/infra-wrapper.sh) — **884 B** — Archivo Shell del proyecto.
 - [<code>scripts/install-infra-wrappers.sh</code>](./scripts/install-infra-wrappers.sh) — **840 B** — Archivo Shell del proyecto.
 
 </details>
 
-**Total actual:** 27 archivos — **126.8 KB**
+**Total actual:** 29 archivos — **144.4 KB**
 
 _Este bloque es mantenido por Actions. No editar manualmente entre los marcadores._
 <!-- FILE-MANIFEST:END -->

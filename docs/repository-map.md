@@ -20,10 +20,12 @@
 - infrastructure.md
 - pendientes-evolucion.md
 - repository-map.md
+- svg2canvas.py
 ## infrastructure
 - desired-state.json
 ### history
 - infrastructure-history.jsonl
+- package-operation-cursor.json
 - pkg-operation-cursor.json
 - system-manifest.json
 ## scripts

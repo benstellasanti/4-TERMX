@@ -30,10 +30,14 @@ digraph RepositoryStructure {
   n_docs -> n_docs_pendientes_evolucion_md;
   n_docs_repository_map_md [label="repository-map.md", shape=note, fillcolor="white"];
   n_docs -> n_docs_repository_map_md;
+  n_docs_svg2canvas_py [label="svg2canvas.py", shape=note, fillcolor="white"];
+  n_docs -> n_docs_svg2canvas_py;
   n_infrastructure_desired_state_json [label="desired-state.json", shape=note, fillcolor="white"];
   n_infrastructure -> n_infrastructure_desired_state_json;
   n_infrastructure_history_infrastructure_history_jsonl [label="infrastructure-history.jsonl", shape=note, fillcolor="white"];
   n_infrastructure_history -> n_infrastructure_history_infrastructure_history_jsonl;
+  n_infrastructure_history_package_operation_cursor_json [label="package-operation-cursor.json", shape=note, fillcolor="white"];
+  n_infrastructure_history -> n_infrastructure_history_package_operation_cursor_json;
   n_infrastructure_history_pkg_operation_cursor_json [label="pkg-operation-cursor.json", shape=note, fillcolor="white"];
   n_infrastructure_history -> n_infrastructure_history_pkg_operation_cursor_json;
   n_infrastructure_system_manifest_json [label="system-manifest.json", shape=note, fillcolor="white"];

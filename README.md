@@ -105,7 +105,7 @@ Graphviz genera los SVG estáticos desde archivos DOT; ambos formatos quedan ver
 | — | [<code>infrastructure/history/package-operation-cursor.json</code>](./infrastructure/history/package-operation-cursor.json) | JSON | 54 B | Archivo JSON del proyecto. |
 | — | [<code>infrastructure/history/pkg-operation-cursor.json</code>](./infrastructure/history/pkg-operation-cursor.json) | JSON | 54 B | Archivo JSON del proyecto. |
 | — | [<code>infrastructure/system-manifest.json</code>](./infrastructure/system-manifest.json) | JSON | 4.2 KB | Archivo JSON del proyecto. |
-| — | [<code>scripts/bajada</code>](./scripts/bajada) | Archivo | 3.9 KB | Archivo Archivo del proyecto. |
+| — | [<code>scripts/bajada</code>](./scripts/bajada) | Archivo | 4.6 KB | Archivo Archivo del proyecto. |
 | — | [<code>scripts/infra-audit.py</code>](./scripts/infra-audit.py) | Python | 2.2 KB | Archivo Python del proyecto. |
 | — | [<code>scripts/infra-git-sync.sh</code>](./scripts/infra-git-sync.sh) | Shell | 463 B | Archivo Shell del proyecto. |
 | — | [<code>scripts/infra-note.py</code>](./scripts/infra-note.py) | Python | 1.1 KB | Archivo Python del proyecto. |
@@ -114,7 +114,7 @@ Graphviz genera los SVG estáticos desde archivos DOT; ambos formatos quedan ver
 | — | [<code>scripts/infra-wrapper.sh</code>](./scripts/infra-wrapper.sh) | Shell | 884 B | Archivo Shell del proyecto. |
 | — | [<code>scripts/install-infra-wrappers.sh</code>](./scripts/install-infra-wrappers.sh) | Shell | 840 B | Archivo Shell del proyecto. |
 | — | [<code>scripts/install-sync-commands.sh</code>](./scripts/install-sync-commands.sh) | Shell | 584 B | Archivo Shell del proyecto. |
-| — | [<code>scripts/subida</code>](./scripts/subida) | Archivo | 3.7 KB | Archivo Archivo del proyecto. |
+| — | [<code>scripts/subida</code>](./scripts/subida) | Archivo | 4.2 KB | Archivo Archivo del proyecto. |
 | — | [<code>scripts/sync-canvas-to-obsidian.py</code>](./scripts/sync-canvas-to-obsidian.py) | Python | 1.5 KB | Archivo Python del proyecto. |
 | — | [<code>sync-repo.sh</code>](./sync-repo.sh) | Shell | 1.1 KB | Sincronización del repositorio desde Termux. |
 | — | [<code>update_readme_tree.py</code>](./update_readme_tree.py) | Python | 13.6 KB | Generador automático del manifiesto y los dos grafos. |
@@ -176,9 +176,9 @@ Graphviz genera los SVG estáticos desde archivos DOT; ambos formatos quedan ver
 </details>
 
 <details>
-<summary>📁 <strong>scripts</strong> — 11 archivos / 29.2 KB</summary>
+<summary>📁 <strong>scripts</strong> — 11 archivos / 30.3 KB</summary>
 
-- [<code>scripts/bajada</code>](./scripts/bajada) — **3.9 KB** — Archivo Archivo del proyecto.
+- [<code>scripts/bajada</code>](./scripts/bajada) — **4.6 KB** — Archivo Archivo del proyecto.
 - [<code>scripts/infra-audit.py</code>](./scripts/infra-audit.py) — **2.2 KB** — Archivo Python del proyecto.
 - [<code>scripts/infra-git-sync.sh</code>](./scripts/infra-git-sync.sh) — **463 B** — Archivo Shell del proyecto.
 - [<code>scripts/infra-note.py</code>](./scripts/infra-note.py) — **1.1 KB** — Archivo Python del proyecto.
@@ -187,12 +187,12 @@ Graphviz genera los SVG estáticos desde archivos DOT; ambos formatos quedan ver
 - [<code>scripts/infra-wrapper.sh</code>](./scripts/infra-wrapper.sh) — **884 B** — Archivo Shell del proyecto.
 - [<code>scripts/install-infra-wrappers.sh</code>](./scripts/install-infra-wrappers.sh) — **840 B** — Archivo Shell del proyecto.
 - [<code>scripts/install-sync-commands.sh</code>](./scripts/install-sync-commands.sh) — **584 B** — Archivo Shell del proyecto.
-- [<code>scripts/subida</code>](./scripts/subida) — **3.7 KB** — Archivo Archivo del proyecto.
+- [<code>scripts/subida</code>](./scripts/subida) — **4.2 KB** — Archivo Archivo del proyecto.
 - [<code>scripts/sync-canvas-to-obsidian.py</code>](./scripts/sync-canvas-to-obsidian.py) — **1.5 KB** — Archivo Python del proyecto.
 
 </details>
 
-**Total actual:** 35 archivos — **181.4 KB**
+**Total actual:** 35 archivos — **182.5 KB**
 
 _Este bloque es mantenido por Actions. No editar manualmente entre los marcadores._
 <!-- FILE-MANIFEST:END -->

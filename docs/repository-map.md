@@ -36,6 +36,7 @@
 - infra-sync.sh
 - infra-wrapper.sh
 - install-infra-wrappers.sh
+- sync-canvas-to-obsidian.py
 - sync-repo.sh
 - update_readme_tree.py
 

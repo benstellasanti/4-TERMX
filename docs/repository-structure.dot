@@ -56,6 +56,8 @@ digraph RepositoryStructure {
   n_scripts -> n_scripts_infra_wrapper_sh;
   n_scripts_install_infra_wrappers_sh [label="install-infra-wrappers.sh", shape=note, fillcolor="white"];
   n_scripts -> n_scripts_install_infra_wrappers_sh;
+  n_scripts_sync_canvas_to_obsidian_py [label="sync-canvas-to-obsidian.py", shape=note, fillcolor="white"];
+  n_scripts -> n_scripts_sync_canvas_to_obsidian_py;
   n_sync_repo_sh [label="sync-repo.sh", shape=note, fillcolor="white"];
   root -> n_sync_repo_sh;
   n_update_readme_tree_py [label="update_readme_tree.py", shape=note, fillcolor="white"];

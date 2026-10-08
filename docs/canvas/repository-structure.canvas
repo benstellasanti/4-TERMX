@@ -5,7 +5,7 @@
       "type": "text",
       "text": "4-TERMX",
       "x": 0,
-      "y": 1008,
+      "y": 1050,
       "width": 200,
       "height": 56,
       "color": "#555555"
@@ -51,7 +51,7 @@
       "type": "text",
       "text": "scripts",
       "x": 270,
-      "y": 1260,
+      "y": 1302,
       "width": 200,
       "height": 56
     },
@@ -60,7 +60,7 @@
       "type": "text",
       "text": ".gitconfig",
       "x": 270,
-      "y": 1596,
+      "y": 1680,
       "width": 200,
       "height": 56
     },
@@ -69,7 +69,7 @@
       "type": "text",
       "text": ".gitignore",
       "x": 270,
-      "y": 1680,
+      "y": 1764,
       "width": 200,
       "height": 56
     },
@@ -78,7 +78,7 @@
       "type": "text",
       "text": ".zshrc",
       "x": 270,
-      "y": 1764,
+      "y": 1848,
       "width": 200,
       "height": 56
     },
@@ -87,7 +87,7 @@
       "type": "text",
       "text": "README.md",
       "x": 270,
-      "y": 1848,
+      "y": 1932,
       "width": 200,
       "height": 56
     },
@@ -96,7 +96,7 @@
       "type": "text",
       "text": "sync-repo.sh",
       "x": 270,
-      "y": 1932,
+      "y": 2016,
       "width": 200,
       "height": 56
     },
@@ -105,7 +105,7 @@
       "type": "text",
       "text": "update_readme_tree.py",
       "x": 270,
-      "y": 2016,
+      "y": 2100,
       "width": 258,
       "height": 56
     },
@@ -263,10 +263,19 @@
       "height": 56
     },
     {
+      "id": "a8941e5ca34171ff",
+      "type": "text",
+      "text": "sync-canvas-to-obsidian.py",
+      "x": 598,
+      "y": 1596,
+      "width": 308,
+      "height": 56
+    },
+    {
       "id": "1e978be8008708e9",
       "type": "text",
       "text": "update-tree.yml",
-      "x": 966,
+      "x": 976,
       "y": 0,
       "width": 200,
       "height": 56
@@ -275,7 +284,7 @@
       "id": "6a9eafd481a00280",
       "type": "text",
       "text": "infrastructure-history.jsonl",
-      "x": 966,
+      "x": 976,
       "y": 588,
       "width": 328,
       "height": 56
@@ -284,7 +293,7 @@
       "id": "4f982b174df62996",
       "type": "text",
       "text": "package-operation-cursor.json",
-      "x": 966,
+      "x": 976,
       "y": 672,
       "width": 338,
       "height": 56
@@ -293,7 +302,7 @@
       "id": "71ddd5b305bacbcd",
       "type": "text",
       "text": "pkg-operation-cursor.json",
-      "x": 966,
+      "x": 976,
       "y": 756,
       "width": 298,
       "height": 56
@@ -494,6 +503,13 @@
       "fromNode": "8c90722c80d2d05f",
       "fromSide": "right",
       "toNode": "9afe10a1bcd28a78",
+      "toSide": "left"
+    },
+    {
+      "id": "320726e21dee2ca0",
+      "fromNode": "8c90722c80d2d05f",
+      "fromSide": "right",
+      "toNode": "a8941e5ca34171ff",
       "toSide": "left"
     },
     {

@@ -11,6 +11,8 @@ GRAPH_STRUCTURE_DOT = ROOT / "docs" / "repository-structure.dot"
 GRAPH_STRUCTURE_SVG = ROOT / "docs" / "repository-structure.svg"
 GRAPH_ARCH_DOT = ROOT / "docs" / "repository-architecture.dot"
 GRAPH_ARCH_SVG = ROOT / "docs" / "repository-architecture.svg"
+CANVAS_DIR = ROOT / "docs" / "canvas"
+SVG_TO_CANVAS = ROOT / "docs" / "svg2canvas.py"
 START = "<!-- FILE-MANIFEST:START -->"
 END = "<!-- FILE-MANIFEST:END -->"
 EXCLUDED_PREFIXES = (".git/", ".ssh/", ".termux_authinfo")
@@ -100,10 +102,35 @@ def files_in_repo(include_generated=False):
         rel = path.relative_to(ROOT).as_posix()
         if rel.startswith(EXCLUDED_PREFIXES):
             continue
-        if not include_generated and rel in GENERATED_GRAPH_FILES:
+        if not include_generated and (
+            rel in GENERATED_GRAPH_FILES or rel.startswith("docs/canvas/")
+        ):
             continue
         result.append((rel, path.stat().st_size))
     return sorted(result)
+
+def convert_svgs_to_canvas():
+    """Regenera un Canvas homólogo por cada SVG de documentación."""
+    if not SVG_TO_CANVAS.exists():
+        raise FileNotFoundError(f"No existe el conversor: {SVG_TO_CANVAS}")
+
+    CANVAS_DIR.mkdir(parents=True, exist_ok=True)
+    svg_files = sorted((ROOT / "docs").glob("*.svg"))
+    for svg in svg_files:
+        output = CANVAS_DIR / f"{svg.stem}.canvas"
+        subprocess.run(
+            [
+                "python",
+                str(SVG_TO_CANVAS),
+                str(svg),
+                "-o",
+                str(output),
+                "--layout",
+                "auto",
+            ],
+            check=True,
+        )
+        print(f"Canvas actualizado: {output.relative_to(ROOT)}")
 
 def dot_escape(value):
     return value.replace("\\", "\\\\").replace('"', '\\"')
@@ -305,6 +332,7 @@ def main():
     GRAPH_ARCH_DOT.write_text(build_architecture_dot(files), encoding="utf-8")
     render_graph(GRAPH_STRUCTURE_DOT, GRAPH_STRUCTURE_SVG)
     render_graph(GRAPH_ARCH_DOT, GRAPH_ARCH_SVG)
+    convert_svgs_to_canvas()
 
     manifest_files = files_in_repo(include_generated=True)
     content = README.read_text(encoding="utf-8")

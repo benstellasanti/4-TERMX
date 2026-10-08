@@ -1,0 +1,402 @@
+{
+  "nodes": [
+    {
+      "id": "eda0b76da6f92e54",
+      "type": "text",
+      "text": "4-TERMX",
+      "x": 1452,
+      "y": -1448,
+      "width": 200,
+      "height": 56
+    },
+    {
+      "id": "359e1713f74600d3",
+      "type": "text",
+      "text": ".github",
+      "x": 265,
+      "y": -1025,
+      "width": 200,
+      "height": 56
+    },
+    {
+      "id": "e216c0621b14f0ec",
+      "type": "text",
+      "text": ".termux",
+      "x": 967,
+      "y": -1185,
+      "width": 200,
+      "height": 56
+    },
+    {
+      "id": "e78c1f34287de23e",
+      "type": "text",
+      "text": "docs",
+      "x": 1196,
+      "y": -1185,
+      "width": 200,
+      "height": 56
+    },
+    {
+      "id": "986ac5c06e89ff78",
+      "type": "text",
+      "text": "infrastructure",
+      "x": 1452,
+      "y": -1185,
+      "width": 200,
+      "height": 56
+    },
+    {
+      "id": "8b6664386e7ef556",
+      "type": "text",
+      "text": "scripts",
+      "x": 1707,
+      "y": -1185,
+      "width": 200,
+      "height": 56
+    },
+    {
+      "id": "db89af5edb722ccc",
+      "type": "text",
+      "text": ".gitconfig",
+      "x": 1938,
+      "y": -1185,
+      "width": 200,
+      "height": 56
+    },
+    {
+      "id": "a7602d0615b33ad0",
+      "type": "text",
+      "text": ".gitignore",
+      "x": 2172,
+      "y": -1185,
+      "width": 200,
+      "height": 56
+    },
+    {
+      "id": "180de974f96e9f1d",
+      "type": "text",
+      "text": ".zshrc",
+      "x": 2404,
+      "y": -1185,
+      "width": 200,
+      "height": 56
+    },
+    {
+      "id": "2a2d89a7fac77e2a",
+      "type": "text",
+      "text": "README.md",
+      "x": 2665,
+      "y": -1185,
+      "width": 200,
+      "height": 56
+    },
+    {
+      "id": "c37c4f5b71526692",
+      "type": "text",
+      "text": "sync-repo.sh",
+      "x": 2949,
+      "y": -1185,
+      "width": 200,
+      "height": 56
+    },
+    {
+      "id": "a702cc4adde8375c",
+      "type": "text",
+      "text": "update_readme_tree.py",
+      "x": 3261,
+      "y": -1185,
+      "width": 258,
+      "height": 56
+    },
+    {
+      "id": "174c0d7238f94439",
+      "type": "text",
+      "text": "update_readme_tree.py\ndescubre + genera",
+      "x": 228,
+      "y": -353,
+      "width": 258,
+      "height": 84,
+      "color": "#f3f3f3"
+    },
+    {
+      "id": "d12a3c06ed446460",
+      "type": "text",
+      "text": "README.md",
+      "x": 2,
+      "y": -75,
+      "width": 200,
+      "height": 56
+    },
+    {
+      "id": "afd59d3fece3fa76",
+      "type": "text",
+      "text": "docs",
+      "x": 739,
+      "y": -1185,
+      "width": 200,
+      "height": 56
+    },
+    {
+      "id": "dd4f3b08601c3598",
+      "type": "text",
+      "text": "GitHub",
+      "x": 505,
+      "y": -1185,
+      "width": 200,
+      "height": 56
+    },
+    {
+      "id": "bc2777f65042d19a",
+      "type": "text",
+      "text": "update-tree.yml\nGitHub Actions",
+      "x": 321,
+      "y": -616,
+      "width": 200,
+      "height": 84,
+      "color": "#f3f3f3"
+    },
+    {
+      "id": "3361a4fbf97d0d08",
+      "type": "text",
+      "text": "repository-map.md",
+      "x": 357,
+      "y": -75,
+      "width": 218,
+      "height": 56
+    },
+    {
+      "id": "255e925cdeac83b6",
+      "type": "text",
+      "text": "conocimiento-4-termx.md",
+      "x": 1000,
+      "y": -865,
+      "width": 278,
+      "height": 56
+    },
+    {
+      "id": "318435fba80b531d",
+      "type": "text",
+      "text": "infrastructure.md",
+      "x": 1405,
+      "y": -865,
+      "width": 218,
+      "height": 56
+    },
+    {
+      "id": "3d06d001084d0853",
+      "type": "text",
+      "text": "pendientes-evolucion.md",
+      "x": 1748,
+      "y": -865,
+      "width": 278,
+      "height": 56
+    },
+    {
+      "id": "c207655ee45917ab",
+      "type": "text",
+      "text": "svg2canvas.py",
+      "x": 2149,
+      "y": -865,
+      "width": 200,
+      "height": 56
+    },
+    {
+      "id": "ca2b3aaeb91c828c",
+      "type": "text",
+      "text": "GitHub Actions",
+      "x": 497,
+      "y": -865,
+      "width": 200,
+      "height": 56
+    }
+  ],
+  "edges": [
+    {
+      "id": "b8c5986aca8d2b2d",
+      "fromNode": "eda0b76da6f92e54",
+      "fromSide": "left",
+      "toNode": "359e1713f74600d3",
+      "toSide": "right"
+    },
+    {
+      "id": "349c29dcc7ae7180",
+      "fromNode": "eda0b76da6f92e54",
+      "fromSide": "left",
+      "toNode": "e216c0621b14f0ec",
+      "toSide": "right"
+    },
+    {
+      "id": "4b2c654112727797",
+      "fromNode": "eda0b76da6f92e54",
+      "fromSide": "bottom",
+      "toNode": "e78c1f34287de23e",
+      "toSide": "top"
+    },
+    {
+      "id": "5931b09cb3d8ac5a",
+      "fromNode": "eda0b76da6f92e54",
+      "fromSide": "bottom",
+      "toNode": "986ac5c06e89ff78",
+      "toSide": "top"
+    },
+    {
+      "id": "0ff08882b117f549",
+      "fromNode": "eda0b76da6f92e54",
+      "fromSide": "bottom",
+      "toNode": "8b6664386e7ef556",
+      "toSide": "top"
+    },
+    {
+      "id": "5751606d2dab04b8",
+      "fromNode": "eda0b76da6f92e54",
+      "fromSide": "right",
+      "toNode": "db89af5edb722ccc",
+      "toSide": "left"
+    },
+    {
+      "id": "adc057d5e3f2855f",
+      "fromNode": "eda0b76da6f92e54",
+      "fromSide": "right",
+      "toNode": "a7602d0615b33ad0",
+      "toSide": "left"
+    },
+    {
+      "id": "ab430b97073e8ecf",
+      "fromNode": "eda0b76da6f92e54",
+      "fromSide": "right",
+      "toNode": "180de974f96e9f1d",
+      "toSide": "left"
+    },
+    {
+      "id": "47abdabed8cba6f4",
+      "fromNode": "eda0b76da6f92e54",
+      "fromSide": "right",
+      "toNode": "2a2d89a7fac77e2a",
+      "toSide": "left"
+    },
+    {
+      "id": "ad58d68c0982774b",
+      "fromNode": "eda0b76da6f92e54",
+      "fromSide": "right",
+      "toNode": "c37c4f5b71526692",
+      "toSide": "left"
+    },
+    {
+      "id": "ab4009ea01053197",
+      "fromNode": "eda0b76da6f92e54",
+      "fromSide": "right",
+      "toNode": "a702cc4adde8375c",
+      "toSide": "left"
+    },
+    {
+      "id": "a4ea56205d948354",
+      "fromNode": "eda0b76da6f92e54",
+      "fromSide": "bottom",
+      "toNode": "174c0d7238f94439",
+      "toSide": "top"
+    },
+    {
+      "id": "74c839cf2daf49f8",
+      "fromNode": "eda0b76da6f92e54",
+      "fromSide": "bottom",
+      "toNode": "d12a3c06ed446460",
+      "toSide": "top"
+    },
+    {
+      "id": "9fac4d371865f150",
+      "fromNode": "eda0b76da6f92e54",
+      "fromSide": "left",
+      "toNode": "afd59d3fece3fa76",
+      "toSide": "right"
+    },
+    {
+      "id": "85754ae5fb24e99c",
+      "fromNode": "eda0b76da6f92e54",
+      "fromSide": "left",
+      "toNode": "dd4f3b08601c3598",
+      "toSide": "right",
+      "label": "repositorio"
+    },
+    {
+      "id": "401f5c875a3bf1a3",
+      "fromNode": "359e1713f74600d3",
+      "fromSide": "bottom",
+      "toNode": "bc2777f65042d19a",
+      "toSide": "top"
+    },
+    {
+      "id": "0ac0b88d75779195",
+      "fromNode": "bc2777f65042d19a",
+      "fromSide": "bottom",
+      "toNode": "174c0d7238f94439",
+      "toSide": "top",
+      "label": "ejecuta"
+    },
+    {
+      "id": "ace2532742c4f986",
+      "fromNode": "174c0d7238f94439",
+      "fromSide": "bottom",
+      "toNode": "d12a3c06ed446460",
+      "toSide": "top",
+      "label": "actualiza"
+    },
+    {
+      "id": "5101f35aa6321a21",
+      "fromNode": "174c0d7238f94439",
+      "fromSide": "bottom",
+      "toNode": "3361a4fbf97d0d08",
+      "toSide": "top",
+      "label": "genera"
+    },
+    {
+      "id": "280a9073f7470e9f",
+      "fromNode": "afd59d3fece3fa76",
+      "fromSide": "bottom",
+      "toNode": "255e925cdeac83b6",
+      "toSide": "top"
+    },
+    {
+      "id": "fafc99735026663c",
+      "fromNode": "afd59d3fece3fa76",
+      "fromSide": "right",
+      "toNode": "318435fba80b531d",
+      "toSide": "left"
+    },
+    {
+      "id": "c2d2de966ccba0fa",
+      "fromNode": "afd59d3fece3fa76",
+      "fromSide": "right",
+      "toNode": "3d06d001084d0853",
+      "toSide": "left"
+    },
+    {
+      "id": "b1ef3d7e195973c4",
+      "fromNode": "afd59d3fece3fa76",
+      "fromSide": "bottom",
+      "toNode": "3361a4fbf97d0d08",
+      "toSide": "top"
+    },
+    {
+      "id": "bbab448f56d0d8be",
+      "fromNode": "afd59d3fece3fa76",
+      "fromSide": "right",
+      "toNode": "c207655ee45917ab",
+      "toSide": "left"
+    },
+    {
+      "id": "90c483e47005f65e",
+      "fromNode": "dd4f3b08601c3598",
+      "fromSide": "bottom",
+      "toNode": "ca2b3aaeb91c828c",
+      "toSide": "top"
+    },
+    {
+      "id": "ac46463f88c720b6",
+      "fromNode": "ca2b3aaeb91c828c",
+      "fromSide": "bottom",
+      "toNode": "bc2777f65042d19a",
+      "toSide": "top",
+      "label": "workflow"
+    }
+  ]
+}

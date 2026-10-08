@@ -1,0 +1,528 @@
+{
+  "nodes": [
+    {
+      "id": "eda0b76da6f92e54",
+      "type": "text",
+      "text": "4-TERMX",
+      "x": 0,
+      "y": 1008,
+      "width": 200,
+      "height": 56,
+      "color": "#555555"
+    },
+    {
+      "id": "68fdfd8aebfa65c2",
+      "type": "text",
+      "text": ".github",
+      "x": 270,
+      "y": 0,
+      "width": 200,
+      "height": 56
+    },
+    {
+      "id": "5c2cdb4fc443de5e",
+      "type": "text",
+      "text": ".termux",
+      "x": 270,
+      "y": 84,
+      "width": 200,
+      "height": 56
+    },
+    {
+      "id": "fad25480dbd74180",
+      "type": "text",
+      "text": "docs",
+      "x": 270,
+      "y": 336,
+      "width": 200,
+      "height": 56
+    },
+    {
+      "id": "639a1847c867b529",
+      "type": "text",
+      "text": "infrastructure",
+      "x": 270,
+      "y": 798,
+      "width": 200,
+      "height": 56
+    },
+    {
+      "id": "8c90722c80d2d05f",
+      "type": "text",
+      "text": "scripts",
+      "x": 270,
+      "y": 1260,
+      "width": 200,
+      "height": 56
+    },
+    {
+      "id": "de5ef0877267beaa",
+      "type": "text",
+      "text": ".gitconfig",
+      "x": 270,
+      "y": 1596,
+      "width": 200,
+      "height": 56
+    },
+    {
+      "id": "499dd1f852978469",
+      "type": "text",
+      "text": ".gitignore",
+      "x": 270,
+      "y": 1680,
+      "width": 200,
+      "height": 56
+    },
+    {
+      "id": "f3c5c55781dc10ff",
+      "type": "text",
+      "text": ".zshrc",
+      "x": 270,
+      "y": 1764,
+      "width": 200,
+      "height": 56
+    },
+    {
+      "id": "c77db0613ea407a6",
+      "type": "text",
+      "text": "README.md",
+      "x": 270,
+      "y": 1848,
+      "width": 200,
+      "height": 56
+    },
+    {
+      "id": "729698cff2e989a4",
+      "type": "text",
+      "text": "sync-repo.sh",
+      "x": 270,
+      "y": 1932,
+      "width": 200,
+      "height": 56
+    },
+    {
+      "id": "26a2da7f0147652c",
+      "type": "text",
+      "text": "update_readme_tree.py",
+      "x": 270,
+      "y": 2016,
+      "width": 258,
+      "height": 56
+    },
+    {
+      "id": "335512a6e6dd7cc2",
+      "type": "text",
+      "text": "workflows",
+      "x": 598,
+      "y": 0,
+      "width": 200,
+      "height": 56
+    },
+    {
+      "id": "812c6844c673ab7e",
+      "type": "text",
+      "text": "termux.properties",
+      "x": 598,
+      "y": 84,
+      "width": 218,
+      "height": 56
+    },
+    {
+      "id": "03ec2241bfbc0e99",
+      "type": "text",
+      "text": "conocimiento-4-termx.md",
+      "x": 598,
+      "y": 168,
+      "width": 278,
+      "height": 56
+    },
+    {
+      "id": "e62cf5df39c67364",
+      "type": "text",
+      "text": "infrastructure.md",
+      "x": 598,
+      "y": 252,
+      "width": 218,
+      "height": 56
+    },
+    {
+      "id": "06533f23e311ec06",
+      "type": "text",
+      "text": "pendientes-evolucion.md",
+      "x": 598,
+      "y": 336,
+      "width": 278,
+      "height": 56
+    },
+    {
+      "id": "14859ac5465cfa88",
+      "type": "text",
+      "text": "repository-map.md",
+      "x": 598,
+      "y": 420,
+      "width": 218,
+      "height": 56
+    },
+    {
+      "id": "afd8e36a1f9347ea",
+      "type": "text",
+      "text": "svg2canvas.py",
+      "x": 598,
+      "y": 504,
+      "width": 200,
+      "height": 56
+    },
+    {
+      "id": "b00b055d1b657160",
+      "type": "text",
+      "text": "history",
+      "x": 598,
+      "y": 672,
+      "width": 200,
+      "height": 56
+    },
+    {
+      "id": "acab99d8e803a5fb",
+      "type": "text",
+      "text": "desired-state.json",
+      "x": 598,
+      "y": 840,
+      "width": 228,
+      "height": 56
+    },
+    {
+      "id": "e651a913a64dcf3d",
+      "type": "text",
+      "text": "system-manifest.json",
+      "x": 598,
+      "y": 924,
+      "width": 248,
+      "height": 56
+    },
+    {
+      "id": "90273974aea59d32",
+      "type": "text",
+      "text": "infra-audit.py",
+      "x": 598,
+      "y": 1008,
+      "width": 200,
+      "height": 56
+    },
+    {
+      "id": "5c1a7fb567bf83e4",
+      "type": "text",
+      "text": "infra-git-sync.sh",
+      "x": 598,
+      "y": 1092,
+      "width": 218,
+      "height": 56
+    },
+    {
+      "id": "9116a2ec0d829d8f",
+      "type": "text",
+      "text": "infra-note.py",
+      "x": 598,
+      "y": 1176,
+      "width": 200,
+      "height": 56
+    },
+    {
+      "id": "2699e29e2a8935db",
+      "type": "text",
+      "text": "infra-sync.py",
+      "x": 598,
+      "y": 1260,
+      "width": 200,
+      "height": 56
+    },
+    {
+      "id": "cceacb02c8e1f526",
+      "type": "text",
+      "text": "infra-sync.sh",
+      "x": 598,
+      "y": 1344,
+      "width": 200,
+      "height": 56
+    },
+    {
+      "id": "d9ac5e7bc2d2d331",
+      "type": "text",
+      "text": "infra-wrapper.sh",
+      "x": 598,
+      "y": 1428,
+      "width": 208,
+      "height": 56
+    },
+    {
+      "id": "9afe10a1bcd28a78",
+      "type": "text",
+      "text": "install-infra-wrappers.sh",
+      "x": 598,
+      "y": 1512,
+      "width": 298,
+      "height": 56
+    },
+    {
+      "id": "1e978be8008708e9",
+      "type": "text",
+      "text": "update-tree.yml",
+      "x": 966,
+      "y": 0,
+      "width": 200,
+      "height": 56
+    },
+    {
+      "id": "6a9eafd481a00280",
+      "type": "text",
+      "text": "infrastructure-history.jsonl",
+      "x": 966,
+      "y": 588,
+      "width": 328,
+      "height": 56
+    },
+    {
+      "id": "4f982b174df62996",
+      "type": "text",
+      "text": "package-operation-cursor.json",
+      "x": 966,
+      "y": 672,
+      "width": 338,
+      "height": 56
+    },
+    {
+      "id": "71ddd5b305bacbcd",
+      "type": "text",
+      "text": "pkg-operation-cursor.json",
+      "x": 966,
+      "y": 756,
+      "width": 298,
+      "height": 56
+    }
+  ],
+  "edges": [
+    {
+      "id": "482b7c2003a0eb37",
+      "fromNode": "eda0b76da6f92e54",
+      "fromSide": "right",
+      "toNode": "68fdfd8aebfa65c2",
+      "toSide": "left"
+    },
+    {
+      "id": "866f921c03fc3c3b",
+      "fromNode": "eda0b76da6f92e54",
+      "fromSide": "right",
+      "toNode": "5c2cdb4fc443de5e",
+      "toSide": "left"
+    },
+    {
+      "id": "fa34457dbe6aa45d",
+      "fromNode": "eda0b76da6f92e54",
+      "fromSide": "right",
+      "toNode": "fad25480dbd74180",
+      "toSide": "left"
+    },
+    {
+      "id": "8334e56d9ab5c6eb",
+      "fromNode": "eda0b76da6f92e54",
+      "fromSide": "right",
+      "toNode": "639a1847c867b529",
+      "toSide": "left"
+    },
+    {
+      "id": "98b3c85af63367ed",
+      "fromNode": "eda0b76da6f92e54",
+      "fromSide": "right",
+      "toNode": "8c90722c80d2d05f",
+      "toSide": "left"
+    },
+    {
+      "id": "7871f2785b13a3c9",
+      "fromNode": "eda0b76da6f92e54",
+      "fromSide": "right",
+      "toNode": "de5ef0877267beaa",
+      "toSide": "left"
+    },
+    {
+      "id": "f31985b88a0d11f0",
+      "fromNode": "eda0b76da6f92e54",
+      "fromSide": "right",
+      "toNode": "499dd1f852978469",
+      "toSide": "left"
+    },
+    {
+      "id": "364676cdfafb851c",
+      "fromNode": "eda0b76da6f92e54",
+      "fromSide": "right",
+      "toNode": "f3c5c55781dc10ff",
+      "toSide": "left"
+    },
+    {
+      "id": "036a2cc787b96cb4",
+      "fromNode": "eda0b76da6f92e54",
+      "fromSide": "right",
+      "toNode": "c77db0613ea407a6",
+      "toSide": "left"
+    },
+    {
+      "id": "4dd48aac6ffe5a63",
+      "fromNode": "eda0b76da6f92e54",
+      "fromSide": "right",
+      "toNode": "729698cff2e989a4",
+      "toSide": "left"
+    },
+    {
+      "id": "eb9a74c5c57efbd2",
+      "fromNode": "eda0b76da6f92e54",
+      "fromSide": "right",
+      "toNode": "26a2da7f0147652c",
+      "toSide": "left"
+    },
+    {
+      "id": "b746b64c1b25ba7b",
+      "fromNode": "68fdfd8aebfa65c2",
+      "fromSide": "right",
+      "toNode": "335512a6e6dd7cc2",
+      "toSide": "left"
+    },
+    {
+      "id": "ad6b70fd9b228bfa",
+      "fromNode": "5c2cdb4fc443de5e",
+      "fromSide": "right",
+      "toNode": "812c6844c673ab7e",
+      "toSide": "left"
+    },
+    {
+      "id": "9225a3061ecfc500",
+      "fromNode": "fad25480dbd74180",
+      "fromSide": "right",
+      "toNode": "03ec2241bfbc0e99",
+      "toSide": "left"
+    },
+    {
+      "id": "e2eae4d912c3fb58",
+      "fromNode": "fad25480dbd74180",
+      "fromSide": "right",
+      "toNode": "e62cf5df39c67364",
+      "toSide": "left"
+    },
+    {
+      "id": "1e7972085be55e0b",
+      "fromNode": "fad25480dbd74180",
+      "fromSide": "right",
+      "toNode": "06533f23e311ec06",
+      "toSide": "left"
+    },
+    {
+      "id": "688e165ec4d956c3",
+      "fromNode": "fad25480dbd74180",
+      "fromSide": "right",
+      "toNode": "14859ac5465cfa88",
+      "toSide": "left"
+    },
+    {
+      "id": "7df59ccea935a65f",
+      "fromNode": "fad25480dbd74180",
+      "fromSide": "right",
+      "toNode": "afd8e36a1f9347ea",
+      "toSide": "left"
+    },
+    {
+      "id": "af2f45bd00a38438",
+      "fromNode": "639a1847c867b529",
+      "fromSide": "right",
+      "toNode": "b00b055d1b657160",
+      "toSide": "left"
+    },
+    {
+      "id": "0932d7da679d66be",
+      "fromNode": "639a1847c867b529",
+      "fromSide": "right",
+      "toNode": "acab99d8e803a5fb",
+      "toSide": "left"
+    },
+    {
+      "id": "abf3923dce241fbe",
+      "fromNode": "639a1847c867b529",
+      "fromSide": "right",
+      "toNode": "e651a913a64dcf3d",
+      "toSide": "left"
+    },
+    {
+      "id": "cd28a61cbd173e22",
+      "fromNode": "8c90722c80d2d05f",
+      "fromSide": "right",
+      "toNode": "90273974aea59d32",
+      "toSide": "left"
+    },
+    {
+      "id": "121428a7a5e49d07",
+      "fromNode": "8c90722c80d2d05f",
+      "fromSide": "right",
+      "toNode": "5c1a7fb567bf83e4",
+      "toSide": "left"
+    },
+    {
+      "id": "0e851ec34e24ebed",
+      "fromNode": "8c90722c80d2d05f",
+      "fromSide": "right",
+      "toNode": "9116a2ec0d829d8f",
+      "toSide": "left"
+    },
+    {
+      "id": "ca2714bba8d9ca69",
+      "fromNode": "8c90722c80d2d05f",
+      "fromSide": "right",
+      "toNode": "2699e29e2a8935db",
+      "toSide": "left"
+    },
+    {
+      "id": "47667beff55dd901",
+      "fromNode": "8c90722c80d2d05f",
+      "fromSide": "right",
+      "toNode": "cceacb02c8e1f526",
+      "toSide": "left"
+    },
+    {
+      "id": "d3a80088416e597e",
+      "fromNode": "8c90722c80d2d05f",
+      "fromSide": "right",
+      "toNode": "d9ac5e7bc2d2d331",
+      "toSide": "left"
+    },
+    {
+      "id": "978ac2ec999c0a93",
+      "fromNode": "8c90722c80d2d05f",
+      "fromSide": "right",
+      "toNode": "9afe10a1bcd28a78",
+      "toSide": "left"
+    },
+    {
+      "id": "a93391ad3800e218",
+      "fromNode": "335512a6e6dd7cc2",
+      "fromSide": "right",
+      "toNode": "1e978be8008708e9",
+      "toSide": "left"
+    },
+    {
+      "id": "be9064eac7342b14",
+      "fromNode": "b00b055d1b657160",
+      "fromSide": "right",
+      "toNode": "6a9eafd481a00280",
+      "toSide": "left"
+    },
+    {
+      "id": "8009664e39f3b13c",
+      "fromNode": "b00b055d1b657160",
+      "fromSide": "right",
+      "toNode": "4f982b174df62996",
+      "toSide": "left"
+    },
+    {
+      "id": "3353ba2d43c6c498",
+      "fromNode": "b00b055d1b657160",
+      "fromSide": "right",
+      "toNode": "71ddd5b305bacbcd",
+      "toSide": "left"
+    }
+  ]
+}

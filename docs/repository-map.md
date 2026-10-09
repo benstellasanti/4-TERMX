@@ -12,7 +12,8 @@
 │   │   ├── bug_report.yml
 │   │   └── feature_request.yml
 │   ├── workflows/
-│   │   └── update-tree.yml
+│   │   ├── update-tree.yml
+│   │   └── validate.yml
 │   └── PULL_REQUEST_TEMPLATE.md
 ├── .termux/
 │   └── termux.properties

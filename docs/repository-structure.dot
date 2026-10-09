@@ -22,6 +22,8 @@ digraph RepositoryStructure {
   n__github -> n__github_PULL_REQUEST_TEMPLATE_md;
   n__github_workflows_update_tree_yml [label="update-tree.yml", shape=note, fillcolor="white"];
   n__github_workflows -> n__github_workflows_update_tree_yml;
+  n__github_workflows_validate_yml [label="validate.yml", shape=note, fillcolor="white"];
+  n__github_workflows -> n__github_workflows_validate_yml;
   n__gitignore [label=".gitignore", shape=note, fillcolor="white"];
   root -> n__gitignore;
   n__termux_termux_properties [label="termux.properties", shape=note, fillcolor="white"];

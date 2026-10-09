@@ -153,15 +153,16 @@ El proyecto continúa en evolución. Las mejoras planificadas están documentada
 | — | [<code>.github/ISSUE_TEMPLATE/feature_request.yml</code>](./.github/ISSUE_TEMPLATE/feature_request.yml) | Plantilla de Issue | 828 B | Formulario para documentar necesidades, propuestas, alternativas y riesgos. |
 | — | [<code>.github/PULL_REQUEST_TEMPLATE.md</code>](./.github/PULL_REQUEST_TEMPLATE.md) | Plantilla de Pull Request | 696 B | Lista de comprobación para resumir cambios, validar pruebas y declarar riesgos. |
 | — | [<code>.github/workflows/update-tree.yml</code>](./.github/workflows/update-tree.yml) | GitHub Actions | 2.1 KB | Workflow que regenera mapas, Canvas e inventario documental. |
+| — | [<code>.github/workflows/validate.yml</code>](./.github/workflows/validate.yml) | GitHub Actions | 1.2 KB | Ejecuta pruebas unitarias y validaciones estáticas con permisos de solo lectura. |
 | — | [<code>.gitignore</code>](./.gitignore) | Configuración | 398 B | Excluye secretos, credenciales y artefactos locales de Git. |
 | — | [<code>.termux/termux.properties</code>](./.termux/termux.properties) | Archivo | 5.9 KB | Preferencias de interfaz y comportamiento de Termux. |
 | — | [<code>.zshrc</code>](./.zshrc) | Configuración | 319 B | Inicialización de Zsh y reconciliación automática de infraestructura. |
 | — | [<code>CONTRIBUTING.md</code>](./CONTRIBUTING.md) | Markdown | 2.7 KB | Normas para proponer, probar y documentar cambios. |
-| — | [<code>README.md</code>](./README.md) | Markdown | 21.8 KB | Guía principal: propósito, requisitos, inicio rápido, comandos y documentación. |
+| — | [<code>README.md</code>](./README.md) | Markdown | 22.4 KB | Guía principal: propósito, requisitos, inicio rápido, comandos y documentación. |
 | — | [<code>SECURITY.md</code>](./SECURITY.md) | Markdown | 1.6 KB | Canal y pautas para reportar vulnerabilidades de forma responsable. |
-| — | [<code>docs/architecture.md</code>](./docs/architecture.md) | Markdown | 4.1 KB | Describe los componentes principales, sus responsabilidades y los flujos de sincronización. |
+| — | [<code>docs/architecture.md</code>](./docs/architecture.md) | Markdown | 4.4 KB | Describe los componentes principales, sus responsabilidades y los flujos de sincronización. |
 | — | [<code>docs/canvas/repository-architecture.canvas</code>](./docs/canvas/repository-architecture.canvas) | Archivo | 10.0 KB | Diagrama de arquitectura para explorar en Obsidian. |
-| — | [<code>docs/canvas/repository-structure.canvas</code>](./docs/canvas/repository-structure.canvas) | Archivo | 15.5 KB | Diagrama estructural para explorar en Obsidian. |
+| — | [<code>docs/canvas/repository-structure.canvas</code>](./docs/canvas/repository-structure.canvas) | Archivo | 15.9 KB | Diagrama estructural para explorar en Obsidian. |
 | — | [<code>docs/conocimiento-4-termx.md</code>](./docs/conocimiento-4-termx.md) | Markdown | 2.4 KB | Registro progresivo de hechos confirmados y conocimiento técnico del proyecto. |
 | — | [<code>docs/design-principles.md</code>](./docs/design-principles.md) | Markdown | 2.3 KB | Define criterios de diseño para evidencia, seguridad, reversibilidad y trazabilidad. |
 | — | [<code>docs/infrastructure.md</code>](./docs/infrastructure.md) | Markdown | 4.7 KB | Manual del manifiesto, historial, wrappers, notas y auditoría de infraestructura. |
@@ -169,8 +170,8 @@ El proyecto continúa en evolución. Las mejoras planificadas están documentada
 | — | [<code>docs/repository-architecture.dot</code>](./docs/repository-architecture.dot) | Archivo | 3.2 KB | Fuente Graphviz de las relaciones funcionales principales. |
 | — | [<code>docs/repository-architecture.svg</code>](./docs/repository-architecture.svg) | Archivo | 25.0 KB | Visualización SVG de la arquitectura y automatización. |
 | — | [<code>docs/repository-map.md</code>](./docs/repository-map.md) | Markdown | 2.1 KB | Mapa textual de la estructura del repositorio, generado automáticamente. |
-| — | [<code>docs/repository-structure.dot</code>](./docs/repository-structure.dot) | Archivo | 6.1 KB | Fuente Graphviz del grafo jerárquico de archivos y directorios. |
-| — | [<code>docs/repository-structure.svg</code>](./docs/repository-structure.svg) | Archivo | 38.3 KB | Visualización SVG de la estructura del repositorio. |
+| — | [<code>docs/repository-structure.dot</code>](./docs/repository-structure.dot) | Archivo | 6.3 KB | Fuente Graphviz del grafo jerárquico de archivos y directorios. |
+| — | [<code>docs/repository-structure.svg</code>](./docs/repository-structure.svg) | Archivo | 39.2 KB | Visualización SVG de la estructura del repositorio. |
 | — | [<code>docs/svg2canvas.py</code>](./docs/svg2canvas.py) | Python | 12.4 KB | Convierte diagramas SVG en archivos Canvas compatibles con Obsidian. |
 | — | [<code>infrastructure/desired-state.json</code>](./infrastructure/desired-state.json) | JSON | 597 B | Clasificación declarada de dependencias requeridas, opcionales y temporales. |
 | — | [<code>infrastructure/history/infrastructure-history.jsonl</code>](./infrastructure/history/infrastructure-history.jsonl) | Archivo | 2.6 KB | Historial estructurado de cambios de infraestructura detectados. |
@@ -190,17 +191,18 @@ El proyecto continúa en evolución. Las mejoras planificadas están documentada
 | — | [<code>scripts/sync-canvas-to-obsidian.py</code>](./scripts/sync-canvas-to-obsidian.py) | Python | 1.8 KB | Copia README y Canvas a Documents/4-TERMX y retira Canvas obsoletos. |
 | — | [<code>sync-repo.sh</code>](./sync-repo.sh) | Shell | 1.1 KB | Punto de entrada para sincronizar el repositorio desde Termux. |
 | — | [<code>tests/test_update_readme_tree.py</code>](./tests/test_update_readme_tree.py) | Python | 1.6 KB | Archivo Python; descripción específica pendiente de documentar. |
-| — | [<code>update_readme_tree.py</code>](./update_readme_tree.py) | Python | 19.6 KB | Genera el mapa estructural, grafos DOT/SVG, Canvas y manifiesto del README. |
+| — | [<code>update_readme_tree.py</code>](./update_readme_tree.py) | Python | 19.7 KB | Genera el mapa estructural, grafos DOT/SVG, Canvas y manifiesto del README. |
 
 ### 📂 Bloques colapsables por componente
 
 <details>
-<summary>📁 <strong>.github</strong> — 4 archivos / 4.7 KB</summary>
+<summary>📁 <strong>.github</strong> — 5 archivos / 5.9 KB</summary>
 
 - [<code>.github/ISSUE_TEMPLATE/bug_report.yml</code>](./.github/ISSUE_TEMPLATE/bug_report.yml) — **1.0 KB** — Formulario guiado para informar errores con pasos de reproducción y entorno.
 - [<code>.github/ISSUE_TEMPLATE/feature_request.yml</code>](./.github/ISSUE_TEMPLATE/feature_request.yml) — **828 B** — Formulario para documentar necesidades, propuestas, alternativas y riesgos.
 - [<code>.github/PULL_REQUEST_TEMPLATE.md</code>](./.github/PULL_REQUEST_TEMPLATE.md) — **696 B** — Lista de comprobación para resumir cambios, validar pruebas y declarar riesgos.
 - [<code>.github/workflows/update-tree.yml</code>](./.github/workflows/update-tree.yml) — **2.1 KB** — Workflow que regenera mapas, Canvas e inventario documental.
+- [<code>.github/workflows/validate.yml</code>](./.github/workflows/validate.yml) — **1.2 KB** — Ejecuta pruebas unitarias y validaciones estáticas con permisos de solo lectura.
 
 </details>
 
@@ -212,11 +214,11 @@ El proyecto continúa en evolución. Las mejoras planificadas están documentada
 </details>
 
 <details>
-<summary>📁 <strong>docs</strong> — 13 archivos / 133.6 KB</summary>
+<summary>📁 <strong>docs</strong> — 13 archivos / 135.4 KB</summary>
 
-- [<code>docs/architecture.md</code>](./docs/architecture.md) — **4.1 KB** — Describe los componentes principales, sus responsabilidades y los flujos de sincronización.
+- [<code>docs/architecture.md</code>](./docs/architecture.md) — **4.4 KB** — Describe los componentes principales, sus responsabilidades y los flujos de sincronización.
 - [<code>docs/canvas/repository-architecture.canvas</code>](./docs/canvas/repository-architecture.canvas) — **10.0 KB** — Diagrama de arquitectura para explorar en Obsidian.
-- [<code>docs/canvas/repository-structure.canvas</code>](./docs/canvas/repository-structure.canvas) — **15.5 KB** — Diagrama estructural para explorar en Obsidian.
+- [<code>docs/canvas/repository-structure.canvas</code>](./docs/canvas/repository-structure.canvas) — **15.9 KB** — Diagrama estructural para explorar en Obsidian.
 - [<code>docs/conocimiento-4-termx.md</code>](./docs/conocimiento-4-termx.md) — **2.4 KB** — Registro progresivo de hechos confirmados y conocimiento técnico del proyecto.
 - [<code>docs/design-principles.md</code>](./docs/design-principles.md) — **2.3 KB** — Define criterios de diseño para evidencia, seguridad, reversibilidad y trazabilidad.
 - [<code>docs/infrastructure.md</code>](./docs/infrastructure.md) — **4.7 KB** — Manual del manifiesto, historial, wrappers, notas y auditoría de infraestructura.
@@ -224,8 +226,8 @@ El proyecto continúa en evolución. Las mejoras planificadas están documentada
 - [<code>docs/repository-architecture.dot</code>](./docs/repository-architecture.dot) — **3.2 KB** — Fuente Graphviz de las relaciones funcionales principales.
 - [<code>docs/repository-architecture.svg</code>](./docs/repository-architecture.svg) — **25.0 KB** — Visualización SVG de la arquitectura y automatización.
 - [<code>docs/repository-map.md</code>](./docs/repository-map.md) — **2.1 KB** — Mapa textual de la estructura del repositorio, generado automáticamente.
-- [<code>docs/repository-structure.dot</code>](./docs/repository-structure.dot) — **6.1 KB** — Fuente Graphviz del grafo jerárquico de archivos y directorios.
-- [<code>docs/repository-structure.svg</code>](./docs/repository-structure.svg) — **38.3 KB** — Visualización SVG de la estructura del repositorio.
+- [<code>docs/repository-structure.dot</code>](./docs/repository-structure.dot) — **6.3 KB** — Fuente Graphviz del grafo jerárquico de archivos y directorios.
+- [<code>docs/repository-structure.svg</code>](./docs/repository-structure.svg) — **39.2 KB** — Visualización SVG de la estructura del repositorio.
 - [<code>docs/svg2canvas.py</code>](./docs/svg2canvas.py) — **12.4 KB** — Convierte diagramas SVG en archivos Canvas compatibles con Obsidian.
 
 </details>
@@ -242,16 +244,16 @@ El proyecto continúa en evolución. Las mejoras planificadas están documentada
 </details>
 
 <details>
-<summary>📁 <strong>raíz</strong> — 8 archivos / 47.4 KB</summary>
+<summary>📁 <strong>raíz</strong> — 8 archivos / 48.2 KB</summary>
 
 - [<code>.gitconfig</code>](./.gitconfig) — **64 B** — Configuración Git versionada para el entorno del proyecto.
 - [<code>.gitignore</code>](./.gitignore) — **398 B** — Excluye secretos, credenciales y artefactos locales de Git.
 - [<code>.zshrc</code>](./.zshrc) — **319 B** — Inicialización de Zsh y reconciliación automática de infraestructura.
 - [<code>CONTRIBUTING.md</code>](./CONTRIBUTING.md) — **2.7 KB** — Normas para proponer, probar y documentar cambios.
-- [<code>README.md</code>](./README.md) — **21.8 KB** — Guía principal: propósito, requisitos, inicio rápido, comandos y documentación.
+- [<code>README.md</code>](./README.md) — **22.4 KB** — Guía principal: propósito, requisitos, inicio rápido, comandos y documentación.
 - [<code>SECURITY.md</code>](./SECURITY.md) — **1.6 KB** — Canal y pautas para reportar vulnerabilidades de forma responsable.
 - [<code>sync-repo.sh</code>](./sync-repo.sh) — **1.1 KB** — Punto de entrada para sincronizar el repositorio desde Termux.
-- [<code>update_readme_tree.py</code>](./update_readme_tree.py) — **19.6 KB** — Genera el mapa estructural, grafos DOT/SVG, Canvas y manifiesto del README.
+- [<code>update_readme_tree.py</code>](./update_readme_tree.py) — **19.7 KB** — Genera el mapa estructural, grafos DOT/SVG, Canvas y manifiesto del README.
 
 </details>
 
@@ -279,7 +281,7 @@ El proyecto continúa en evolución. Las mejoras planificadas están documentada
 
 </details>
 
-**Total actual:** 43 archivos — **231.3 KB**
+**Total actual:** 44 archivos — **235.1 KB**
 
 _Este bloque es mantenido por Actions. No editar manualmente entre los marcadores._
 <!-- FILE-MANIFEST:END -->

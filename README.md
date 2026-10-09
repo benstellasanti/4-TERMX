@@ -160,7 +160,7 @@ El proyecto continúa en evolución. Las mejoras planificadas están documentada
 | — | [<code>.termux/termux.properties</code>](./.termux/termux.properties) | Archivo | 5.9 KB | Preferencias de interfaz y comportamiento de Termux. |
 | — | [<code>.zshrc</code>](./.zshrc) | Configuración | 319 B | Inicialización de Zsh y reconciliación automática de infraestructura. |
 | — | [<code>CONTRIBUTING.md</code>](./CONTRIBUTING.md) | Markdown | 2.7 KB | Normas para proponer, probar y documentar cambios. |
-| — | [<code>README.md</code>](./README.md) | Markdown | 22.8 KB | Guía principal: propósito, requisitos, inicio rápido, comandos y documentación. |
+| — | [<code>README.md</code>](./README.md) | Markdown | 23.0 KB | Guía principal: propósito, requisitos, inicio rápido, comandos y documentación. |
 | — | [<code>SECURITY.md</code>](./SECURITY.md) | Markdown | 1.6 KB | Canal y pautas para reportar vulnerabilidades de forma responsable. |
 | — | [<code>docs/architecture.md</code>](./docs/architecture.md) | Markdown | 4.4 KB | Describe los componentes principales, sus responsabilidades y los flujos de sincronización. |
 | — | [<code>docs/canvas/repository-architecture.canvas</code>](./docs/canvas/repository-architecture.canvas) | Archivo | 10.0 KB | Diagrama de arquitectura para explorar en Obsidian. |
@@ -246,13 +246,13 @@ El proyecto continúa en evolución. Las mejoras planificadas están documentada
 </details>
 
 <details>
-<summary>📁 <strong>raíz</strong> — 8 archivos / 48.6 KB</summary>
+<summary>📁 <strong>raíz</strong> — 8 archivos / 48.7 KB</summary>
 
 - [<code>.gitconfig</code>](./.gitconfig) — **64 B** — Configuración Git versionada para el entorno del proyecto.
 - [<code>.gitignore</code>](./.gitignore) — **398 B** — Excluye secretos, credenciales y artefactos locales de Git.
 - [<code>.zshrc</code>](./.zshrc) — **319 B** — Inicialización de Zsh y reconciliación automática de infraestructura.
 - [<code>CONTRIBUTING.md</code>](./CONTRIBUTING.md) — **2.7 KB** — Normas para proponer, probar y documentar cambios.
-- [<code>README.md</code>](./README.md) — **22.8 KB** — Guía principal: propósito, requisitos, inicio rápido, comandos y documentación.
+- [<code>README.md</code>](./README.md) — **23.0 KB** — Guía principal: propósito, requisitos, inicio rápido, comandos y documentación.
 - [<code>SECURITY.md</code>](./SECURITY.md) — **1.6 KB** — Canal y pautas para reportar vulnerabilidades de forma responsable.
 - [<code>sync-repo.sh</code>](./sync-repo.sh) — **1.1 KB** — Punto de entrada para sincronizar el repositorio desde Termux.
 - [<code>update_readme_tree.py</code>](./update_readme_tree.py) — **19.7 KB** — Genera el mapa estructural, grafos DOT/SVG, Canvas y manifiesto del README.
@@ -283,7 +283,7 @@ El proyecto continúa en evolución. Las mejoras planificadas están documentada
 
 </details>
 
-**Total actual:** 44 archivos — **235.5 KB**
+**Total actual:** 44 archivos — **235.6 KB**
 
 _Este bloque es mantenido por Actions. No editar manualmente entre los marcadores._
 <!-- FILE-MANIFEST:END -->

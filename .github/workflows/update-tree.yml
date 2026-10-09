@@ -37,7 +37,8 @@ jobs:
       - name: 🧪 Validar sintaxis Python, JSON y Shell
         shell: bash
         run: |
-          python -m compileall -q update_readme_tree.py scripts docs
+          python -m compileall -q update_readme_tree.py scripts docs tests
+          python -m unittest discover -s tests -v
           while IFS= read -r -d '' file; do
             python -m json.tool "$file" > /dev/null
           done < <(find infrastructure -type f -name '*.json' -print0)

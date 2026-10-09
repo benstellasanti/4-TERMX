@@ -20,6 +20,8 @@
 - [Principios de diseño](./docs/design-principles.md)
 - [Contribuir](./CONTRIBUTING.md)
 - [Política de seguridad](./SECURITY.md)
+- [Plantillas de Issues](./.github/ISSUE_TEMPLATE/)
+- [Plantilla de Pull Request](./.github/PULL_REQUEST_TEMPLATE.md)
 - [Seguridad y límites](#seguridad-y-límites)
 - [Estructura del repositorio](#estructura-del-repositorio)
 - [Estado y evolución](#estado-y-evolución)

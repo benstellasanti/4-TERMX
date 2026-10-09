@@ -53,7 +53,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          if git diff --quiet -- README.md docs/repository-map.md docs/repository-structure.dot docs/repository-structure.svg docs/repository-architecture.dot docs/repository-architecture.svg; then
+          if git diff --quiet -- README.md docs/repository-map.md docs/repository-structure.dot docs/repository-structure.svg docs/repository-architecture.dot docs/repository-architecture.svg docs/canvas; then
             echo "Documentación ya está actualizada."
             exit 0
           fi

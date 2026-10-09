@@ -97,6 +97,7 @@ Guía completa: [docs/infrastructure.md](./docs/infrastructure.md).
 ## Documentación y mapas
 
 - [Mapa del repositorio](./docs/repository-map.md)
+- [Arquitectura del sistema](./docs/architecture.md)
 - [Estructura del repositorio (SVG)](./docs/repository-structure.svg) · [fuente DOT](./docs/repository-structure.dot)
 - [Arquitectura y relaciones (SVG)](./docs/repository-architecture.svg) · [fuente DOT](./docs/repository-architecture.dot)
 - [Conocimiento del proyecto](./docs/conocimiento-4-termx.md)

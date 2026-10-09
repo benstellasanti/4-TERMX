@@ -107,7 +107,8 @@ Guía completa: [docs/infrastructure.md](./docs/infrastructure.md).
 - [Principios de diseño](./docs/design-principles.md)
 - [Guía de contribución](./CONTRIBUTING.md)
 - [Política de seguridad](./SECURITY.md)
-- [Workflow de validación](./.github/workflows/validate.yml)\n- [Workflow de generación documental](./.github/workflows/update-tree.yml)
+- [Workflow de validación](./.github/workflows/validate.yml)
+- [Workflow de generación documental](./.github/workflows/update-tree.yml)
 
 Los mapas, el inventario y los Canvas relacionados son artefactos generados. Para cambiar su lógica, modifica el generador o la fuente correspondiente; evita editar manualmente los bloques generados.
 

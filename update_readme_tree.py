@@ -40,6 +40,7 @@ DESCRIPTIONS = {
     ".zshrc": "Inicialización de Zsh y reconciliación automática de infraestructura.",
     ".termux/termux.properties": "Preferencias de interfaz y comportamiento de Termux.",
     ".github/workflows/update-tree.yml": "Workflow que regenera mapas, Canvas e inventario documental.",
+    ".github/workflows/validate.yml": "Ejecuta pruebas unitarias y validaciones estáticas con permisos de solo lectura.",
     "update_readme_tree.py": "Genera el mapa estructural, grafos DOT/SVG, Canvas y manifiesto del README.",
     "sync-repo.sh": "Punto de entrada para sincronizar el repositorio desde Termux.",
 

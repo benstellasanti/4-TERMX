@@ -8,6 +8,7 @@ digraph RepositoryStructure {
   n_docs [label="docs", shape=box, fillcolor="#eeeeee"];
   n_infrastructure [label="infrastructure", shape=box, fillcolor="#eeeeee"];
   n_scripts [label="scripts", shape=box, fillcolor="#eeeeee"];
+  n_tests [label="tests", shape=box, fillcolor="#eeeeee"];
   n__github_ISSUE_TEMPLATE [label="ISSUE_TEMPLATE", shape=box, fillcolor="#eeeeee"];
   n__github_workflows [label="workflows", shape=box, fillcolor="#eeeeee"];
   n_infrastructure_history [label="history", shape=box, fillcolor="#eeeeee"];
@@ -81,6 +82,8 @@ digraph RepositoryStructure {
   n_scripts -> n_scripts_sync_canvas_to_obsidian_py;
   n_sync_repo_sh [label="sync-repo.sh", shape=note, fillcolor="white"];
   root -> n_sync_repo_sh;
+  n_tests_test_update_readme_tree_py [label="test_update_readme_tree.py", shape=note, fillcolor="white"];
+  n_tests -> n_tests_test_update_readme_tree_py;
   n_update_readme_tree_py [label="update_readme_tree.py", shape=note, fillcolor="white"];
   root -> n_update_readme_tree_py;
   root -> n__github;
@@ -88,6 +91,7 @@ digraph RepositoryStructure {
   root -> n_docs;
   root -> n_infrastructure;
   root -> n_scripts;
+  root -> n_tests;
   n__github -> n__github_ISSUE_TEMPLATE;
   n__github -> n__github_workflows;
   n_infrastructure -> n_infrastructure_history;

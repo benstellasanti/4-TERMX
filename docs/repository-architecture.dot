@@ -13,6 +13,8 @@ digraph RepositoryArchitecture {
   root -> dir_n_infrastructure;
   dir_n_scripts [label="scripts", shape=box, fillcolor="#eeeeee"];
   root -> dir_n_scripts;
+  dir_n_tests [label="tests", shape=box, fillcolor="#eeeeee"];
+  root -> dir_n_tests;
   file_n__gitconfig [label=".gitconfig", shape=note];
   root -> file_n__gitconfig;
   file_n__gitignore [label=".gitignore", shape=note];

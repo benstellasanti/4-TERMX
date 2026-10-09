@@ -5,7 +5,7 @@
       "type": "text",
       "text": "4-TERMX",
       "x": 0,
-      "y": 1543,
+      "y": 1585,
       "width": 200,
       "height": 56,
       "color": "#555555"
@@ -56,11 +56,20 @@
       "height": 56
     },
     {
+      "id": "2651644e989d2c83",
+      "type": "text",
+      "text": "tests",
+      "x": 270,
+      "y": 2352,
+      "width": 200,
+      "height": 56
+    },
+    {
       "id": "de5ef0877267beaa",
       "type": "text",
       "text": ".gitconfig",
       "x": 270,
-      "y": 2352,
+      "y": 2436,
       "width": 200,
       "height": 56
     },
@@ -69,7 +78,7 @@
       "type": "text",
       "text": ".gitignore",
       "x": 270,
-      "y": 2436,
+      "y": 2520,
       "width": 200,
       "height": 56
     },
@@ -78,7 +87,7 @@
       "type": "text",
       "text": ".zshrc",
       "x": 270,
-      "y": 2520,
+      "y": 2604,
       "width": 200,
       "height": 56
     },
@@ -87,7 +96,7 @@
       "type": "text",
       "text": "CONTRIBUTING.md",
       "x": 270,
-      "y": 2604,
+      "y": 2688,
       "width": 200,
       "height": 56
     },
@@ -96,7 +105,7 @@
       "type": "text",
       "text": "README.md",
       "x": 270,
-      "y": 2688,
+      "y": 2772,
       "width": 200,
       "height": 56
     },
@@ -105,7 +114,7 @@
       "type": "text",
       "text": "SECURITY.md",
       "x": 270,
-      "y": 2772,
+      "y": 2856,
       "width": 200,
       "height": 56
     },
@@ -114,7 +123,7 @@
       "type": "text",
       "text": "sync-repo.sh",
       "x": 270,
-      "y": 2856,
+      "y": 2940,
       "width": 200,
       "height": 56
     },
@@ -123,7 +132,7 @@
       "type": "text",
       "text": "update_readme_tree.py",
       "x": 270,
-      "y": 2940,
+      "y": 3024,
       "width": 258,
       "height": 56
     },
@@ -353,6 +362,15 @@
       "height": 56
     },
     {
+      "id": "e4b327d3a10303b7",
+      "type": "text",
+      "text": "test_update_readme_tree.py",
+      "x": 598,
+      "y": 2352,
+      "width": 308,
+      "height": 56
+    },
+    {
       "id": "8b468cf653ebd208",
       "type": "text",
       "text": "bug_report.yml",
@@ -441,6 +459,13 @@
       "fromNode": "eda0b76da6f92e54",
       "fromSide": "right",
       "toNode": "8c90722c80d2d05f",
+      "toSide": "left"
+    },
+    {
+      "id": "c3053dbdab536b40",
+      "fromNode": "eda0b76da6f92e54",
+      "fromSide": "right",
+      "toNode": "2651644e989d2c83",
       "toSide": "left"
     },
     {
@@ -672,6 +697,13 @@
       "fromNode": "8c90722c80d2d05f",
       "fromSide": "right",
       "toNode": "a8941e5ca34171ff",
+      "toSide": "left"
+    },
+    {
+      "id": "57915a3cf2053e45",
+      "fromNode": "2651644e989d2c83",
+      "fromSide": "right",
+      "toNode": "e4b327d3a10303b7",
       "toSide": "left"
     },
     {

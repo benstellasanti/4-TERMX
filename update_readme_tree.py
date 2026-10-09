@@ -15,7 +15,9 @@ CANVAS_DIR = ROOT / "docs" / "canvas"
 SVG_TO_CANVAS = ROOT / "docs" / "svg2canvas.py"
 START = "<!-- FILE-MANIFEST:START -->"
 END = "<!-- FILE-MANIFEST:END -->"
-EXCLUDED_PREFIXES = (".git/", ".ssh/", ".termux_authinfo")
+EXCLUDED_PREFIXES = (".git/", ".ssh/", ".termux_authinfo", ".local/", "storage/", "4termx-security-backup/")
+EXCLUDED_NAMES = {"__pycache__", ".cache"}
+EXCLUDED_SUFFIXES = {".pyc", ".pyo"}
 GENERATED_GRAPH_FILES = {
     "docs/repository-structure.dot",
     "docs/repository-structure.svg",
@@ -151,7 +153,14 @@ def files_in_repo(include_generated=False):
         if not path.is_file():
             continue
         rel = path.relative_to(ROOT).as_posix()
+        parts = path.relative_to(ROOT).parts
         if rel.startswith(EXCLUDED_PREFIXES):
+            continue
+        if any(part in EXCLUDED_NAMES for part in parts):
+            continue
+        if path.suffix.lower() in EXCLUDED_SUFFIXES:
+            continue
+        if rel == ".env" or (path.name.startswith(".env.") and path.name != ".env.example"):
             continue
         if not include_generated and (
             rel in GENERATED_GRAPH_FILES or rel.startswith("docs/canvas/")

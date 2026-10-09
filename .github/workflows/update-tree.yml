@@ -34,6 +34,15 @@ jobs:
       - name: 🔎 Verificar Graphviz
         run: dot -V
 
+      - name: 🧪 Validar sintaxis Python, JSON y Shell
+        shell: bash
+        run: |
+          python -m compileall -q update_readme_tree.py scripts docs
+          while IFS= read -r -d '' file; do
+            python -m json.tool "$file" > /dev/null
+          done < <(find infrastructure -type f -name '*.json' -print0)
+          bash -n scripts/bajada scripts/subida scripts/infra-git-sync.sh scripts/infra-sync.sh scripts/infra-wrapper.sh scripts/install-infra-wrappers.sh scripts/install-sync-commands.sh sync-repo.sh
+
       - name: 📋 Generar Manifest + 2 grafos
         run: python update_readme_tree.py
 

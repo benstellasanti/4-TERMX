@@ -4,6 +4,7 @@
 [![Shell](https://img.shields.io/badge/shell-Zsh-informational?logo=zsh&logoColor=white)](https://www.zsh.org/)
 [![Automation](https://img.shields.io/badge/automation-GitHub%20Actions-blue?logo=githubactions&logoColor=white)](./.github/workflows/update-tree.yml)
 [![Workflow status](https://github.com/benstellasanti/4-TERMX/actions/workflows/update-tree.yml/badge.svg)](https://github.com/benstellasanti/4-TERMX/actions/workflows/update-tree.yml)
+[![Validation status](https://github.com/benstellasanti/4-TERMX/actions/workflows/validate.yml/badge.svg)](https://github.com/benstellasanti/4-TERMX/actions/workflows/validate.yml)
 
 **4-TERMX** reúne configuración, automatización y documentación para mantener un entorno de trabajo reproducible en Termux/Android. Incluye sincronización Git segura, documentación visual del repositorio y un sistema de observación de infraestructura mediante manifiestos e historial estructurado.
 

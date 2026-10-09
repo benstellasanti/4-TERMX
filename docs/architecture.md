@@ -8,7 +8,7 @@
 
 | Componente | Responsabilidad | Entradas principales | Salidas principales |
 |---|---|---|---|
-| `.github/workflows/update-tree.yml` | Validar y regenerar documentación en GitHub Actions | Archivos versionados | README actualizado, mapa, DOT/SVG y Canvas |
+| `.github/workflows/validate.yml` | Ejecutar pruebas y validaciones con permisos de solo lectura | Código, pruebas y manifiestos JSON | Resultado de validación en GitHub Actions |\n| `.github/workflows/update-tree.yml` | Validar y regenerar documentación en GitHub Actions | Archivos versionados | README actualizado, mapa, DOT/SVG y Canvas |
 | `update_readme_tree.py` | Descubrir archivos y generar artefactos documentales | Árbol del repositorio y README | Inventario, mapa y grafos |
 | `scripts/bajada` | Integrar cambios remotos en el clon Termux | Rama local y `origin/main` | Árbol local actualizado y copia de Obsidian |
 | `scripts/subida` | Publicar cambios locales de forma controlada | Cambios locales revisados | Commit y push normal a GitHub |
@@ -22,7 +22,7 @@
 ### Documentación automática
 
 1. Un cambio llega a la rama `main`.
-2. GitHub Actions prepara el entorno y valida Python, JSON y Shell.
+2. `validate.yml` ejecuta pruebas unitarias y validaciones estáticas con permisos de solo lectura.\n3. `update-tree.yml` vuelve a validar antes de generar documentación y dispone de permisos de escritura solo para publicar artefactos generados.
 3. El generador descubre los archivos que deben documentarse.
 4. Graphviz genera las visualizaciones SVG desde sus fuentes DOT.
 5. El conversor crea los Canvas asociados.

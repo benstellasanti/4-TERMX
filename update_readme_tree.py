@@ -31,16 +31,54 @@ TYPE_MAP = {
 }
 
 DESCRIPTIONS = {
-    "README.md": "Documentación central del entorno Termux.",
-    "CHANGELOG.md": "Historial de cambios del proyecto.",
-    "MENU_IA.md": "Menú y documentación de herramientas de IA.",
-    "RAG.md": "Documentación del flujo RAG.",
-    "rag.py": "Implementación principal de RAG.",
-    "rag_local.py": "Implementación local de RAG.",
-    "rag_simple.py": "Implementación simplificada de RAG.",
-    "sync-menu.sh": "Menú de sincronización y operaciones Git.",
-    "sync-repo.sh": "Sincronización del repositorio desde Termux.",
-    "update_readme_tree.py": "Generador automático del manifiesto y los dos grafos.",
+    # Raíz y configuración
+    "README.md": "Guía principal: propósito, requisitos, inicio rápido, comandos y documentación.",
+    ".gitignore": "Excluye secretos, credenciales y artefactos locales de Git.",
+    ".gitconfig": "Configuración Git versionada para el entorno del proyecto.",
+    ".zshrc": "Inicialización de Zsh y reconciliación automática de infraestructura.",
+    ".termux/termux.properties": "Preferencias de interfaz y comportamiento de Termux.",
+    ".github/workflows/update-tree.yml": "Workflow que regenera mapas, Canvas e inventario documental.",
+    "update_readme_tree.py": "Genera el mapa estructural, grafos DOT/SVG, Canvas y manifiesto del README.",
+    "sync-repo.sh": "Punto de entrada para sincronizar el repositorio desde Termux.",
+
+    # Documentación
+    "docs/infrastructure.md": "Manual del manifiesto, historial, wrappers, notas y auditoría de infraestructura.",
+    "docs/repository-map.md": "Mapa textual de la estructura del repositorio, generado automáticamente.",
+    "docs/repository-structure.dot": "Fuente Graphviz del grafo jerárquico de archivos y directorios.",
+    "docs/repository-structure.svg": "Visualización SVG de la estructura del repositorio.",
+    "docs/repository-architecture.dot": "Fuente Graphviz de las relaciones funcionales principales.",
+    "docs/repository-architecture.svg": "Visualización SVG de la arquitectura y automatización.",
+    "docs/svg2canvas.py": "Convierte diagramas SVG en archivos Canvas compatibles con Obsidian.",
+    "docs/conocimiento-4-termx.md": "Registro progresivo de hechos confirmados y conocimiento técnico del proyecto.",
+    "docs/pendientes-evolucion.md": "Registro priorizado de mejoras y metodología de evolución pendiente.",
+    "docs/canvas/repository-architecture.canvas": "Diagrama de arquitectura para explorar en Obsidian.",
+    "docs/canvas/repository-structure.canvas": "Diagrama estructural para explorar en Obsidian.",
+
+    # Sincronización y comandos
+    "scripts/bajada": "Integra cambios de GitHub en Termux con rebase seguro y sincronización a Obsidian.",
+    "scripts/subida": "Valida, prepara y publica cambios locales sin force push.",
+    "scripts/install-sync-commands.sh": "Instala los comandos bajada y subida en el PATH de Termux.",
+    "scripts/sync-canvas-to-obsidian.py": "Copia README y Canvas a Documents/4-TERMX y retira Canvas obsoletos.",
+    "scripts/infra-git-sync.sh": "Reconcilia la infraestructura y sincroniza sus cambios con GitHub.",
+    "scripts/infra-sync.sh": "Lanza el motor de reconciliación de infraestructura.",
+
+    # Infraestructura como datos
+    "infrastructure/system-manifest.json": "Instantánea observada de paquetes, runtimes y metadatos del entorno.",
+    "infrastructure/desired-state.json": "Clasificación declarada de dependencias requeridas, opcionales y temporales.",
+    "infrastructure/history/infrastructure-history.jsonl": "Historial estructurado de cambios de infraestructura detectados.",
+    "infrastructure/history/package-operation-cursor.json": "Cursor para evitar reprocesar operaciones capturadas.",
+    "infrastructure/history/pkg-operation-cursor.json": "Cursor de compatibilidad con el registro histórico de operaciones.",
+
+    # Herramientas de auditoría y captura
+    "scripts/infra-sync.py": "Detecta cambios entre instantáneas y reconcilia evidencia de operaciones.",
+    "scripts/infra-audit.py": "Compara el estado observado con el estado deseado sin desinstalar paquetes.",
+    "scripts/infra-note.py": "Registra explícitamente la razón, el actor y el alcance de una dependencia.",
+    "scripts/infra-wrapper.sh": "Captura operaciones de gestores de paquetes en un registro JSONL.",
+    "scripts/install-infra-wrappers.sh": "Instala wrappers de captura para los gestores disponibles.",
+    "scripts/update_readme_tree.py": "Alias documental del generador, si existe en una futura estructura.",
+    "CHANGELOG.md": "Historial cronológico de cambios publicados.",
+    "CONTRIBUTING.md": "Normas para proponer, probar y documentar cambios.",
+    "SECURITY.md": "Canal y pautas para reportar vulnerabilidades de forma responsable.",
 }
 
 def size_text(size):
@@ -56,10 +94,21 @@ def file_type(path):
     return TYPE_MAP.get(path.suffix.lower(), "Archivo")
 
 def description(rel):
+    """Devuelve una descripción específica o una alternativa transparente."""
     if rel in DESCRIPTIONS:
         return DESCRIPTIONS[rel]
     if rel.startswith(".github/workflows/"):
         return "Workflow de automatización de GitHub Actions."
+    if rel.startswith("docs/canvas/"):
+        return "Diagrama Canvas de Obsidian generado desde la documentación visual."
+    if rel.startswith("docs/"):
+        return "Documento de referencia del proyecto; consultar su contenido para el detalle."
+    if rel.startswith("infrastructure/history/"):
+        return "Dato de historial o cursor utilizado por la reconciliación de infraestructura."
+    if rel.startswith("infrastructure/"):
+        return "Manifiesto de infraestructura; consultar el esquema y la documentación asociada."
+    if rel.startswith("scripts/"):
+        return "Script operativo; revisar su ayuda y código antes de ejecutarlo."
     if rel.startswith("agente/core/"):
         return "Lógica central del agente."
     if rel.startswith("agente/tools/"):
@@ -72,7 +121,9 @@ def description(rel):
         return "Configuración del flujo PXE/WinPE."
     if rel.startswith("pxe-winpe/"):
         return "Componente del entorno PXE/WinPE."
-    return f"Archivo {file_type(Path(rel))} del proyecto."
+    if rel.startswith("."):
+        return "Archivo de configuración del entorno o del control de versiones."
+    return f"Archivo {file_type(Path(rel))}; descripción específica pendiente de documentar."
 
 def changed_files():
     before = os.getenv("GITHUB_EVENT_BEFORE", "")

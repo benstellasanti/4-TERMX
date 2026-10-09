@@ -143,10 +143,10 @@ La implementación definitiva queda pendiente de diseño. Este documento registr
 ## 2. Mejoras de documentación y mantenibilidad
 
 ### 2.1 Badge de estado de GitHub Actions
-- [ ] Añadir badge de estado del workflow principal al README.
+- [x] Añadir badge de estado del workflow principal al README.
 
 ### 2.2 Quick Start
-- [ ] Mejorar o incorporar una sección de inicio rápido.
+- [x] Incorporar una sección de inicio rápido en el README.
 - [ ] Documentar los pasos mínimos para comprender y utilizar el entorno.
 
 ### 2.3 Arquitectura explícita
@@ -159,7 +159,7 @@ La implementación definitiva queda pendiente de diseño. Este documento registr
 - [ ] Diferenciar claramente observación, inferencia e historial.
 
 ### 2.5 Design Principles
-- [ ] Documentar principios de diseño del sistema, incluyendo:
+- [x] Crear `docs/design-principles.md` y documentar los principios de diseño del sistema, incluyendo:
   - Evidence over inference.
   - Observed state ≠ desired state.
   - Unmanaged ≠ removable.
@@ -168,10 +168,10 @@ La implementación definitiva queda pendiente de diseño. Este documento registr
   - Las acciones destructivas requieren intención explícita.
 
 ### 2.6 SECURITY.md
-- [ ] Evaluar la incorporación de `SECURITY.md` según la evolución y exposición del proyecto.
+- [x] Añadir `SECURITY.md` con pautas para reportar vulnerabilidades de forma responsable.
 
 ### 2.7 CONTRIBUTING.md
-- [ ] Evaluar la incorporación de `CONTRIBUTING.md` si el repositorio comienza a recibir colaboradores externos.
+- [x] Añadir `CONTRIBUTING.md` con un flujo de cambios y criterios de validación.
 
 ---
 

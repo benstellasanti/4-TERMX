@@ -327,7 +327,7 @@ def build_tree_markdown(files):
         entries = sorted(node.items(), key=lambda item: (item[1] is None, item[0].lower()))
         for index, (name, value) in enumerate(entries):
             last = index == len(entries) - 1
-            connector = "`└── `" if last else "`├── `"
+            connector = "└── " if last else "├── "
             is_dir = isinstance(value, dict)
             lines.append(f"{prefix}{connector}{name}{'/' if is_dir else ''}")
             if is_dir:

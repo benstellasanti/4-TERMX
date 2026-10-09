@@ -140,7 +140,7 @@
       "id": "d12a3c06ed446460",
       "type": "text",
       "text": "README.md",
-      "x": 1357,
+      "x": 2432,
       "y": -75,
       "width": 200,
       "height": 56
@@ -149,7 +149,7 @@
       "id": "afd59d3fece3fa76",
       "type": "text",
       "text": "docs",
-      "x": 4751,
+      "x": 4900,
       "y": -1185,
       "width": 200,
       "height": 56
@@ -177,16 +177,25 @@
       "id": "3361a4fbf97d0d08",
       "type": "text",
       "text": "repository-map.md",
-      "x": 4838,
+      "x": 4330,
       "y": -75,
       "width": 218,
+      "height": 56
+    },
+    {
+      "id": "590f4ffbc25c8eff",
+      "type": "text",
+      "text": "architecture.md",
+      "x": 4717,
+      "y": -865,
+      "width": 200,
       "height": 56
     },
     {
       "id": "255e925cdeac83b6",
       "type": "text",
       "text": "conocimiento-4-termx.md",
-      "x": 4316,
+      "x": 5045,
       "y": -865,
       "width": 278,
       "height": 56
@@ -195,7 +204,7 @@
       "id": "f379077378e35d26",
       "type": "text",
       "text": "design-principles.md",
-      "x": 4727,
+      "x": 5456,
       "y": -865,
       "width": 248,
       "height": 56
@@ -204,7 +213,7 @@
       "id": "318435fba80b531d",
       "type": "text",
       "text": "infrastructure.md",
-      "x": 5088,
+      "x": 5817,
       "y": -865,
       "width": 218,
       "height": 56
@@ -213,7 +222,7 @@
       "id": "3d06d001084d0853",
       "type": "text",
       "text": "pendientes-evolucion.md",
-      "x": 5431,
+      "x": 4007,
       "y": -865,
       "width": 278,
       "height": 56
@@ -222,7 +231,7 @@
       "id": "c207655ee45917ab",
       "type": "text",
       "text": "svg2canvas.py",
-      "x": 3991,
+      "x": 4408,
       "y": -865,
       "width": 200,
       "height": 56
@@ -390,6 +399,13 @@
       "label": "genera"
     },
     {
+      "id": "8575fc9276e1cfe6",
+      "fromNode": "afd59d3fece3fa76",
+      "fromSide": "bottom",
+      "toNode": "590f4ffbc25c8eff",
+      "toSide": "top"
+    },
+    {
       "id": "280a9073f7470e9f",
       "fromNode": "afd59d3fece3fa76",
       "fromSide": "bottom",
@@ -399,23 +415,23 @@
     {
       "id": "b3aba74ff2b0662c",
       "fromNode": "afd59d3fece3fa76",
-      "fromSide": "bottom",
+      "fromSide": "right",
       "toNode": "f379077378e35d26",
-      "toSide": "top"
+      "toSide": "left"
     },
     {
       "id": "fafc99735026663c",
       "fromNode": "afd59d3fece3fa76",
-      "fromSide": "bottom",
+      "fromSide": "right",
       "toNode": "318435fba80b531d",
-      "toSide": "top"
+      "toSide": "left"
     },
     {
       "id": "c2d2de966ccba0fa",
       "fromNode": "afd59d3fece3fa76",
-      "fromSide": "right",
+      "fromSide": "left",
       "toNode": "3d06d001084d0853",
-      "toSide": "left"
+      "toSide": "right"
     },
     {
       "id": "b1ef3d7e195973c4",
@@ -427,9 +443,9 @@
     {
       "id": "bbab448f56d0d8be",
       "fromNode": "afd59d3fece3fa76",
-      "fromSide": "left",
+      "fromSide": "bottom",
       "toNode": "c207655ee45917ab",
-      "toSide": "right"
+      "toSide": "top"
     },
     {
       "id": "90c483e47005f65e",

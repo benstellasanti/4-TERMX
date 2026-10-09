@@ -8,10 +8,17 @@ digraph RepositoryStructure {
   n_docs [label="docs", shape=box, fillcolor="#eeeeee"];
   n_infrastructure [label="infrastructure", shape=box, fillcolor="#eeeeee"];
   n_scripts [label="scripts", shape=box, fillcolor="#eeeeee"];
+  n__github_ISSUE_TEMPLATE [label="ISSUE_TEMPLATE", shape=box, fillcolor="#eeeeee"];
   n__github_workflows [label="workflows", shape=box, fillcolor="#eeeeee"];
   n_infrastructure_history [label="history", shape=box, fillcolor="#eeeeee"];
   n__gitconfig [label=".gitconfig", shape=note, fillcolor="white"];
   root -> n__gitconfig;
+  n__github_ISSUE_TEMPLATE_bug_report_yml [label="bug_report.yml", shape=note, fillcolor="white"];
+  n__github_ISSUE_TEMPLATE -> n__github_ISSUE_TEMPLATE_bug_report_yml;
+  n__github_ISSUE_TEMPLATE_feature_request_yml [label="feature_request.yml", shape=note, fillcolor="white"];
+  n__github_ISSUE_TEMPLATE -> n__github_ISSUE_TEMPLATE_feature_request_yml;
+  n__github_PULL_REQUEST_TEMPLATE_md [label="PULL_REQUEST_TEMPLATE.md", shape=note, fillcolor="white"];
+  n__github -> n__github_PULL_REQUEST_TEMPLATE_md;
   n__github_workflows_update_tree_yml [label="update-tree.yml", shape=note, fillcolor="white"];
   n__github_workflows -> n__github_workflows_update_tree_yml;
   n__gitignore [label=".gitignore", shape=note, fillcolor="white"];
@@ -26,6 +33,8 @@ digraph RepositoryStructure {
   root -> n_README_md;
   n_SECURITY_md [label="SECURITY.md", shape=note, fillcolor="white"];
   root -> n_SECURITY_md;
+  n_docs_architecture_md [label="architecture.md", shape=note, fillcolor="white"];
+  n_docs -> n_docs_architecture_md;
   n_docs_conocimiento_4_termx_md [label="conocimiento-4-termx.md", shape=note, fillcolor="white"];
   n_docs -> n_docs_conocimiento_4_termx_md;
   n_docs_design_principles_md [label="design-principles.md", shape=note, fillcolor="white"];
@@ -79,6 +88,7 @@ digraph RepositoryStructure {
   root -> n_docs;
   root -> n_infrastructure;
   root -> n_scripts;
+  n__github -> n__github_ISSUE_TEMPLATE;
   n__github -> n__github_workflows;
   n_infrastructure -> n_infrastructure_history;
 }

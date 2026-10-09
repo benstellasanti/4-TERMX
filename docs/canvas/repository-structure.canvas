@@ -5,7 +5,7 @@
       "type": "text",
       "text": "4-TERMX",
       "x": 0,
-      "y": 1302,
+      "y": 1543,
       "width": 200,
       "height": 56,
       "color": "#555555"
@@ -15,7 +15,7 @@
       "type": "text",
       "text": ".github",
       "x": 270,
-      "y": 0,
+      "y": 147,
       "width": 200,
       "height": 56
     },
@@ -24,7 +24,7 @@
       "type": "text",
       "text": ".termux",
       "x": 270,
-      "y": 84,
+      "y": 336,
       "width": 200,
       "height": 56
     },
@@ -33,7 +33,7 @@
       "type": "text",
       "text": "docs",
       "x": 270,
-      "y": 378,
+      "y": 672,
       "width": 200,
       "height": 56
     },
@@ -42,7 +42,7 @@
       "type": "text",
       "text": "infrastructure",
       "x": 270,
-      "y": 882,
+      "y": 1218,
       "width": 200,
       "height": 56
     },
@@ -51,7 +51,7 @@
       "type": "text",
       "text": "scripts",
       "x": 270,
-      "y": 1512,
+      "y": 1848,
       "width": 200,
       "height": 56
     },
@@ -60,7 +60,7 @@
       "type": "text",
       "text": ".gitconfig",
       "x": 270,
-      "y": 2016,
+      "y": 2352,
       "width": 200,
       "height": 56
     },
@@ -69,7 +69,7 @@
       "type": "text",
       "text": ".gitignore",
       "x": 270,
-      "y": 2100,
+      "y": 2436,
       "width": 200,
       "height": 56
     },
@@ -78,7 +78,7 @@
       "type": "text",
       "text": ".zshrc",
       "x": 270,
-      "y": 2184,
+      "y": 2520,
       "width": 200,
       "height": 56
     },
@@ -87,7 +87,7 @@
       "type": "text",
       "text": "CONTRIBUTING.md",
       "x": 270,
-      "y": 2268,
+      "y": 2604,
       "width": 200,
       "height": 56
     },
@@ -96,7 +96,7 @@
       "type": "text",
       "text": "README.md",
       "x": 270,
-      "y": 2352,
+      "y": 2688,
       "width": 200,
       "height": 56
     },
@@ -105,7 +105,7 @@
       "type": "text",
       "text": "SECURITY.md",
       "x": 270,
-      "y": 2436,
+      "y": 2772,
       "width": 200,
       "height": 56
     },
@@ -114,7 +114,7 @@
       "type": "text",
       "text": "sync-repo.sh",
       "x": 270,
-      "y": 2520,
+      "y": 2856,
       "width": 200,
       "height": 56
     },
@@ -123,8 +123,17 @@
       "type": "text",
       "text": "update_readme_tree.py",
       "x": 270,
-      "y": 2604,
+      "y": 2940,
       "width": 258,
+      "height": 56
+    },
+    {
+      "id": "a77e029392468af8",
+      "type": "text",
+      "text": "ISSUE_TEMPLATE",
+      "x": 598,
+      "y": 42,
+      "width": 200,
       "height": 56
     },
     {
@@ -132,8 +141,17 @@
       "type": "text",
       "text": "workflows",
       "x": 598,
-      "y": 0,
+      "y": 168,
       "width": 200,
+      "height": 56
+    },
+    {
+      "id": "5a65a4d0ccb4bac8",
+      "type": "text",
+      "text": "PULL_REQUEST_TEMPLATE.md",
+      "x": 598,
+      "y": 252,
+      "width": 288,
       "height": 56
     },
     {
@@ -141,8 +159,17 @@
       "type": "text",
       "text": "termux.properties",
       "x": 598,
-      "y": 84,
+      "y": 336,
       "width": 218,
+      "height": 56
+    },
+    {
+      "id": "e2c95bce6449c5b0",
+      "type": "text",
+      "text": "architecture.md",
+      "x": 598,
+      "y": 420,
+      "width": 200,
       "height": 56
     },
     {
@@ -150,7 +177,7 @@
       "type": "text",
       "text": "conocimiento-4-termx.md",
       "x": 598,
-      "y": 168,
+      "y": 504,
       "width": 278,
       "height": 56
     },
@@ -159,7 +186,7 @@
       "type": "text",
       "text": "design-principles.md",
       "x": 598,
-      "y": 252,
+      "y": 588,
       "width": 248,
       "height": 56
     },
@@ -168,7 +195,7 @@
       "type": "text",
       "text": "infrastructure.md",
       "x": 598,
-      "y": 336,
+      "y": 672,
       "width": 218,
       "height": 56
     },
@@ -177,7 +204,7 @@
       "type": "text",
       "text": "pendientes-evolucion.md",
       "x": 598,
-      "y": 420,
+      "y": 756,
       "width": 278,
       "height": 56
     },
@@ -186,7 +213,7 @@
       "type": "text",
       "text": "repository-map.md",
       "x": 598,
-      "y": 504,
+      "y": 840,
       "width": 218,
       "height": 56
     },
@@ -195,7 +222,7 @@
       "type": "text",
       "text": "svg2canvas.py",
       "x": 598,
-      "y": 588,
+      "y": 924,
       "width": 200,
       "height": 56
     },
@@ -204,7 +231,7 @@
       "type": "text",
       "text": "history",
       "x": 598,
-      "y": 756,
+      "y": 1092,
       "width": 200,
       "height": 56
     },
@@ -213,7 +240,7 @@
       "type": "text",
       "text": "desired-state.json",
       "x": 598,
-      "y": 924,
+      "y": 1260,
       "width": 228,
       "height": 56
     },
@@ -222,7 +249,7 @@
       "type": "text",
       "text": "system-manifest.json",
       "x": 598,
-      "y": 1008,
+      "y": 1344,
       "width": 248,
       "height": 56
     },
@@ -231,7 +258,7 @@
       "type": "text",
       "text": "bajada",
       "x": 598,
-      "y": 1092,
+      "y": 1428,
       "width": 200,
       "height": 56
     },
@@ -240,7 +267,7 @@
       "type": "text",
       "text": "infra-audit.py",
       "x": 598,
-      "y": 1176,
+      "y": 1512,
       "width": 200,
       "height": 56
     },
@@ -249,7 +276,7 @@
       "type": "text",
       "text": "infra-git-sync.sh",
       "x": 598,
-      "y": 1260,
+      "y": 1596,
       "width": 218,
       "height": 56
     },
@@ -258,7 +285,7 @@
       "type": "text",
       "text": "infra-note.py",
       "x": 598,
-      "y": 1344,
+      "y": 1680,
       "width": 200,
       "height": 56
     },
@@ -267,7 +294,7 @@
       "type": "text",
       "text": "infra-sync.py",
       "x": 598,
-      "y": 1428,
+      "y": 1764,
       "width": 200,
       "height": 56
     },
@@ -276,7 +303,7 @@
       "type": "text",
       "text": "infra-sync.sh",
       "x": 598,
-      "y": 1512,
+      "y": 1848,
       "width": 200,
       "height": 56
     },
@@ -285,7 +312,7 @@
       "type": "text",
       "text": "infra-wrapper.sh",
       "x": 598,
-      "y": 1596,
+      "y": 1932,
       "width": 208,
       "height": 56
     },
@@ -294,7 +321,7 @@
       "type": "text",
       "text": "install-infra-wrappers.sh",
       "x": 598,
-      "y": 1680,
+      "y": 2016,
       "width": 298,
       "height": 56
     },
@@ -303,7 +330,7 @@
       "type": "text",
       "text": "install-sync-commands.sh",
       "x": 598,
-      "y": 1764,
+      "y": 2100,
       "width": 288,
       "height": 56
     },
@@ -312,7 +339,7 @@
       "type": "text",
       "text": "subida",
       "x": 598,
-      "y": 1848,
+      "y": 2184,
       "width": 200,
       "height": 56
     },
@@ -321,8 +348,26 @@
       "type": "text",
       "text": "sync-canvas-to-obsidian.py",
       "x": 598,
-      "y": 1932,
+      "y": 2268,
       "width": 308,
+      "height": 56
+    },
+    {
+      "id": "8b468cf653ebd208",
+      "type": "text",
+      "text": "bug_report.yml",
+      "x": 976,
+      "y": 0,
+      "width": 200,
+      "height": 56
+    },
+    {
+      "id": "7ef8c2b9603995d3",
+      "type": "text",
+      "text": "feature_request.yml",
+      "x": 976,
+      "y": 84,
+      "width": 238,
       "height": 56
     },
     {
@@ -330,7 +375,7 @@
       "type": "text",
       "text": "update-tree.yml",
       "x": 976,
-      "y": 0,
+      "y": 168,
       "width": 200,
       "height": 56
     },
@@ -339,7 +384,7 @@
       "type": "text",
       "text": "infrastructure-history.jsonl",
       "x": 976,
-      "y": 672,
+      "y": 1008,
       "width": 328,
       "height": 56
     },
@@ -348,7 +393,7 @@
       "type": "text",
       "text": "package-operation-cursor.json",
       "x": 976,
-      "y": 756,
+      "y": 1092,
       "width": 338,
       "height": 56
     },
@@ -357,7 +402,7 @@
       "type": "text",
       "text": "pkg-operation-cursor.json",
       "x": 976,
-      "y": 840,
+      "y": 1176,
       "width": 298,
       "height": 56
     }
@@ -455,6 +500,13 @@
       "toSide": "left"
     },
     {
+      "id": "c28323c002150d02",
+      "fromNode": "68fdfd8aebfa65c2",
+      "fromSide": "right",
+      "toNode": "a77e029392468af8",
+      "toSide": "left"
+    },
+    {
       "id": "b746b64c1b25ba7b",
       "fromNode": "68fdfd8aebfa65c2",
       "fromSide": "right",
@@ -462,10 +514,24 @@
       "toSide": "left"
     },
     {
+      "id": "efeae642a7846f22",
+      "fromNode": "68fdfd8aebfa65c2",
+      "fromSide": "right",
+      "toNode": "5a65a4d0ccb4bac8",
+      "toSide": "left"
+    },
+    {
       "id": "ad6b70fd9b228bfa",
       "fromNode": "5c2cdb4fc443de5e",
       "fromSide": "right",
       "toNode": "812c6844c673ab7e",
+      "toSide": "left"
+    },
+    {
+      "id": "1f1efe86f5ccb09f",
+      "fromNode": "fad25480dbd74180",
+      "fromSide": "right",
+      "toNode": "e2c95bce6449c5b0",
       "toSide": "left"
     },
     {
@@ -606,6 +672,20 @@
       "fromNode": "8c90722c80d2d05f",
       "fromSide": "right",
       "toNode": "a8941e5ca34171ff",
+      "toSide": "left"
+    },
+    {
+      "id": "1520a62740501147",
+      "fromNode": "a77e029392468af8",
+      "fromSide": "right",
+      "toNode": "8b468cf653ebd208",
+      "toSide": "left"
+    },
+    {
+      "id": "62766c12dc926dd0",
+      "fromNode": "a77e029392468af8",
+      "fromSide": "right",
+      "toNode": "7ef8c2b9603995d3",
       "toSide": "left"
     },
     {

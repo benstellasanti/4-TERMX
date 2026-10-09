@@ -8,6 +8,10 @@
 # 4-TERMX
 - .gitconfig
 ## .github
+### ISSUE_TEMPLATE
+- bug_report.yml
+- feature_request.yml
+- PULL_REQUEST_TEMPLATE.md
 ### workflows
 - update-tree.yml
 - .gitignore
@@ -18,6 +22,7 @@
 - README.md
 - SECURITY.md
 ## docs
+- architecture.md
 - conocimiento-4-termx.md
 - design-principles.md
 - infrastructure.md

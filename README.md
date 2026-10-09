@@ -3,6 +3,7 @@
 [![Platform](https://img.shields.io/badge/platform-Termux%20%7C%20Android-2ea44f?logo=android&logoColor=white)](https://termux.dev/)
 [![Shell](https://img.shields.io/badge/shell-Zsh-informational?logo=zsh&logoColor=white)](https://www.zsh.org/)
 [![Automation](https://img.shields.io/badge/automation-GitHub%20Actions-blue?logo=githubactions&logoColor=white)](./.github/workflows/update-tree.yml)
+[![Workflow status](https://github.com/benstellasanti/4-TERMX/actions/workflows/update-tree.yml/badge.svg)](https://github.com/benstellasanti/4-TERMX/actions/workflows/update-tree.yml)
 
 **4-TERMX** reúne configuración, automatización y documentación para mantener un entorno de trabajo reproducible en Termux/Android. Incluye sincronización Git segura, documentación visual del repositorio y un sistema de observación de infraestructura mediante manifiestos e historial estructurado.
 
@@ -16,6 +17,9 @@
 - [Comandos habituales](#comandos-habituales)
 - [Infraestructura como datos](#infraestructura-como-datos)
 - [Documentación y mapas](#documentación-y-mapas)
+- [Principios de diseño](./docs/design-principles.md)
+- [Contribuir](./CONTRIBUTING.md)
+- [Política de seguridad](./SECURITY.md)
 - [Seguridad y límites](#seguridad-y-límites)
 - [Estructura del repositorio](#estructura-del-repositorio)
 - [Estado y evolución](#estado-y-evolución)
@@ -97,6 +101,9 @@ Guía completa: [docs/infrastructure.md](./docs/infrastructure.md).
 - [Arquitectura y relaciones (SVG)](./docs/repository-architecture.svg) · [fuente DOT](./docs/repository-architecture.dot)
 - [Conocimiento del proyecto](./docs/conocimiento-4-termx.md)
 - [Pendientes de evolución](./docs/pendientes-evolucion.md)
+- [Principios de diseño](./docs/design-principles.md)
+- [Guía de contribución](./CONTRIBUTING.md)
+- [Política de seguridad](./SECURITY.md)
 - [Workflow de generación documental](./.github/workflows/update-tree.yml)
 
 Los mapas, el inventario y los Canvas relacionados son artefactos generados. Para cambiar su lógica, modifica el generador o la fuente correspondiente; evita editar manualmente los bloques generados.

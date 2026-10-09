@@ -138,116 +138,116 @@ El proyecto continúa en evolución. Las mejoras planificadas están documentada
 
 | Estado | Archivo | Tipo | Tamaño | Función |
 |---|---|---|---:|---|
-| — | [<code>.gitconfig</code>](./.gitconfig) | Configuración | 64 B | Archivo Configuración del proyecto. |
-| — | [<code>.github/workflows/update-tree.yml</code>](./.github/workflows/update-tree.yml) | GitHub Actions | 1.5 KB | Workflow de automatización de GitHub Actions. |
-| — | [<code>.gitignore</code>](./.gitignore) | Configuración | 398 B | Archivo Configuración del proyecto. |
-| — | [<code>.termux/termux.properties</code>](./.termux/termux.properties) | Archivo | 5.9 KB | Archivo Archivo del proyecto. |
-| — | [<code>.zshrc</code>](./.zshrc) | Configuración | 319 B | Archivo Configuración del proyecto. |
-| — | [<code>README.md</code>](./README.md) | Markdown | 16.5 KB | Documentación central del entorno Termux. |
-| — | [<code>docs/canvas/repository-architecture.canvas</code>](./docs/canvas/repository-architecture.canvas) | Archivo | 8.4 KB | Archivo Archivo del proyecto. |
-| — | [<code>docs/canvas/repository-structure.canvas</code>](./docs/canvas/repository-structure.canvas) | Archivo | 12.2 KB | Archivo Archivo del proyecto. |
-| — | [<code>docs/conocimiento-4-termx.md</code>](./docs/conocimiento-4-termx.md) | Markdown | 2.4 KB | Archivo Markdown del proyecto. |
-| — | [<code>docs/infrastructure.md</code>](./docs/infrastructure.md) | Markdown | 4.7 KB | Archivo Markdown del proyecto. |
-| — | [<code>docs/pendientes-evolucion.md</code>](./docs/pendientes-evolucion.md) | Markdown | 7.5 KB | Archivo Markdown del proyecto. |
-| — | [<code>docs/repository-architecture.dot</code>](./docs/repository-architecture.dot) | Archivo | 2.7 KB | Archivo Archivo del proyecto. |
-| — | [<code>docs/repository-architecture.svg</code>](./docs/repository-architecture.svg) | Archivo | 21.3 KB | Archivo Archivo del proyecto. |
-| — | [<code>docs/repository-map.md</code>](./docs/repository-map.md) | Markdown | 1.2 KB | Archivo Markdown del proyecto. |
-| — | [<code>docs/repository-structure.dot</code>](./docs/repository-structure.dot) | Archivo | 4.8 KB | Archivo Archivo del proyecto. |
-| — | [<code>docs/repository-structure.svg</code>](./docs/repository-structure.svg) | Archivo | 29.7 KB | Archivo Archivo del proyecto. |
-| — | [<code>docs/svg2canvas.py</code>](./docs/svg2canvas.py) | Python | 12.4 KB | Archivo Python del proyecto. |
-| — | [<code>infrastructure/desired-state.json</code>](./infrastructure/desired-state.json) | JSON | 597 B | Archivo JSON del proyecto. |
-| — | [<code>infrastructure/history/infrastructure-history.jsonl</code>](./infrastructure/history/infrastructure-history.jsonl) | Archivo | 2.6 KB | Archivo Archivo del proyecto. |
-| — | [<code>infrastructure/history/package-operation-cursor.json</code>](./infrastructure/history/package-operation-cursor.json) | JSON | 54 B | Archivo JSON del proyecto. |
-| — | [<code>infrastructure/history/pkg-operation-cursor.json</code>](./infrastructure/history/pkg-operation-cursor.json) | JSON | 54 B | Archivo JSON del proyecto. |
-| — | [<code>infrastructure/system-manifest.json</code>](./infrastructure/system-manifest.json) | JSON | 4.2 KB | Archivo JSON del proyecto. |
-| — | [<code>scripts/bajada</code>](./scripts/bajada) | Archivo | 4.6 KB | Archivo Archivo del proyecto. |
-| — | [<code>scripts/infra-audit.py</code>](./scripts/infra-audit.py) | Python | 2.2 KB | Archivo Python del proyecto. |
-| — | [<code>scripts/infra-git-sync.sh</code>](./scripts/infra-git-sync.sh) | Shell | 463 B | Archivo Shell del proyecto. |
-| — | [<code>scripts/infra-note.py</code>](./scripts/infra-note.py) | Python | 1.1 KB | Archivo Python del proyecto. |
-| — | [<code>scripts/infra-sync.py</code>](./scripts/infra-sync.py) | Python | 13.8 KB | Archivo Python del proyecto. |
-| — | [<code>scripts/infra-sync.sh</code>](./scripts/infra-sync.sh) | Shell | 181 B | Archivo Shell del proyecto. |
-| — | [<code>scripts/infra-wrapper.sh</code>](./scripts/infra-wrapper.sh) | Shell | 884 B | Archivo Shell del proyecto. |
-| — | [<code>scripts/install-infra-wrappers.sh</code>](./scripts/install-infra-wrappers.sh) | Shell | 840 B | Archivo Shell del proyecto. |
-| — | [<code>scripts/install-sync-commands.sh</code>](./scripts/install-sync-commands.sh) | Shell | 584 B | Archivo Shell del proyecto. |
-| — | [<code>scripts/subida</code>](./scripts/subida) | Archivo | 4.2 KB | Archivo Archivo del proyecto. |
-| — | [<code>scripts/sync-canvas-to-obsidian.py</code>](./scripts/sync-canvas-to-obsidian.py) | Python | 1.8 KB | Archivo Python del proyecto. |
-| — | [<code>sync-repo.sh</code>](./sync-repo.sh) | Shell | 1.1 KB | Sincronización del repositorio desde Termux. |
-| — | [<code>update_readme_tree.py</code>](./update_readme_tree.py) | Python | 13.6 KB | Generador automático del manifiesto y los dos grafos. |
+| — | [<code>.gitconfig</code>](./.gitconfig) | Configuración | 64 B | Configuración Git versionada para el entorno del proyecto. |
+| — | [<code>.github/workflows/update-tree.yml</code>](./.github/workflows/update-tree.yml) | GitHub Actions | 1.5 KB | Workflow que regenera mapas, Canvas e inventario documental. |
+| — | [<code>.gitignore</code>](./.gitignore) | Configuración | 398 B | Excluye secretos, credenciales y artefactos locales de Git. |
+| — | [<code>.termux/termux.properties</code>](./.termux/termux.properties) | Archivo | 5.9 KB | Preferencias de interfaz y comportamiento de Termux. |
+| — | [<code>.zshrc</code>](./.zshrc) | Configuración | 319 B | Inicialización de Zsh y reconciliación automática de infraestructura. |
+| — | [<code>README.md</code>](./README.md) | Markdown | 16.5 KB | Guía principal: propósito, requisitos, inicio rápido, comandos y documentación. |
+| — | [<code>docs/canvas/repository-architecture.canvas</code>](./docs/canvas/repository-architecture.canvas) | Archivo | 8.4 KB | Diagrama de arquitectura para explorar en Obsidian. |
+| — | [<code>docs/canvas/repository-structure.canvas</code>](./docs/canvas/repository-structure.canvas) | Archivo | 12.2 KB | Diagrama estructural para explorar en Obsidian. |
+| — | [<code>docs/conocimiento-4-termx.md</code>](./docs/conocimiento-4-termx.md) | Markdown | 2.4 KB | Registro progresivo de hechos confirmados y conocimiento técnico del proyecto. |
+| — | [<code>docs/infrastructure.md</code>](./docs/infrastructure.md) | Markdown | 4.7 KB | Manual del manifiesto, historial, wrappers, notas y auditoría de infraestructura. |
+| — | [<code>docs/pendientes-evolucion.md</code>](./docs/pendientes-evolucion.md) | Markdown | 7.5 KB | Registro priorizado de mejoras y metodología de evolución pendiente. |
+| — | [<code>docs/repository-architecture.dot</code>](./docs/repository-architecture.dot) | Archivo | 2.7 KB | Fuente Graphviz de las relaciones funcionales principales. |
+| — | [<code>docs/repository-architecture.svg</code>](./docs/repository-architecture.svg) | Archivo | 21.3 KB | Visualización SVG de la arquitectura y automatización. |
+| — | [<code>docs/repository-map.md</code>](./docs/repository-map.md) | Markdown | 1.2 KB | Mapa textual de la estructura del repositorio, generado automáticamente. |
+| — | [<code>docs/repository-structure.dot</code>](./docs/repository-structure.dot) | Archivo | 4.8 KB | Fuente Graphviz del grafo jerárquico de archivos y directorios. |
+| — | [<code>docs/repository-structure.svg</code>](./docs/repository-structure.svg) | Archivo | 29.7 KB | Visualización SVG de la estructura del repositorio. |
+| — | [<code>docs/svg2canvas.py</code>](./docs/svg2canvas.py) | Python | 12.4 KB | Convierte diagramas SVG en archivos Canvas compatibles con Obsidian. |
+| — | [<code>infrastructure/desired-state.json</code>](./infrastructure/desired-state.json) | JSON | 597 B | Clasificación declarada de dependencias requeridas, opcionales y temporales. |
+| — | [<code>infrastructure/history/infrastructure-history.jsonl</code>](./infrastructure/history/infrastructure-history.jsonl) | Archivo | 2.6 KB | Historial estructurado de cambios de infraestructura detectados. |
+| — | [<code>infrastructure/history/package-operation-cursor.json</code>](./infrastructure/history/package-operation-cursor.json) | JSON | 54 B | Cursor para evitar reprocesar operaciones capturadas. |
+| — | [<code>infrastructure/history/pkg-operation-cursor.json</code>](./infrastructure/history/pkg-operation-cursor.json) | JSON | 54 B | Cursor de compatibilidad con el registro histórico de operaciones. |
+| — | [<code>infrastructure/system-manifest.json</code>](./infrastructure/system-manifest.json) | JSON | 4.2 KB | Instantánea observada de paquetes, runtimes y metadatos del entorno. |
+| — | [<code>scripts/bajada</code>](./scripts/bajada) | Archivo | 4.6 KB | Integra cambios de GitHub en Termux con rebase seguro y sincronización a Obsidian. |
+| — | [<code>scripts/infra-audit.py</code>](./scripts/infra-audit.py) | Python | 2.2 KB | Compara el estado observado con el estado deseado sin desinstalar paquetes. |
+| — | [<code>scripts/infra-git-sync.sh</code>](./scripts/infra-git-sync.sh) | Shell | 463 B | Reconcilia la infraestructura y sincroniza sus cambios con GitHub. |
+| — | [<code>scripts/infra-note.py</code>](./scripts/infra-note.py) | Python | 1.1 KB | Registra explícitamente la razón, el actor y el alcance de una dependencia. |
+| — | [<code>scripts/infra-sync.py</code>](./scripts/infra-sync.py) | Python | 13.8 KB | Detecta cambios entre instantáneas y reconcilia evidencia de operaciones. |
+| — | [<code>scripts/infra-sync.sh</code>](./scripts/infra-sync.sh) | Shell | 181 B | Lanza el motor de reconciliación de infraestructura. |
+| — | [<code>scripts/infra-wrapper.sh</code>](./scripts/infra-wrapper.sh) | Shell | 884 B | Captura operaciones de gestores de paquetes en un registro JSONL. |
+| — | [<code>scripts/install-infra-wrappers.sh</code>](./scripts/install-infra-wrappers.sh) | Shell | 840 B | Instala wrappers de captura para los gestores disponibles. |
+| — | [<code>scripts/install-sync-commands.sh</code>](./scripts/install-sync-commands.sh) | Shell | 584 B | Instala los comandos bajada y subida en el PATH de Termux. |
+| — | [<code>scripts/subida</code>](./scripts/subida) | Archivo | 4.2 KB | Valida, prepara y publica cambios locales sin force push. |
+| — | [<code>scripts/sync-canvas-to-obsidian.py</code>](./scripts/sync-canvas-to-obsidian.py) | Python | 1.8 KB | Copia README y Canvas a Documents/4-TERMX y retira Canvas obsoletos. |
+| — | [<code>sync-repo.sh</code>](./sync-repo.sh) | Shell | 1.1 KB | Punto de entrada para sincronizar el repositorio desde Termux. |
+| — | [<code>update_readme_tree.py</code>](./update_readme_tree.py) | Python | 17.9 KB | Genera el mapa estructural, grafos DOT/SVG, Canvas y manifiesto del README. |
 
 ### 📂 Bloques colapsables por componente
 
 <details>
 <summary>📁 <strong>.github</strong> — 1 archivos / 1.5 KB</summary>
 
-- [<code>.github/workflows/update-tree.yml</code>](./.github/workflows/update-tree.yml) — **1.5 KB** — Workflow de automatización de GitHub Actions.
+- [<code>.github/workflows/update-tree.yml</code>](./.github/workflows/update-tree.yml) — **1.5 KB** — Workflow que regenera mapas, Canvas e inventario documental.
 
 </details>
 
 <details>
 <summary>📁 <strong>.termux</strong> — 1 archivos / 5.9 KB</summary>
 
-- [<code>.termux/termux.properties</code>](./.termux/termux.properties) — **5.9 KB** — Archivo Archivo del proyecto.
+- [<code>.termux/termux.properties</code>](./.termux/termux.properties) — **5.9 KB** — Preferencias de interfaz y comportamiento de Termux.
 
 </details>
 
 <details>
 <summary>📁 <strong>docs</strong> — 11 archivos / 107.1 KB</summary>
 
-- [<code>docs/canvas/repository-architecture.canvas</code>](./docs/canvas/repository-architecture.canvas) — **8.4 KB** — Archivo Archivo del proyecto.
-- [<code>docs/canvas/repository-structure.canvas</code>](./docs/canvas/repository-structure.canvas) — **12.2 KB** — Archivo Archivo del proyecto.
-- [<code>docs/conocimiento-4-termx.md</code>](./docs/conocimiento-4-termx.md) — **2.4 KB** — Archivo Markdown del proyecto.
-- [<code>docs/infrastructure.md</code>](./docs/infrastructure.md) — **4.7 KB** — Archivo Markdown del proyecto.
-- [<code>docs/pendientes-evolucion.md</code>](./docs/pendientes-evolucion.md) — **7.5 KB** — Archivo Markdown del proyecto.
-- [<code>docs/repository-architecture.dot</code>](./docs/repository-architecture.dot) — **2.7 KB** — Archivo Archivo del proyecto.
-- [<code>docs/repository-architecture.svg</code>](./docs/repository-architecture.svg) — **21.3 KB** — Archivo Archivo del proyecto.
-- [<code>docs/repository-map.md</code>](./docs/repository-map.md) — **1.2 KB** — Archivo Markdown del proyecto.
-- [<code>docs/repository-structure.dot</code>](./docs/repository-structure.dot) — **4.8 KB** — Archivo Archivo del proyecto.
-- [<code>docs/repository-structure.svg</code>](./docs/repository-structure.svg) — **29.7 KB** — Archivo Archivo del proyecto.
-- [<code>docs/svg2canvas.py</code>](./docs/svg2canvas.py) — **12.4 KB** — Archivo Python del proyecto.
+- [<code>docs/canvas/repository-architecture.canvas</code>](./docs/canvas/repository-architecture.canvas) — **8.4 KB** — Diagrama de arquitectura para explorar en Obsidian.
+- [<code>docs/canvas/repository-structure.canvas</code>](./docs/canvas/repository-structure.canvas) — **12.2 KB** — Diagrama estructural para explorar en Obsidian.
+- [<code>docs/conocimiento-4-termx.md</code>](./docs/conocimiento-4-termx.md) — **2.4 KB** — Registro progresivo de hechos confirmados y conocimiento técnico del proyecto.
+- [<code>docs/infrastructure.md</code>](./docs/infrastructure.md) — **4.7 KB** — Manual del manifiesto, historial, wrappers, notas y auditoría de infraestructura.
+- [<code>docs/pendientes-evolucion.md</code>](./docs/pendientes-evolucion.md) — **7.5 KB** — Registro priorizado de mejoras y metodología de evolución pendiente.
+- [<code>docs/repository-architecture.dot</code>](./docs/repository-architecture.dot) — **2.7 KB** — Fuente Graphviz de las relaciones funcionales principales.
+- [<code>docs/repository-architecture.svg</code>](./docs/repository-architecture.svg) — **21.3 KB** — Visualización SVG de la arquitectura y automatización.
+- [<code>docs/repository-map.md</code>](./docs/repository-map.md) — **1.2 KB** — Mapa textual de la estructura del repositorio, generado automáticamente.
+- [<code>docs/repository-structure.dot</code>](./docs/repository-structure.dot) — **4.8 KB** — Fuente Graphviz del grafo jerárquico de archivos y directorios.
+- [<code>docs/repository-structure.svg</code>](./docs/repository-structure.svg) — **29.7 KB** — Visualización SVG de la estructura del repositorio.
+- [<code>docs/svg2canvas.py</code>](./docs/svg2canvas.py) — **12.4 KB** — Convierte diagramas SVG en archivos Canvas compatibles con Obsidian.
 
 </details>
 
 <details>
 <summary>📁 <strong>infrastructure</strong> — 5 archivos / 7.5 KB</summary>
 
-- [<code>infrastructure/desired-state.json</code>](./infrastructure/desired-state.json) — **597 B** — Archivo JSON del proyecto.
-- [<code>infrastructure/history/infrastructure-history.jsonl</code>](./infrastructure/history/infrastructure-history.jsonl) — **2.6 KB** — Archivo Archivo del proyecto.
-- [<code>infrastructure/history/package-operation-cursor.json</code>](./infrastructure/history/package-operation-cursor.json) — **54 B** — Archivo JSON del proyecto.
-- [<code>infrastructure/history/pkg-operation-cursor.json</code>](./infrastructure/history/pkg-operation-cursor.json) — **54 B** — Archivo JSON del proyecto.
-- [<code>infrastructure/system-manifest.json</code>](./infrastructure/system-manifest.json) — **4.2 KB** — Archivo JSON del proyecto.
+- [<code>infrastructure/desired-state.json</code>](./infrastructure/desired-state.json) — **597 B** — Clasificación declarada de dependencias requeridas, opcionales y temporales.
+- [<code>infrastructure/history/infrastructure-history.jsonl</code>](./infrastructure/history/infrastructure-history.jsonl) — **2.6 KB** — Historial estructurado de cambios de infraestructura detectados.
+- [<code>infrastructure/history/package-operation-cursor.json</code>](./infrastructure/history/package-operation-cursor.json) — **54 B** — Cursor para evitar reprocesar operaciones capturadas.
+- [<code>infrastructure/history/pkg-operation-cursor.json</code>](./infrastructure/history/pkg-operation-cursor.json) — **54 B** — Cursor de compatibilidad con el registro histórico de operaciones.
+- [<code>infrastructure/system-manifest.json</code>](./infrastructure/system-manifest.json) — **4.2 KB** — Instantánea observada de paquetes, runtimes y metadatos del entorno.
 
 </details>
 
 <details>
-<summary>📁 <strong>raíz</strong> — 6 archivos / 32.0 KB</summary>
+<summary>📁 <strong>raíz</strong> — 6 archivos / 36.3 KB</summary>
 
-- [<code>.gitconfig</code>](./.gitconfig) — **64 B** — Archivo Configuración del proyecto.
-- [<code>.gitignore</code>](./.gitignore) — **398 B** — Archivo Configuración del proyecto.
-- [<code>.zshrc</code>](./.zshrc) — **319 B** — Archivo Configuración del proyecto.
-- [<code>README.md</code>](./README.md) — **16.5 KB** — Documentación central del entorno Termux.
-- [<code>sync-repo.sh</code>](./sync-repo.sh) — **1.1 KB** — Sincronización del repositorio desde Termux.
-- [<code>update_readme_tree.py</code>](./update_readme_tree.py) — **13.6 KB** — Generador automático del manifiesto y los dos grafos.
+- [<code>.gitconfig</code>](./.gitconfig) — **64 B** — Configuración Git versionada para el entorno del proyecto.
+- [<code>.gitignore</code>](./.gitignore) — **398 B** — Excluye secretos, credenciales y artefactos locales de Git.
+- [<code>.zshrc</code>](./.zshrc) — **319 B** — Inicialización de Zsh y reconciliación automática de infraestructura.
+- [<code>README.md</code>](./README.md) — **16.5 KB** — Guía principal: propósito, requisitos, inicio rápido, comandos y documentación.
+- [<code>sync-repo.sh</code>](./sync-repo.sh) — **1.1 KB** — Punto de entrada para sincronizar el repositorio desde Termux.
+- [<code>update_readme_tree.py</code>](./update_readme_tree.py) — **17.9 KB** — Genera el mapa estructural, grafos DOT/SVG, Canvas y manifiesto del README.
 
 </details>
 
 <details>
 <summary>📁 <strong>scripts</strong> — 11 archivos / 30.6 KB</summary>
 
-- [<code>scripts/bajada</code>](./scripts/bajada) — **4.6 KB** — Archivo Archivo del proyecto.
-- [<code>scripts/infra-audit.py</code>](./scripts/infra-audit.py) — **2.2 KB** — Archivo Python del proyecto.
-- [<code>scripts/infra-git-sync.sh</code>](./scripts/infra-git-sync.sh) — **463 B** — Archivo Shell del proyecto.
-- [<code>scripts/infra-note.py</code>](./scripts/infra-note.py) — **1.1 KB** — Archivo Python del proyecto.
-- [<code>scripts/infra-sync.py</code>](./scripts/infra-sync.py) — **13.8 KB** — Archivo Python del proyecto.
-- [<code>scripts/infra-sync.sh</code>](./scripts/infra-sync.sh) — **181 B** — Archivo Shell del proyecto.
-- [<code>scripts/infra-wrapper.sh</code>](./scripts/infra-wrapper.sh) — **884 B** — Archivo Shell del proyecto.
-- [<code>scripts/install-infra-wrappers.sh</code>](./scripts/install-infra-wrappers.sh) — **840 B** — Archivo Shell del proyecto.
-- [<code>scripts/install-sync-commands.sh</code>](./scripts/install-sync-commands.sh) — **584 B** — Archivo Shell del proyecto.
-- [<code>scripts/subida</code>](./scripts/subida) — **4.2 KB** — Archivo Archivo del proyecto.
-- [<code>scripts/sync-canvas-to-obsidian.py</code>](./scripts/sync-canvas-to-obsidian.py) — **1.8 KB** — Archivo Python del proyecto.
+- [<code>scripts/bajada</code>](./scripts/bajada) — **4.6 KB** — Integra cambios de GitHub en Termux con rebase seguro y sincronización a Obsidian.
+- [<code>scripts/infra-audit.py</code>](./scripts/infra-audit.py) — **2.2 KB** — Compara el estado observado con el estado deseado sin desinstalar paquetes.
+- [<code>scripts/infra-git-sync.sh</code>](./scripts/infra-git-sync.sh) — **463 B** — Reconcilia la infraestructura y sincroniza sus cambios con GitHub.
+- [<code>scripts/infra-note.py</code>](./scripts/infra-note.py) — **1.1 KB** — Registra explícitamente la razón, el actor y el alcance de una dependencia.
+- [<code>scripts/infra-sync.py</code>](./scripts/infra-sync.py) — **13.8 KB** — Detecta cambios entre instantáneas y reconcilia evidencia de operaciones.
+- [<code>scripts/infra-sync.sh</code>](./scripts/infra-sync.sh) — **181 B** — Lanza el motor de reconciliación de infraestructura.
+- [<code>scripts/infra-wrapper.sh</code>](./scripts/infra-wrapper.sh) — **884 B** — Captura operaciones de gestores de paquetes en un registro JSONL.
+- [<code>scripts/install-infra-wrappers.sh</code>](./scripts/install-infra-wrappers.sh) — **840 B** — Instala wrappers de captura para los gestores disponibles.
+- [<code>scripts/install-sync-commands.sh</code>](./scripts/install-sync-commands.sh) — **584 B** — Instala los comandos bajada y subida en el PATH de Termux.
+- [<code>scripts/subida</code>](./scripts/subida) — **4.2 KB** — Valida, prepara y publica cambios locales sin force push.
+- [<code>scripts/sync-canvas-to-obsidian.py</code>](./scripts/sync-canvas-to-obsidian.py) — **1.8 KB** — Copia README y Canvas a Documents/4-TERMX y retira Canvas obsoletos.
 
 </details>
 
-**Total actual:** 35 archivos — **184.7 KB**
+**Total actual:** 35 archivos — **189.0 KB**
 
 _Este bloque es mantenido por Actions. No editar manualmente entre los marcadores._
 <!-- FILE-MANIFEST:END -->

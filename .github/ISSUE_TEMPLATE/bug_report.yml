@@ -1,0 +1,38 @@
+name: Reporte de error
+description: Documentar un comportamiento inesperado de 4-TERMX.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        No incluyas tokens, contraseñas, claves privadas ni datos personales.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problema observado
+      description: ¿Qué ocurrió y qué esperabas que ocurriera?
+      placeholder: Describe el comportamiento observado.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Pasos para reproducir
+      description: Incluye comandos mínimos y seguros.
+      placeholder: |
+        1. Ejecutar ...
+        2. Observar ...
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Entorno
+      description: Termux/Android, versión de Python o commit relevante.
+  - type: textarea
+    id: logs
+    attributes:
+      label: Salida relevante
+      description: Redacta secretos antes de compartir cualquier salida.
+      render: text

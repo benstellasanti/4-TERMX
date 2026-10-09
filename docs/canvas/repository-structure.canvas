@@ -5,7 +5,7 @@
       "type": "text",
       "text": "4-TERMX",
       "x": 0,
-      "y": 1176,
+      "y": 1302,
       "width": 200,
       "height": 56,
       "color": "#555555"
@@ -33,7 +33,7 @@
       "type": "text",
       "text": "docs",
       "x": 270,
-      "y": 336,
+      "y": 378,
       "width": 200,
       "height": 56
     },
@@ -42,7 +42,7 @@
       "type": "text",
       "text": "infrastructure",
       "x": 270,
-      "y": 798,
+      "y": 882,
       "width": 200,
       "height": 56
     },
@@ -51,7 +51,7 @@
       "type": "text",
       "text": "scripts",
       "x": 270,
-      "y": 1428,
+      "y": 1512,
       "width": 200,
       "height": 56
     },
@@ -60,7 +60,7 @@
       "type": "text",
       "text": ".gitconfig",
       "x": 270,
-      "y": 1932,
+      "y": 2016,
       "width": 200,
       "height": 56
     },
@@ -69,7 +69,7 @@
       "type": "text",
       "text": ".gitignore",
       "x": 270,
-      "y": 2016,
+      "y": 2100,
       "width": 200,
       "height": 56
     },
@@ -78,7 +78,16 @@
       "type": "text",
       "text": ".zshrc",
       "x": 270,
-      "y": 2100,
+      "y": 2184,
+      "width": 200,
+      "height": 56
+    },
+    {
+      "id": "13eeed488a08bb62",
+      "type": "text",
+      "text": "CONTRIBUTING.md",
+      "x": 270,
+      "y": 2268,
       "width": 200,
       "height": 56
     },
@@ -87,7 +96,16 @@
       "type": "text",
       "text": "README.md",
       "x": 270,
-      "y": 2184,
+      "y": 2352,
+      "width": 200,
+      "height": 56
+    },
+    {
+      "id": "77c7e43c57d13b64",
+      "type": "text",
+      "text": "SECURITY.md",
+      "x": 270,
+      "y": 2436,
       "width": 200,
       "height": 56
     },
@@ -96,7 +114,7 @@
       "type": "text",
       "text": "sync-repo.sh",
       "x": 270,
-      "y": 2268,
+      "y": 2520,
       "width": 200,
       "height": 56
     },
@@ -105,7 +123,7 @@
       "type": "text",
       "text": "update_readme_tree.py",
       "x": 270,
-      "y": 2352,
+      "y": 2604,
       "width": 258,
       "height": 56
     },
@@ -137,11 +155,20 @@
       "height": 56
     },
     {
+      "id": "cfdb0584b6d4c661",
+      "type": "text",
+      "text": "design-principles.md",
+      "x": 598,
+      "y": 252,
+      "width": 248,
+      "height": 56
+    },
+    {
       "id": "e62cf5df39c67364",
       "type": "text",
       "text": "infrastructure.md",
       "x": 598,
-      "y": 252,
+      "y": 336,
       "width": 218,
       "height": 56
     },
@@ -150,7 +177,7 @@
       "type": "text",
       "text": "pendientes-evolucion.md",
       "x": 598,
-      "y": 336,
+      "y": 420,
       "width": 278,
       "height": 56
     },
@@ -159,7 +186,7 @@
       "type": "text",
       "text": "repository-map.md",
       "x": 598,
-      "y": 420,
+      "y": 504,
       "width": 218,
       "height": 56
     },
@@ -168,7 +195,7 @@
       "type": "text",
       "text": "svg2canvas.py",
       "x": 598,
-      "y": 504,
+      "y": 588,
       "width": 200,
       "height": 56
     },
@@ -177,7 +204,7 @@
       "type": "text",
       "text": "history",
       "x": 598,
-      "y": 672,
+      "y": 756,
       "width": 200,
       "height": 56
     },
@@ -186,7 +213,7 @@
       "type": "text",
       "text": "desired-state.json",
       "x": 598,
-      "y": 840,
+      "y": 924,
       "width": 228,
       "height": 56
     },
@@ -195,7 +222,7 @@
       "type": "text",
       "text": "system-manifest.json",
       "x": 598,
-      "y": 924,
+      "y": 1008,
       "width": 248,
       "height": 56
     },
@@ -204,7 +231,7 @@
       "type": "text",
       "text": "bajada",
       "x": 598,
-      "y": 1008,
+      "y": 1092,
       "width": 200,
       "height": 56
     },
@@ -213,7 +240,7 @@
       "type": "text",
       "text": "infra-audit.py",
       "x": 598,
-      "y": 1092,
+      "y": 1176,
       "width": 200,
       "height": 56
     },
@@ -222,7 +249,7 @@
       "type": "text",
       "text": "infra-git-sync.sh",
       "x": 598,
-      "y": 1176,
+      "y": 1260,
       "width": 218,
       "height": 56
     },
@@ -231,7 +258,7 @@
       "type": "text",
       "text": "infra-note.py",
       "x": 598,
-      "y": 1260,
+      "y": 1344,
       "width": 200,
       "height": 56
     },
@@ -240,7 +267,7 @@
       "type": "text",
       "text": "infra-sync.py",
       "x": 598,
-      "y": 1344,
+      "y": 1428,
       "width": 200,
       "height": 56
     },
@@ -249,7 +276,7 @@
       "type": "text",
       "text": "infra-sync.sh",
       "x": 598,
-      "y": 1428,
+      "y": 1512,
       "width": 200,
       "height": 56
     },
@@ -258,7 +285,7 @@
       "type": "text",
       "text": "infra-wrapper.sh",
       "x": 598,
-      "y": 1512,
+      "y": 1596,
       "width": 208,
       "height": 56
     },
@@ -267,7 +294,7 @@
       "type": "text",
       "text": "install-infra-wrappers.sh",
       "x": 598,
-      "y": 1596,
+      "y": 1680,
       "width": 298,
       "height": 56
     },
@@ -276,7 +303,7 @@
       "type": "text",
       "text": "install-sync-commands.sh",
       "x": 598,
-      "y": 1680,
+      "y": 1764,
       "width": 288,
       "height": 56
     },
@@ -285,7 +312,7 @@
       "type": "text",
       "text": "subida",
       "x": 598,
-      "y": 1764,
+      "y": 1848,
       "width": 200,
       "height": 56
     },
@@ -294,7 +321,7 @@
       "type": "text",
       "text": "sync-canvas-to-obsidian.py",
       "x": 598,
-      "y": 1848,
+      "y": 1932,
       "width": 308,
       "height": 56
     },
@@ -312,7 +339,7 @@
       "type": "text",
       "text": "infrastructure-history.jsonl",
       "x": 976,
-      "y": 588,
+      "y": 672,
       "width": 328,
       "height": 56
     },
@@ -321,7 +348,7 @@
       "type": "text",
       "text": "package-operation-cursor.json",
       "x": 976,
-      "y": 672,
+      "y": 756,
       "width": 338,
       "height": 56
     },
@@ -330,7 +357,7 @@
       "type": "text",
       "text": "pkg-operation-cursor.json",
       "x": 976,
-      "y": 756,
+      "y": 840,
       "width": 298,
       "height": 56
     }
@@ -393,10 +420,24 @@
       "toSide": "left"
     },
     {
+      "id": "73901703e8d01b52",
+      "fromNode": "eda0b76da6f92e54",
+      "fromSide": "right",
+      "toNode": "13eeed488a08bb62",
+      "toSide": "left"
+    },
+    {
       "id": "036a2cc787b96cb4",
       "fromNode": "eda0b76da6f92e54",
       "fromSide": "right",
       "toNode": "c77db0613ea407a6",
+      "toSide": "left"
+    },
+    {
+      "id": "8a22e3ccde19d710",
+      "fromNode": "eda0b76da6f92e54",
+      "fromSide": "right",
+      "toNode": "77c7e43c57d13b64",
       "toSide": "left"
     },
     {
@@ -432,6 +473,13 @@
       "fromNode": "fad25480dbd74180",
       "fromSide": "right",
       "toNode": "03ec2241bfbc0e99",
+      "toSide": "left"
+    },
+    {
+      "id": "852d726522adef11",
+      "fromNode": "fad25480dbd74180",
+      "fromSide": "right",
+      "toNode": "cfdb0584b6d4c661",
       "toSide": "left"
     },
     {

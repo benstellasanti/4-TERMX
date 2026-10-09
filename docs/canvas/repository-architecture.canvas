@@ -4,7 +4,7 @@
       "id": "eda0b76da6f92e54",
       "type": "text",
       "text": "4-TERMX",
-      "x": 1452,
+      "x": 1711,
       "y": -1448,
       "width": 200,
       "height": 56
@@ -13,7 +13,7 @@
       "id": "359e1713f74600d3",
       "type": "text",
       "text": ".github",
-      "x": 265,
+      "x": 3443,
       "y": -1025,
       "width": 200,
       "height": 56
@@ -22,7 +22,7 @@
       "id": "e216c0621b14f0ec",
       "type": "text",
       "text": ".termux",
-      "x": 967,
+      "x": -28,
       "y": -1185,
       "width": 200,
       "height": 56
@@ -31,7 +31,7 @@
       "id": "e78c1f34287de23e",
       "type": "text",
       "text": "docs",
-      "x": 1196,
+      "x": 200,
       "y": -1185,
       "width": 200,
       "height": 56
@@ -40,7 +40,7 @@
       "id": "986ac5c06e89ff78",
       "type": "text",
       "text": "infrastructure",
-      "x": 1452,
+      "x": 455,
       "y": -1185,
       "width": 200,
       "height": 56
@@ -49,7 +49,7 @@
       "id": "8b6664386e7ef556",
       "type": "text",
       "text": "scripts",
-      "x": 1707,
+      "x": 711,
       "y": -1185,
       "width": 200,
       "height": 56
@@ -58,7 +58,7 @@
       "id": "db89af5edb722ccc",
       "type": "text",
       "text": ".gitconfig",
-      "x": 1938,
+      "x": 942,
       "y": -1185,
       "width": 200,
       "height": 56
@@ -67,7 +67,7 @@
       "id": "a7602d0615b33ad0",
       "type": "text",
       "text": ".gitignore",
-      "x": 2172,
+      "x": 1176,
       "y": -1185,
       "width": 200,
       "height": 56
@@ -76,7 +76,16 @@
       "id": "180de974f96e9f1d",
       "type": "text",
       "text": ".zshrc",
-      "x": 2404,
+      "x": 1408,
+      "y": -1185,
+      "width": 200,
+      "height": 56
+    },
+    {
+      "id": "c16c25360dd6b297",
+      "type": "text",
+      "text": "CONTRIBUTING.md",
+      "x": 1711,
       "y": -1185,
       "width": 200,
       "height": 56
@@ -85,7 +94,16 @@
       "id": "2a2d89a7fac77e2a",
       "type": "text",
       "text": "README.md",
-      "x": 2665,
+      "x": 2046,
+      "y": -1185,
+      "width": 200,
+      "height": 56
+    },
+    {
+      "id": "7112bb58412ab93c",
+      "type": "text",
+      "text": "SECURITY.md",
+      "x": 2344,
       "y": -1185,
       "width": 200,
       "height": 56
@@ -94,7 +112,7 @@
       "id": "c37c4f5b71526692",
       "type": "text",
       "text": "sync-repo.sh",
-      "x": 2949,
+      "x": 2637,
       "y": -1185,
       "width": 200,
       "height": 56
@@ -103,7 +121,7 @@
       "id": "a702cc4adde8375c",
       "type": "text",
       "text": "update_readme_tree.py",
-      "x": 3261,
+      "x": 2948,
       "y": -1185,
       "width": 258,
       "height": 56
@@ -112,7 +130,7 @@
       "id": "174c0d7238f94439",
       "type": "text",
       "text": "update_readme_tree.py\ndescubre + genera",
-      "x": 228,
+      "x": 3358,
       "y": -353,
       "width": 258,
       "height": 84,
@@ -122,7 +140,7 @@
       "id": "d12a3c06ed446460",
       "type": "text",
       "text": "README.md",
-      "x": 2,
+      "x": 1357,
       "y": -75,
       "width": 200,
       "height": 56
@@ -131,7 +149,7 @@
       "id": "afd59d3fece3fa76",
       "type": "text",
       "text": "docs",
-      "x": 739,
+      "x": 4751,
       "y": -1185,
       "width": 200,
       "height": 56
@@ -140,7 +158,7 @@
       "id": "dd4f3b08601c3598",
       "type": "text",
       "text": "GitHub",
-      "x": 505,
+      "x": 3663,
       "y": -1185,
       "width": 200,
       "height": 56
@@ -149,7 +167,7 @@
       "id": "bc2777f65042d19a",
       "type": "text",
       "text": "update-tree.yml\nGitHub Actions",
-      "x": 321,
+      "x": 3509,
       "y": -616,
       "width": 200,
       "height": 84,
@@ -159,7 +177,7 @@
       "id": "3361a4fbf97d0d08",
       "type": "text",
       "text": "repository-map.md",
-      "x": 357,
+      "x": 4838,
       "y": -75,
       "width": 218,
       "height": 56
@@ -168,16 +186,25 @@
       "id": "255e925cdeac83b6",
       "type": "text",
       "text": "conocimiento-4-termx.md",
-      "x": 1000,
+      "x": 4316,
       "y": -865,
       "width": 278,
+      "height": 56
+    },
+    {
+      "id": "f379077378e35d26",
+      "type": "text",
+      "text": "design-principles.md",
+      "x": 4727,
+      "y": -865,
+      "width": 248,
       "height": 56
     },
     {
       "id": "318435fba80b531d",
       "type": "text",
       "text": "infrastructure.md",
-      "x": 1405,
+      "x": 5088,
       "y": -865,
       "width": 218,
       "height": 56
@@ -186,7 +213,7 @@
       "id": "3d06d001084d0853",
       "type": "text",
       "text": "pendientes-evolucion.md",
-      "x": 1748,
+      "x": 5431,
       "y": -865,
       "width": 278,
       "height": 56
@@ -195,7 +222,7 @@
       "id": "c207655ee45917ab",
       "type": "text",
       "text": "svg2canvas.py",
-      "x": 2149,
+      "x": 3991,
       "y": -865,
       "width": 200,
       "height": 56
@@ -204,7 +231,7 @@
       "id": "ca2b3aaeb91c828c",
       "type": "text",
       "text": "GitHub Actions",
-      "x": 497,
+      "x": 3685,
       "y": -865,
       "width": 200,
       "height": 56
@@ -214,9 +241,9 @@
     {
       "id": "b8c5986aca8d2b2d",
       "fromNode": "eda0b76da6f92e54",
-      "fromSide": "left",
+      "fromSide": "right",
       "toNode": "359e1713f74600d3",
-      "toSide": "right"
+      "toSide": "left"
     },
     {
       "id": "349c29dcc7ae7180",
@@ -228,50 +255,64 @@
     {
       "id": "4b2c654112727797",
       "fromNode": "eda0b76da6f92e54",
-      "fromSide": "bottom",
+      "fromSide": "left",
       "toNode": "e78c1f34287de23e",
-      "toSide": "top"
+      "toSide": "right"
     },
     {
       "id": "5931b09cb3d8ac5a",
       "fromNode": "eda0b76da6f92e54",
-      "fromSide": "bottom",
+      "fromSide": "left",
       "toNode": "986ac5c06e89ff78",
-      "toSide": "top"
+      "toSide": "right"
     },
     {
       "id": "0ff08882b117f549",
       "fromNode": "eda0b76da6f92e54",
-      "fromSide": "bottom",
+      "fromSide": "left",
       "toNode": "8b6664386e7ef556",
-      "toSide": "top"
+      "toSide": "right"
     },
     {
       "id": "5751606d2dab04b8",
       "fromNode": "eda0b76da6f92e54",
-      "fromSide": "right",
+      "fromSide": "left",
       "toNode": "db89af5edb722ccc",
-      "toSide": "left"
+      "toSide": "right"
     },
     {
       "id": "adc057d5e3f2855f",
       "fromNode": "eda0b76da6f92e54",
-      "fromSide": "right",
+      "fromSide": "left",
       "toNode": "a7602d0615b33ad0",
-      "toSide": "left"
+      "toSide": "right"
     },
     {
       "id": "ab430b97073e8ecf",
       "fromNode": "eda0b76da6f92e54",
-      "fromSide": "right",
+      "fromSide": "bottom",
       "toNode": "180de974f96e9f1d",
-      "toSide": "left"
+      "toSide": "top"
+    },
+    {
+      "id": "664b0de68ffdb1ab",
+      "fromNode": "eda0b76da6f92e54",
+      "fromSide": "bottom",
+      "toNode": "c16c25360dd6b297",
+      "toSide": "top"
     },
     {
       "id": "47abdabed8cba6f4",
       "fromNode": "eda0b76da6f92e54",
-      "fromSide": "right",
+      "fromSide": "bottom",
       "toNode": "2a2d89a7fac77e2a",
+      "toSide": "top"
+    },
+    {
+      "id": "f57774ab46034dfa",
+      "fromNode": "eda0b76da6f92e54",
+      "fromSide": "right",
+      "toNode": "7112bb58412ab93c",
       "toSide": "left"
     },
     {
@@ -305,16 +346,16 @@
     {
       "id": "9fac4d371865f150",
       "fromNode": "eda0b76da6f92e54",
-      "fromSide": "left",
+      "fromSide": "right",
       "toNode": "afd59d3fece3fa76",
-      "toSide": "right"
+      "toSide": "left"
     },
     {
       "id": "85754ae5fb24e99c",
       "fromNode": "eda0b76da6f92e54",
-      "fromSide": "left",
+      "fromSide": "right",
       "toNode": "dd4f3b08601c3598",
-      "toSide": "right",
+      "toSide": "left",
       "label": "repositorio"
     },
     {
@@ -335,17 +376,17 @@
     {
       "id": "ace2532742c4f986",
       "fromNode": "174c0d7238f94439",
-      "fromSide": "bottom",
+      "fromSide": "left",
       "toNode": "d12a3c06ed446460",
-      "toSide": "top",
+      "toSide": "right",
       "label": "actualiza"
     },
     {
       "id": "5101f35aa6321a21",
       "fromNode": "174c0d7238f94439",
-      "fromSide": "bottom",
+      "fromSide": "right",
       "toNode": "3361a4fbf97d0d08",
-      "toSide": "top",
+      "toSide": "left",
       "label": "genera"
     },
     {
@@ -356,11 +397,18 @@
       "toSide": "top"
     },
     {
+      "id": "b3aba74ff2b0662c",
+      "fromNode": "afd59d3fece3fa76",
+      "fromSide": "bottom",
+      "toNode": "f379077378e35d26",
+      "toSide": "top"
+    },
+    {
       "id": "fafc99735026663c",
       "fromNode": "afd59d3fece3fa76",
-      "fromSide": "right",
+      "fromSide": "bottom",
       "toNode": "318435fba80b531d",
-      "toSide": "left"
+      "toSide": "top"
     },
     {
       "id": "c2d2de966ccba0fa",
@@ -379,9 +427,9 @@
     {
       "id": "bbab448f56d0d8be",
       "fromNode": "afd59d3fece3fa76",
-      "fromSide": "right",
+      "fromSide": "left",
       "toNode": "c207655ee45917ab",
-      "toSide": "left"
+      "toSide": "right"
     },
     {
       "id": "90c483e47005f65e",

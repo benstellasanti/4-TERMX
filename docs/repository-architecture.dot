@@ -19,8 +19,12 @@ digraph RepositoryArchitecture {
   root -> file_n__gitignore;
   file_n__zshrc [label=".zshrc", shape=note];
   root -> file_n__zshrc;
+  file_n_CONTRIBUTING_md [label="CONTRIBUTING.md", shape=note];
+  root -> file_n_CONTRIBUTING_md;
   file_n_README_md [label="README.md", shape=note];
   root -> file_n_README_md;
+  file_n_SECURITY_md [label="SECURITY.md", shape=note];
+  root -> file_n_SECURITY_md;
   file_n_sync_repo_sh [label="sync-repo.sh", shape=note];
   root -> file_n_sync_repo_sh;
   file_n_update_readme_tree_py [label="update_readme_tree.py", shape=note];
@@ -35,6 +39,8 @@ digraph RepositoryArchitecture {
   root -> docs;
   doc_n_docs_conocimiento_4_termx_md [label="conocimiento-4-termx.md", shape=note];
   docs -> doc_n_docs_conocimiento_4_termx_md;
+  doc_n_docs_design_principles_md [label="design-principles.md", shape=note];
+  docs -> doc_n_docs_design_principles_md;
   doc_n_docs_infrastructure_md [label="infrastructure.md", shape=note];
   docs -> doc_n_docs_infrastructure_md;
   doc_n_docs_pendientes_evolucion_md [label="pendientes-evolucion.md", shape=note];

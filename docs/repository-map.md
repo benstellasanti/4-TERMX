@@ -14,9 +14,12 @@
 ## .termux
 - termux.properties
 - .zshrc
+- CONTRIBUTING.md
 - README.md
+- SECURITY.md
 ## docs
 - conocimiento-4-termx.md
+- design-principles.md
 - infrastructure.md
 - pendientes-evolucion.md
 - repository-map.md

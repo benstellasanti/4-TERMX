@@ -20,10 +20,16 @@ digraph RepositoryStructure {
   n__termux -> n__termux_termux_properties;
   n__zshrc [label=".zshrc", shape=note, fillcolor="white"];
   root -> n__zshrc;
+  n_CONTRIBUTING_md [label="CONTRIBUTING.md", shape=note, fillcolor="white"];
+  root -> n_CONTRIBUTING_md;
   n_README_md [label="README.md", shape=note, fillcolor="white"];
   root -> n_README_md;
+  n_SECURITY_md [label="SECURITY.md", shape=note, fillcolor="white"];
+  root -> n_SECURITY_md;
   n_docs_conocimiento_4_termx_md [label="conocimiento-4-termx.md", shape=note, fillcolor="white"];
   n_docs -> n_docs_conocimiento_4_termx_md;
+  n_docs_design_principles_md [label="design-principles.md", shape=note, fillcolor="white"];
+  n_docs -> n_docs_design_principles_md;
   n_docs_infrastructure_md [label="infrastructure.md", shape=note, fillcolor="white"];
   n_docs -> n_docs_infrastructure_md;
   n_docs_pendientes_evolucion_md [label="pendientes-evolucion.md", shape=note, fillcolor="white"];

@@ -150,7 +150,7 @@ La implementación definitiva queda pendiente de diseño. Este documento registr
 - [ ] Documentar los pasos mínimos para comprender y utilizar el entorno.
 
 ### 2.3 Arquitectura explícita
-- [ ] Incorporar una explicación formal de la arquitectura.
+- [x] Incorporar una explicación formal de la arquitectura en `docs/architecture.md`.
 - [ ] Relacionar componentes, flujos de datos y mecanismos de reconciliación.
 
 ### 2.4 Modelo de evidencia

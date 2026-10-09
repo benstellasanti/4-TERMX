@@ -1,0 +1,29 @@
+name: Propuesta de mejora
+description: Proponer una mejora concreta para 4-TERMX.
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Necesidad o problema
+      description: ¿Qué necesidad concreta motiva la propuesta?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Solución propuesta
+      description: Describe el comportamiento esperado.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternativas consideradas
+      description: ¿Qué otras opciones podrían resolver la necesidad?
+  - type: textarea
+    id: risks
+    attributes:
+      label: Impacto y riesgos
+      description: Considera compatibilidad, rutas, datos locales y seguridad.

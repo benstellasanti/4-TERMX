@@ -143,7 +143,7 @@ El proyecto continúa en evolución. Las mejoras planificadas están documentada
 | — | [<code>.gitignore</code>](./.gitignore) | Configuración | 398 B | Archivo Configuración del proyecto. |
 | — | [<code>.termux/termux.properties</code>](./.termux/termux.properties) | Archivo | 5.9 KB | Archivo Archivo del proyecto. |
 | — | [<code>.zshrc</code>](./.zshrc) | Configuración | 319 B | Archivo Configuración del proyecto. |
-| — | [<code>README.md</code>](./README.md) | Markdown | 14.7 KB | Documentación central del entorno Termux. |
+| — | [<code>README.md</code>](./README.md) | Markdown | 16.5 KB | Documentación central del entorno Termux. |
 | — | [<code>docs/canvas/repository-architecture.canvas</code>](./docs/canvas/repository-architecture.canvas) | Archivo | 8.4 KB | Archivo Archivo del proyecto. |
 | — | [<code>docs/canvas/repository-structure.canvas</code>](./docs/canvas/repository-structure.canvas) | Archivo | 12.2 KB | Archivo Archivo del proyecto. |
 | — | [<code>docs/conocimiento-4-termx.md</code>](./docs/conocimiento-4-termx.md) | Markdown | 2.4 KB | Archivo Markdown del proyecto. |
@@ -219,12 +219,12 @@ El proyecto continúa en evolución. Las mejoras planificadas están documentada
 </details>
 
 <details>
-<summary>📁 <strong>raíz</strong> — 6 archivos / 30.2 KB</summary>
+<summary>📁 <strong>raíz</strong> — 6 archivos / 32.0 KB</summary>
 
 - [<code>.gitconfig</code>](./.gitconfig) — **64 B** — Archivo Configuración del proyecto.
 - [<code>.gitignore</code>](./.gitignore) — **398 B** — Archivo Configuración del proyecto.
 - [<code>.zshrc</code>](./.zshrc) — **319 B** — Archivo Configuración del proyecto.
-- [<code>README.md</code>](./README.md) — **14.7 KB** — Documentación central del entorno Termux.
+- [<code>README.md</code>](./README.md) — **16.5 KB** — Documentación central del entorno Termux.
 - [<code>sync-repo.sh</code>](./sync-repo.sh) — **1.1 KB** — Sincronización del repositorio desde Termux.
 - [<code>update_readme_tree.py</code>](./update_readme_tree.py) — **13.6 KB** — Generador automático del manifiesto y los dos grafos.
 
@@ -247,7 +247,7 @@ El proyecto continúa en evolución. Las mejoras planificadas están documentada
 
 </details>
 
-**Total actual:** 35 archivos — **182.8 KB**
+**Total actual:** 35 archivos — **184.7 KB**
 
 _Este bloque es mantenido por Actions. No editar manualmente entre los marcadores._
 <!-- FILE-MANIFEST:END -->

@@ -56,6 +56,12 @@ DESCRIPTIONS = {
     "docs/canvas/repository-architecture.canvas": "Diagrama de arquitectura para explorar en Obsidian.",
     "docs/canvas/repository-structure.canvas": "Diagrama estructural para explorar en Obsidian.",
 
+    ".github/ISSUE_TEMPLATE/bug_report.yml": "Formulario guiado para informar errores con pasos de reproducción y entorno.",
+    ".github/ISSUE_TEMPLATE/feature_request.yml": "Formulario para documentar necesidades, propuestas, alternativas y riesgos.",
+    ".github/PULL_REQUEST_TEMPLATE.md": "Lista de comprobación para resumir cambios, validar pruebas y declarar riesgos.",
+    "docs/architecture.md": "Describe los componentes principales, sus responsabilidades y los flujos de sincronización.",
+    "docs/design-principles.md": "Define criterios de diseño para evidencia, seguridad, reversibilidad y trazabilidad.",
+
     # Sincronización y comandos
     "scripts/bajada": "Integra cambios de GitHub en Termux con rebase seguro y sincronización a Obsidian.",
     "scripts/subida": "Valida, prepara y publica cambios locales sin force push.",
@@ -91,6 +97,11 @@ def size_text(size):
     return f"{size / (1024 * 1024):.1f} MB"
 
 def file_type(path):
+    rel = path.as_posix()
+    if rel.startswith(".github/ISSUE_TEMPLATE/"):
+        return "Plantilla de Issue"
+    if rel == ".github/PULL_REQUEST_TEMPLATE.md":
+        return "Plantilla de Pull Request"
     if path.name.startswith("."):
         return "Configuración"
     return TYPE_MAP.get(path.suffix.lower(), "Archivo")
@@ -291,43 +302,48 @@ def render_graph(dot_path, svg_path):
     subprocess.run(["dot", "-Tsvg", str(dot_path), "-o", str(svg_path)], check=True)
 
 def build_tree_markdown(files):
-    lines = [
-        "# 🌳 4-TERMX — Repository Map",
-        "",
-        "> Generado automáticamente por GitHub Actions a partir de la estructura real del repositorio.",
-        "> Los directorios son ramas y los archivos son hojas.",
-        "",
-        "## 🧭 Mapa estructural",
-        "",
-        "# 4-TERMX",
-    ]
+    """Genera un árbol ASCII que conserva la jerarquía real de directorios."""
     tree = {}
     for rel, _ in files:
         node = tree
         parts = rel.split("/")
-        for index, part in enumerate(parts):
-            if index == len(parts) - 1:
-                node[part] = None
-            else:
-                node = node.setdefault(part, {})
-    def emit(node, depth):
-        for name in sorted(node):
-            value = node[name]
-            if value is None:
-                lines.append(f"- {name}")
-            else:
-                prefix = "#" * min(depth + 2, 6)
-                lines.append(f"{prefix} {name}")
-                emit(value, depth + 1)
-    emit(tree, 0)
+        for part in parts[:-1]:
+            node = node.setdefault(part, {})
+        node.setdefault(parts[-1], None)
+
+    lines = [
+        "# 🌳 4-TERMX — Repository Map",
+        "",
+        "> Generado automáticamente por GitHub Actions a partir de los archivos del repositorio.",
+        "> El árbol refleja rutas relativas; no incluye secretos ni artefactos excluidos.",
+        "",
+        "## 🧭 Mapa estructural",
+        "",
+        "```text",
+        "4-TERMX/",
+    ]
+
+    def emit(node, prefix=""):
+        entries = sorted(node.items(), key=lambda item: (item[1] is None, item[0].lower()))
+        for index, (name, value) in enumerate(entries):
+            last = index == len(entries) - 1
+            connector = "`└── `" if last else "`├── `"
+            is_dir = isinstance(value, dict)
+            lines.append(f"{prefix}{connector}{name}{'/' if is_dir else ''}")
+            if is_dir:
+                emit(value, prefix + ("    " if last else "│   "))
+
+    emit(tree)
     lines += [
+        "```",
         "",
         "## 🗺️ Grafos estáticos",
         "",
-        "- repository-structure.svg: estructura completa, directorios como ramas y archivos como hojas.",
-        "- repository-architecture.svg: relaciones funcionales entre GitHub, Actions, workflow, generador, README y docs/.",
+        "- [repository-structure.svg](./repository-structure.svg): grafo visual de la estructura de archivos y carpetas.",
+        "- [repository-architecture.svg](./repository-architecture.svg): relaciones funcionales entre GitHub Actions, el generador, README y la documentación.",
+        "- Los archivos DOT son las fuentes editables de ambos grafos.",
         "",
-        "> Ambos SVG y sus fuentes DOT se regeneran automáticamente cuando cambia el repositorio.",
+        "> Los mapas SVG, sus fuentes DOT y los Canvas de Obsidian se regeneran desde el workflow del repositorio.",
         "",
     ]
     return "\n".join(lines)
